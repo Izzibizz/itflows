@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+@font-face {
+  font-family: "quicking";
+  src: url("./assets/fonts/Quicking-Regular.ttf") format("Truetype");
+  font-weight: 700;
+  font-style: oblique;
+}
+
+@font-face {
+  font-family: "voyage";
+  src: url("./assets/fonts/voyage-bold.otf") format("Opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "voyage";
+  src: url("./assets/fonts/voyage-Regular.otf") format("Opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@import "tailwindcss";
+
+@theme {
+  --font-body: "Mulish", sans-serif;
+  --font-header: "quicking", sans-serif;
+  --font-collab: "voyage", serif;
+  --font-c-body: "Montserrat", sans-serif;
+
+  --breakpoint-tablet: 600px;
+  --breakpoint-laptop: 1025px;
+  --breakpoint-desktop: 1280px;
+
+  --color-warm-white: rgb(255 250 243);
+  --color-light-beige: rgb(250 232 218);
+  --color-gray: rgb(185 176 178);
+  --color-gray-blue: rgb(175 173 179);
+  --color-warm-black: rgb(47 26 14);
+  --color-dark-red: rgb(151 67 51);
+  --color-red-beige: rgb(230 128 96);
+  --color-brown-beige: rgb(229 157 109);
+  --color-warm-beige: rgb(251 177 130);
+  --color-purple: rgb(104, 109, 137);
+  --color-light-blue: rgb(163 184 213);
+  --color-dark-blue: rgb(101 136 184);
+  --color-collab-green: rgb(133 125 95);
+
+  --animate-fadeIn: fadeIn 1s ease-in both;
+  --animate-spin: spin 10s ease-in infinite;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}

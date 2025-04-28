@@ -1,0 +1,42 @@
+[
+    {
+      "title": "Webbutveckling",
+      "path": "/webbutveckling",
+      "bgColor": "bg-warm-beige",
+      "textColor": "text-warm-white",
+      "description": [
+        "itFlows bygger hemsidor från grunden – helt i kod",
+        "Inga drag-and-drop plattformer används, inga färdiga mallar – bara skräddarsydda, unika lösningar anpassade efter dina behov och mål. För ett proffsigare resultat."
+      ]
+    },
+    {
+      "title": "Design",
+      "path": "/design",
+      "bgColor": "bg-red-beige",
+      "textColor": "text-warm-white",
+      "description": [
+        "Designexpertis med unik design – inga mallar",
+        "Vi går tillsammans igenom dina behov, mål och önskemål – och formger en användarvänlig, smidig och visuellt tilltalande webbplats som sticker ut från mängden."
+      ]
+    },
+    {
+      "title": "Branding",
+      "path": "/branding",
+      "bgColor": "bg-light-beige",
+      "textColor": "text-dark-blue",
+      "description": [
+        "Ditt företag behöver en tydlig identitet",
+        "Vi hjälper dig skapa ett minnesvärt visuellt intryck som speglar ditt företags själ. itFlows utvecklar logotyp, färgpalett, typografi och stil – allt för att du ska nå rätt målgrupp och sticka ut i mängden."
+      ]
+    },
+    {
+      "title": "Helhetskoncept",
+      "path": "/helhetskoncept",
+      "bgColor": "bg-light-blue",
+      "textColor": "text-warm-white",
+      "description": [
+        "En hemsida som känns genomtänkt rakt igenom",
+        "Vi hjälper dig skapa en röd tråd i hela ditt visuella uttryck – från logotyp och färgpalett till fotografier och illustrationer. Ett helhetskoncept som stärker ditt varumärke på riktigt."
+      ]
+    }
+  ]

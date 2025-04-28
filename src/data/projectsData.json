@@ -1,0 +1,51 @@
+[
+    {
+      "name": "Kontakt- och bokningshemsida",
+      "year": 2025,
+      "company": "Light Body Yoga",
+      "title": "Yogainstruktör och Egenföretagare",
+      "text": "itFlows utvecklade ett helhetskoncept tillsammans med Therese, där logga, profil, fotografier - allt ingick.",
+      "pictures": [
+        "https://res.cloudinary.com/dlp85vjwx/image/upload/v1744377150/hemsida-therese-lind-bjellder-light-body-yoga_nnp8oh.png",
+        "https://res.cloudinary.com/dlp85vjwx/image/upload/v1744377147/massage-hemsida-therese-lind-bjellder-light-body-yoga_di9aov.png",
+        "https://res.cloudinary.com/dlp85vjwx/image/upload/v1744377146/workshop-hemsida-therese-lind-bjellder-light-body-yoga_b7kzli.png",
+        "https://res.cloudinary.com/dlp85vjwx/image/upload/v1744377146/tjanster-hemsida-therese-lind-bjellder-light-body-yoga_aivn4a.png",
+        "https://res.cloudinary.com/dlp85vjwx/image/upload/v1744377145/contact-hemsida-therese-lind-bjellder-light-body-yoga_jfez3q.png",
+        "https://res.cloudinary.com/dlp85vjwx/image/upload/v1744377144/sketch-skiss-light-body-yoga_nuvaur.png"
+      ],
+      "website": "https://www.lightbodyyoga.se",
+      "typeOfProject": ["helhetskonceptet"]
+    },
+    {
+      "name": "Portfolio",
+      "year": 2024,
+      "company": "Ama Kyei",
+      "title": "Professionell dansare och koreograf",
+      "text": "Smidigt och snabbt samarbete. Vi fick exakt det vi ville ha och mer därtill.",
+      "pictures": [
+        "https://res.cloudinary.com/dlp85vjwx/image/upload/v1744377647/Ama-kyei-hemsida-itFlows-utveckling-kreativ-webbyra-2_whtstp.png",
+        "https://res.cloudinary.com/dlp85vjwx/image/upload/v1744377646/Ama-kyei-hemsida-itFlows-utveckling-kreativ-webbyra-3_s1ttx6.png",
+        "https://res.cloudinary.com/dlp85vjwx/image/upload/v1744377646/Ama-kyei-hemsida-itFlows-utveckling-kreativ-webbyra_dn3eaw.png",
+        "https://res.cloudinary.com/dlp85vjwx/image/upload/v1744377645/Ama-kyei-hemsida-itFlows-utveckling-kreativ-webbyra-4_vdmo41.png",
+        "https://res.cloudinary.com/dlp85vjwx/image/upload/v1744379019/Sk%C3%A4rmbild_2025-04-11_154230_p5jtzo.png"
+      ],
+      "website": "https://www.amakyei.se",
+      "typeOfProject": ["design", "webbutveckling"]
+    },
+    {
+      "name": "Portfolio",
+      "year": 2024,
+      "company": "Izabel Lind",
+      "title": "Konstnär och Frontend utvecklare",
+      "text": "Designen blev helt magisk och kundresan var tydlig hela vägen.",
+      "pictures": [
+        "https://res.cloudinary.com/dlp85vjwx/image/upload/v1744377647/Ama-kyei-hemsida-itFlows-utveckling-kreativ-webbyra-2_whtstp.png",
+        "https://res.cloudinary.com/dlp85vjwx/image/upload/v1744377646/Ama-kyei-hemsida-itFlows-utveckling-kreativ-webbyra-3_s1ttx6.png",
+        "https://res.cloudinary.com/dlp85vjwx/image/upload/v1744377646/Ama-kyei-hemsida-itFlows-utveckling-kreativ-webbyra_dn3eaw.png",
+        "https://res.cloudinary.com/dlp85vjwx/image/upload/v1744377645/Ama-kyei-hemsida-itFlows-utveckling-kreativ-webbyra-4_vdmo41.png",
+        "https://res.cloudinary.com/dlp85vjwx/image/upload/v1744379019/Sk%C3%A4rmbild_2025-04-11_154230_p5jtzo.png"
+      ],
+      "website": "https://www.izabellind.com",
+      "typeOfProject": ["design", "branding", "webbutveckling"]
+    }
+  ]

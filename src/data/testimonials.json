@@ -1,0 +1,29 @@
+[
+    {
+      "name": "Therese",
+      "year": 2025,
+      "company": "Light Body Yoga",
+      "title": "Yogainstruktör och Egenföretagare",
+      "text": "Jag kunde slappna av helt – de tog hand om allt och skapade en proffsig, snygg hemsida som överträffade mina förväntningar!",
+      "website": "https://www.lightbodyyoga.se",
+      "typeOfProject": ["helhetskonceptet"]
+    },
+    {
+      "name": "Anders",
+      "year": 2024,
+      "company": "GreenTech AB",
+      "title": "Entreprenörsduo",
+      "text": "Smidigt och snabbt samarbete. Vi fick exakt det vi ville ha och mer därtill.",
+      "website": "https://www.greentech.se",
+      "typeOfProject": ["branding", "design", "webbutveckling"]
+    },
+    {
+      "name": "Maja",
+      "year": 2023,
+      "company": "Studio M",
+      "title": "Musikalartist",
+      "text": "Designen blev helt magisk och kundresan var tydlig hela vägen.",
+      "website": "https://www.studiom.se",
+      "typeOfProject": ["design", "branding"]
+    }
+  ]
