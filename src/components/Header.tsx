@@ -111,7 +111,7 @@ export const Header: React.FC = () => {
       <header
         className={`${
           isSamarbete ? "font-c-body" : "font-header"
-        } p-12 laptop:px-18 fixed top-0 z-70 w-full h-16 flex ${
+        } px-9 p-12 laptop:px-18 fixed top-0 z-70 w-full h-16 flex ${
           currentPath === "/om-oss" ? "justify-end" : "justify-between"
         } items-center  animate-fadeIn ${
           headerBg
@@ -150,7 +150,7 @@ export const Header: React.FC = () => {
               }
               alt="logo itflows"
               className={`${
-                headerBg ? "w-[100px]" : "w-[200px] mt-6"
+                headerBg ? "w-[100px]" : "w-[200px]"
               } laptop:hover:scale-105 cursor-pointer animate-fadeIn`}
               onClick={() => logoClick()}
             />

@@ -9,7 +9,7 @@ export const Hero: React.FC = () => {
   return (
     <section>
       <VideoBg />
-      <div className="relative pt-48 w-10/12 mx-auto flex flex-col gap-16 mb-20 laptop:mb-0 laptop:h-[95vh]">
+      <div className="relative pt-42 laptop:pt-48 w-10/12 mx-auto flex flex-col gap-6 laptop:gap-16 mb-20 laptop:mb-0 laptop:h-[95vh]">
         <div className="text-white">
           <h1 className="text-[50px] laptop:text-[90px] leading-tight font-bold">
             BRANDING, DESIGN & WEBBUTVECKLING
@@ -23,16 +23,16 @@ export const Hero: React.FC = () => {
             Vi bygger. Du växer.
           </h2>
         </div>
-        <div className="flex flex-col gap-10 laptop:flex-row justify-between">
-          <div className="flex gap-10">
+        <div className="flex flex-col gap-16 laptop:gap-10 laptop:flex-row justify-between">
+          <div className="flex gap-4 laptop:gap-10">
             <button
-              className="bg-red-beige text-white laptop:text-warm-black p-3 px-6 rounded-full w-fit h-fit text-sm laptop:text-xl cursor-pointer shadow-lg hover:scale-110 hover:text-white"
+              className="bg-red-beige text-white laptop:text-warm-black p-3 px-6 rounded-full w-fit h-fit text-xs laptop:text-xl cursor-pointer shadow-lg hover:scale-110 hover:text-white"
               onClick={() => navigate("/erbjudanden")}
             >
               Våra Erbjudanden
             </button>
             <button
-              className="bg-warm-white text-stone-700 p-3 px-6 rounded-full w-fit h-fit text-sm laptop:text-xl cursor-pointer shadow-lg hover:scale-110 hover:text-dark-red"
+              className="bg-warm-white text-stone-700 p-3 px-6 rounded-full w-fit h-fit text-xs laptop:text-xl cursor-pointer shadow-lg hover:scale-110 hover:text-dark-red"
               onClick={() => navigate("/kontakt")}
             >
               Få Offert

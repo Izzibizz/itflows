@@ -17,7 +17,7 @@ export const Testimonial: React.FC<TestimonialProps> = ({
 }) => {
   return (
     <div
-      className={`bg-warm-white shadow-lg rounded-[100px] rounded-br-none rounded-tr-[140px] laptop:rounded-tr-[180px] laptop:w-1/2 p-8 pt-14 pr-12 laptop:pr-24 laptop:pl-20 font-body text-end flex flex-col gap-4 text-xs laptop:text-sm ${position}`}
+      className={`bg-warm-white shadow-lg rounded-[100px] rounded-br-none rounded-tr-[120px] laptop:rounded-tr-[180px] laptop:w-1/2 p-8 pt-14 pr-12 laptop:pr-24 laptop:pl-20 font-body text-end flex flex-col gap-4 text-xs laptop:text-sm ${position}`}
     >
       <div className="flex gap-6 items-center">
       <p className="italic">"{testimonial.text}"</p>
