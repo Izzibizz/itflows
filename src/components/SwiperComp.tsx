@@ -1,14 +1,28 @@
 
+
+import projectsJson from "../data/projectsData.json"
 import { Swiper, SwiperSlide } from 'swiper/react';
-import projects from "../data/projectsData.json"
+import { EffectCoverflow, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 
 
-import { EffectCoverflow, Pagination } from 'swiper/modules';
+type Project = {
+  name: string;
+  year: number;
+  company: string;
+  title: string;
+  text: string;
+  pictures: string[];
+  website: string;
+  typeOfProject: string[];
+};
+const projects: Project[] = projectsJson;
 
 export const SwiperComp: React.FC = () => {
+
+  
     return (
         <div className="overflow-visible laptop:w-1/2 mx-auto">
           <Swiper

@@ -27,7 +27,7 @@ export const Overview: React.FC = () => {
   }, [])
 
   return (
-    <section className="grid grid-cols-2 laptop:grid-cols-4 font-header">
+    <section className="grid grid-cols-2 laptop:grid-cols-4 relative">
       {overviewCards.map(
         ({ title, path, bgColor, textColor, description }, index) => {
           const isOpen = openIndex === index;
@@ -41,7 +41,7 @@ export const Overview: React.FC = () => {
               onClick={() => navigate(path)}
             >
               <h3
-                className={`text-xl tablet:text-2xl transition-opacity duration-300 ${
+                className={`text-xl tablet:text-4xl transition-opacity duration-300 font-bold tracking-wide ${
                   isOpen ? "opacity-0" : "opacity-100"
                 }`}
               >
@@ -49,18 +49,18 @@ export const Overview: React.FC = () => {
               </h3>
 
               <div
-                className={`transition-all duration-500 ease-in-out overflow-hidden flex flex-col gap-4 items-center text-justify w-10/12 mx-auto ${
+                className={`transition-all duration-500 ease-in-out overflow-hidden flex flex-col gap-4 items-center text-justify w-10/12 mx-auto font-body ${
                   isOpen && isDesktop
                     ? "max-h-[500px] opacity-100"
                     : "max-h-0 opacity-0"
                 }`}
               >
                 {description.map((line, i) => (
-                  <p key={i} className={i === 0 ? "text-lg text-center" : "text-sm"}>{line}</p>
+                  <p key={i} className={i === 0 ? "text-xl text-center font-header" : "text-sm italic"}>{line}</p>
                 ))}
                 <NavLink
                   to={path}
-                  className="bg-dark-blue text-warm-white p-2 px-6 mt-2 mb-4 rounded-full w-fit h-fit text-lg cursor-pointer shadow-lg hover:scale-110"
+                  className="bg-dark-blue text-warm-white p-2 px-6 mt-2 mb-4 rounded-full w-fit h-fit cursor-pointer shadow-lg hover:scale-110 hover:bg-warm-white hover:text-dark-blue"
                 >
                   Läs mer
                 </NavLink>

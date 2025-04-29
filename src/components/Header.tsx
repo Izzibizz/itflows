@@ -5,18 +5,25 @@ import { MenuToggle } from "../components/MenuToggle";
 import { useCollabStore } from "../stores/useCollabStore";
 import { FaPlus } from "react-icons/fa";
 
+type NavLinkItem = {
+  name: string;
+  path: string;
+  children?: { name: string; path: string }[];
+};
+
 export const Header: React.FC = () => {
-  const { isSamarbete } = useCollabStore();
+  const { isSamarbete, isLandingPage } = useCollabStore();
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
   const [headerBg, setHeaderBg] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
-  const dropdownRef = useRef<HTMLButtonElement>(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
+  const currentPath = location.pathname;
 
-  const navLinksBase = [
+  const navLinksBase: NavLinkItem[] = [
     {
       name: "Tjänster",
       path: "/tjanster",
@@ -33,25 +40,31 @@ export const Header: React.FC = () => {
     { name: "Kontakt", path: "/kontakt" },
   ];
 
-  const collabNav = [
+  const collabNav: NavLinkItem[] = [
     { name: "Hem", path: "/" },
     { name: "Prislista", path: "/samarbete/prislista" },
     { name: "Om oss", path: "/samarbete/om-oss" },
     { name: "Kontakt", path: "/samarbete/kontakt" },
   ];
 
+  const omOssNav: NavLinkItem[] = [{ name: "Hem", path: "/" }, ...navLinksBase];
+
   const navChildren =
-  navLinksBase.find(link => link.name === "Tjänster")?.children ?? [];
+    navLinksBase.find((link) => link.name === "Tjänster")?.children ?? [];
 
   const navLinks = isSamarbete
-  ? collabNav
-  : isMobile
-  ? [
-    { name: "Hem", path: "/" },
-    ...navChildren,
-    ...navLinksBase.filter(link => link.name !== "Tjänster" && link.name !== "Hem")
-  ]
-  : navLinksBase;
+    ? collabNav
+    : currentPath === "/om-oss"
+    ? omOssNav
+    : isMobile
+    ? [
+        { name: "Hem", path: "/" },
+        ...navChildren,
+        ...navLinksBase.filter(
+          (link) => link.name !== "Tjänster" && link.name !== "Hem"
+        ),
+      ]
+    : navLinksBase;
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -91,46 +104,57 @@ export const Header: React.FC = () => {
     };
   }, []);
 
-  console.log(isSamarbete)
+  console.log(currentPath);
 
   return (
     <>
       <header
-        className={`${isSamarbete? "font-c-body" : "font-header"} p-8 laptop:px-18 fixed top-0 z-20 w-full h-24 flex justify-between items-center  animate-fadeIn ${
+        className={`${
+          isSamarbete ? "font-c-body" : "font-header"
+        } p-12 laptop:px-18 fixed top-0 z-70 w-full h-16 flex ${
+          currentPath === "/om-oss" ? "justify-end" : "justify-between"
+        } items-center  animate-fadeIn ${
           headerBg
             ? "bg-gray-blue/70 shadow-lg backdrop-blur-[15px] "
             : "bg-light/0"
         }`}
       >
-        {isSamarbete ? (
-          <div className="flex gap-2 items-center animate-fadeIn">
+        {currentPath !== "/om-oss" &&
+          (isSamarbete ? (
+            <div className="flex gap-2 items-center animate-fadeIn">
+              <img
+                src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1744875992/itflows-logo-green_lb3upj.svg"
+                alt="logo itflows"
+                className="w-[100px] tablet:w-[200px] laptop:hover:scale-105 cursor-pointer mr-8"
+                onClick={() => logoClick()}
+              />
+              <FaPlus className="text-collab-green" />
+              <a
+                href="https://studiomamama.se"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1744875557/logga-studio-mamama_va4bfr.svg"
+                  alt="logo studio mamama"
+                  className="w-[100px] tablet:w-[200px] laptop:hover:scale-105 cursor-pointer"
+                />
+              </a>
+            </div>
+          ) : (
             <img
-              src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1744875992/itflows-logo-green_lb3upj.svg"
+              src={
+                isLandingPage
+                  ? "https://res.cloudinary.com/dlp85vjwx/image/upload/v1744819259/itflows-logo-white_mbvqfy.svg"
+                  : "https://res.cloudinary.com/dlp85vjwx/image/upload/v1745912964/itflows-logo-blue_r6ce5a.svg"
+              }
               alt="logo itflows"
-              className="w-[100px] tablet:w-[200px] laptop:hover:scale-105 cursor-pointer mr-8"
+              className={`${
+                headerBg ? "w-[100px]" : "w-[200px] mt-6"
+              } laptop:hover:scale-105 cursor-pointer animate-fadeIn`}
               onClick={() => logoClick()}
             />
-            <FaPlus className="text-collab-green" />
-            <a
-              href="https://studiomamama.se"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1744875557/logga-studio-mamama_va4bfr.svg"
-                alt="logo studio mamama"
-                className="w-[100px] tablet:w-[200px] laptop:hover:scale-105 cursor-pointer"
-              />
-            </a>
-          </div>
-        ) : (
-          <img
-            src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1744819259/itflows-logo-white_mbvqfy.svg"
-            alt="logo itflows"
-            className="w-[100px] tablet:w-[200px] laptop:hover:scale-105 cursor-pointer animate-fadeIn"
-            onClick={() => logoClick()}
-          />
-        )}
+          ))}
         {isMobile ? (
           <>
             <MenuToggle
@@ -145,17 +169,18 @@ export const Header: React.FC = () => {
                   animate={{ clipPath: "circle(150% at 50% 50%)" }}
                   exit={{ clipPath: "circle(5% at 100% 0%)" }}
                   transition={{ duration: 0.8, ease: "easeInOut" }}
-                  className={`fixed top-0 right-0 h-screen w-screen overflow-hidden font-dream text-3xl backdrop-blur-xl ${
+                  className={`fixed top-0 right-0 h-screen w-screen overflow-hidden font-dream text-2xl backdrop-blur-xl ${
                     isSamarbete
                       ? "text-collab-green bg-warm-white/98"
-                      : "text-warm-white bg-gray-blue/98"
+                      : isLandingPage
+                      ? "text-warm-white bg-gray-blue/98"
+                      : "text-dark-blue bg-warm-white/98"
                   } flex justify-end px-10 `}
                   ref={dropdownRef}
                 >
                   <ul className="flex flex-col laptop:flex-row items-end gap-5 font-light absolute bottom-26 tablet:bottom-40 animate-fadeIn">
                     {navLinks.map((link) => (
                       <NavLink
-                        layout="position"
                         key={link.path}
                         to={link.path}
                         onClick={closeMenu}
@@ -172,7 +197,11 @@ export const Header: React.FC = () => {
         ) : (
           <ul
             className={`flex gap-20 ${
-              isSamarbete ? "text-collab-green" : "text-white"
+              isSamarbete
+                ? "text-collab-green"
+                : isLandingPage
+                ? "text-white"
+                : "text-dark-blue"
             } tracking-wider h-fit `}
           >
             {navLinks.map((link) => {
@@ -191,20 +220,27 @@ export const Header: React.FC = () => {
 
                     {showDropdown && (
                       <ul
-                        className="absolute left-[-35%] top-full mt-2 rounded-md shadow-xl p-2 z-60 flex flex-col"
+                        className={`absolute left-[-35%] top-full mt-2 rounded-b-md shadow-xl p-2 z-60 flex flex-col ${
+                          headerBg &&
+                          "bg-gray-blue/70 z-10 backdrop-blur-[15px] mt-9"
+                        }`}
                         onMouseLeave={() => setShowDropdown(false)}
                       >
-                        {link.children.map((child) => (
-                          <li key={child.name}>
-                            <NavLink
-                              to={child.path}
-                              className="block px-4 py-2 whitespace-nowrap hover:scale-105"
-                              onClick={() => setShowDropdown(false)}
-                            >
-                              {child.name}
-                            </NavLink>
-                          </li>
-                        ))}
+                        {link.name === "Tjänster" &&
+                          Array.isArray(link.children) &&
+                          link.children.map(
+                            (child: { name: string; path: string }) => (
+                              <li key={child.name}>
+                                <NavLink
+                                  to={child.path}
+                                  className="block px-4 py-2 whitespace-nowrap hover:scale-105"
+                                  onClick={() => setShowDropdown(false)}
+                                >
+                                  {child.name}
+                                </NavLink>
+                              </li>
+                            )
+                          )}
                       </ul>
                     )}
                   </li>
