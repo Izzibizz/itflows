@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 import { Hero } from "../components/Hero"
 import { Overview } from "../components/Overview"
-import { ClientsOverview } from "../components/ClientsOverview"
+/* import { ClientsOverview } from "../components/ClientsOverview" */
 import { useCollabStore } from "../stores/useCollabStore"
 
 export const LandningsSida: React.FC = () => {
@@ -18,7 +18,7 @@ export const LandningsSida: React.FC = () => {
     <section className=" animate-fadeIn ">
       <Hero />
       <Overview />
-      <ClientsOverview />
+{/*       <ClientsOverview /> */}
     </section >
   )
 }

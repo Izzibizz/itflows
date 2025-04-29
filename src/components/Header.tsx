@@ -8,7 +8,7 @@ import { FaPlus } from "react-icons/fa";
 type NavLinkItem = {
   name: string;
   path: string;
-  children?: { name: string; path: string }[];
+  children?: NavLinkItem[];
 };
 
 export const Header: React.FC = () => {
