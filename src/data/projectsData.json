@@ -23,7 +23,7 @@
       "title": "Professionell dansare och koreograf",
       "text": "Smidigt och snabbt samarbete. Vi fick exakt det vi ville ha och mer därtill.",
       "pictures": [
-        "https://res.cloudinary.com/dlp85vjwx/image/upload/v1744377647/Ama-kyei-hemsida-itFlows-utveckling-kreativ-webbyra-2_whtstp.png",
+        "https://res.cloudinary.com/dlp85vjwx/image/upload/v1746017136/Ama-kyei.hemsida-frontend-fullstack-developer-izabel.lind-2-18.2_omtsfi.jpg",
         "https://res.cloudinary.com/dlp85vjwx/image/upload/v1744377646/Ama-kyei-hemsida-itFlows-utveckling-kreativ-webbyra-3_s1ttx6.png",
         "https://res.cloudinary.com/dlp85vjwx/image/upload/v1744377646/Ama-kyei-hemsida-itFlows-utveckling-kreativ-webbyra_dn3eaw.png",
         "https://res.cloudinary.com/dlp85vjwx/image/upload/v1744377645/Ama-kyei-hemsida-itFlows-utveckling-kreativ-webbyra-4_vdmo41.png",
@@ -33,13 +33,29 @@
       "typeOfProject": ["design", "webbutveckling"]
     },
     {
+      "name": "Landningssida",
+      "year": 2025,
+      "company": "Carlie Consulting",
+      "title": "Konsulter inom restaurang och event",
+      "text": "Designen blev helt magisk och kundresan var tydlig hela vägen.",
+      "pictures": [
+        "https://res.cloudinary.com/dlp85vjwx/image/upload/v1746016922/Sk%C3%A4rmbild_2025-04-30_144149_iuuw7f.png",
+        "https://res.cloudinary.com/dlp85vjwx/image/upload/v1744377646/Ama-kyei-hemsida-itFlows-utveckling-kreativ-webbyra-3_s1ttx6.png",
+        "https://res.cloudinary.com/dlp85vjwx/image/upload/v1744377646/Ama-kyei-hemsida-itFlows-utveckling-kreativ-webbyra_dn3eaw.png",
+        "https://res.cloudinary.com/dlp85vjwx/image/upload/v1744377645/Ama-kyei-hemsida-itFlows-utveckling-kreativ-webbyra-4_vdmo41.png",
+        "https://res.cloudinary.com/dlp85vjwx/image/upload/v1744379019/Sk%C3%A4rmbild_2025-04-11_154230_p5jtzo.png"
+      ],
+      "website": "https://www.izabellind.com",
+      "typeOfProject": ["design", "branding", "webbutveckling"]
+    },
+    {
       "name": "Portfolio",
       "year": 2024,
       "company": "Izabel Lind",
       "title": "Konstnär och Frontend utvecklare",
       "text": "Designen blev helt magisk och kundresan var tydlig hela vägen.",
       "pictures": [
-        "https://res.cloudinary.com/dlp85vjwx/image/upload/v1744377647/Ama-kyei-hemsida-itFlows-utveckling-kreativ-webbyra-2_whtstp.png",
+        "https://res.cloudinary.com/dlp85vjwx/image/upload/v1746017403/izabel-lind-portfolio-frontend-ux-designer-overview18.2_pjmgda.jpg",
         "https://res.cloudinary.com/dlp85vjwx/image/upload/v1744377646/Ama-kyei-hemsida-itFlows-utveckling-kreativ-webbyra-3_s1ttx6.png",
         "https://res.cloudinary.com/dlp85vjwx/image/upload/v1744377646/Ama-kyei-hemsida-itFlows-utveckling-kreativ-webbyra_dn3eaw.png",
         "https://res.cloudinary.com/dlp85vjwx/image/upload/v1744377645/Ama-kyei-hemsida-itFlows-utveckling-kreativ-webbyra-4_vdmo41.png",

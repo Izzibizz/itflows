@@ -169,11 +169,11 @@ export const Header: React.FC = () => {
                   animate={{ clipPath: "circle(150% at 50% 50%)" }}
                   exit={{ clipPath: "circle(5% at 100% 0%)" }}
                   transition={{ duration: 0.8, ease: "easeInOut" }}
-                  className={`fixed top-0 right-0 h-screen w-screen overflow-hidden font-dream text-2xl backdrop-blur-xl ${
+                  className={`fixed top-0 right-0 h-screen w-screen overflow-hidden font-body text-2xl backdrop-blur-xl ${
                     isSamarbete
                       ? "text-collab-green bg-warm-white/98"
                       : isLandingPage
-                      ? "text-warm-white bg-gray-blue/98"
+                      ? "text-warm-white bg-dark-blue/98"
                       : "text-dark-blue bg-warm-white/98"
                   } flex justify-end px-10 `}
                   ref={dropdownRef}

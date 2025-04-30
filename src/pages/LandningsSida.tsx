@@ -1,26 +1,23 @@
-import { useEffect } from "react"
-import { Hero } from "../components/Hero"
-import { Overview } from "../components/Overview"
-/* import { ClientsOverview } from "../components/ClientsOverview" */
-import { useCollabStore } from "../stores/useCollabStore"
+import { useEffect } from "react";
+import { Hero } from "../components/Hero";
+import { Overview } from "../components/Overview";
+import { ClientsOverview } from "../components/ClientsOverview";
+import { useCollabStore } from "../stores/useCollabStore";
 
 export const LandningsSida: React.FC = () => {
-
-  const { isLandingPage, setIsLandingPage } = useCollabStore()
+  const { isLandingPage, setIsLandingPage } = useCollabStore();
 
   useEffect(() => {
-    setIsLandingPage(true)
-  }, [])
+    setIsLandingPage(true);
+  }, []);
 
-  console.log(isLandingPage)
+  console.log(isLandingPage);
 
   return (
     <section className=" animate-fadeIn ">
       <Hero />
       <Overview />
-{/*       <ClientsOverview /> */}
-    </section >
-  )
-}
-
-
+      <ClientsOverview />
+    </section>
+  );
+};

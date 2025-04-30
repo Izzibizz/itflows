@@ -37,7 +37,7 @@ export const Hero: React.FC = () => {
         <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 4, duration: 2 }}
+        transition={{ delay: 2.3, duration: 2 }}
         className="flex flex-col gap-16 laptop:gap-10 laptop:flex-row justify-between">
           <div className="flex gap-4 laptop:gap-10">
             <button
