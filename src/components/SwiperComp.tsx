@@ -2,7 +2,7 @@ import projectsJson from "../data/projectsData.json";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useNavigate } from "react-router-dom";
 
-import { EffectCoverflow, Pagination } from "swiper/modules";
+import { EffectCoverflow, Pagination, Autoplay  } from "swiper/modules";
 import "../styles/swiper.css";
 import "../styles/effect-coverflow.css";
 import "../styles/pagination.css";
@@ -26,6 +26,11 @@ export const SwiperComp: React.FC = () => {
     <div className="overflow-visible w-full flex flex-col">
       <Swiper
         effect={"coverflow"}
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: false, 
+        }}
+        speed={700}
         direction={"horizontal"}
         grabCursor={true}
         centeredSlides={true}
@@ -44,13 +49,13 @@ export const SwiperComp: React.FC = () => {
         loop={true}
         coverflowEffect={{
           rotate: 50,
-          stretch: 80,
+          stretch: 40,
           depth: 100,
           modifier: 1,
           slideShadows: false,
         }}
         pagination={true}
-        modules={[EffectCoverflow, Pagination]}
+        modules={[EffectCoverflow, Pagination, Autoplay]}
         className="w-full h-[300px] tablet:h-auto"
       >
         {projects.map((project, index) => (
