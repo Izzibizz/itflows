@@ -3,6 +3,7 @@
 import projectsJson from "../data/projectsData.json"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useNavigate } from "react-router-dom";
+
 import { EffectCoverflow, Pagination } from 'swiper/modules';
 import '../styles/swiper.css';
 import '../styles/effect-coverflow.css';
@@ -27,7 +28,7 @@ export const SwiperComp: React.FC = () => {
 
   
     return (
-        <div className="overflow-visible w-full">
+        <div className="overflow-visible w-full flex flex-col">
           <Swiper
             effect={'coverflow'}
             grabCursor={true}
@@ -46,9 +47,13 @@ export const SwiperComp: React.FC = () => {
             className="w-full"
           >
             { projects.map((project, index) => (
-            <SwiperSlide key={index} className="py-10 bg-warm-white w-[500px]" onClick={() => navigate("/kunder")}>
-            <img src={project.pictures[0]} className="pb-1"/>
-            <p className="flex justify-between font-body"><span className="font-semibold text-sm">{project.company}</span><span className="italic hidden tablet:flex text-xs">{project.title}</span></p>
+            <SwiperSlide key={index} className=" bg-warm-white" onClick={() => navigate("/kunder")}>
+            <img src={project.pictures[0]} className="pb-10"/>
+            <div className="font-body self-end text-end hidden tablet:block">
+            <a href={project.website} target="_blank" rel="noref noopener" className="text-xl">{project.company}</a>
+            <p className="text-sm">{project.title}</p>
+            <p className="text-sm">{project.year}</p>
+          </div>
           </SwiperSlide>
             ))}
 
