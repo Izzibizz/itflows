@@ -75,8 +75,10 @@
   height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 8px));
   display: inline-block;
   border-radius: var(--swiper-pagination-bullet-border-radius, 50%);
-  background: var(--swiper-pagination-bullet-inactive-color, #000);
-  opacity: var(--swiper-pagination-bullet-inactive-opacity, 0.2);
+  border-color: rgb(210, 181, 181);
+  border-width: 1px;
+  background:rgb(163 184 213);
+  opacity:  0.5;
 }
 button.swiper-pagination-bullet {
   border: none;
@@ -94,6 +96,7 @@ button.swiper-pagination-bullet {
 }
 .swiper-pagination-bullet-active {
   opacity: var(--swiper-pagination-bullet-opacity, 1);
+  transform: scale(1.5);
   background: rgb(230 128 96);
 }
 .swiper-vertical > .swiper-pagination-bullets,
@@ -145,7 +148,7 @@ button.swiper-pagination-bullet {
 }
 /* Progress */
 .swiper-pagination-progressbar {
-  background: var(--swiper-pagination-progressbar-bg-color, rgba(0, 0, 0, 0.25));
+  background: rgba(208, 17, 17, 0.941);
   position: absolute;
 }
 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
