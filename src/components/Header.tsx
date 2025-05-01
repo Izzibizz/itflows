@@ -12,10 +12,9 @@ type NavLinkItem = {
 };
 
 export const Header: React.FC = () => {
-  const { isSamarbete, isLandingPage } = useCollabStore();
+  const { isSamarbete, isLandingPage, headerBg, setHeaderBg } = useCollabStore();
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
-  const [headerBg, setHeaderBg] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
@@ -111,12 +110,12 @@ export const Header: React.FC = () => {
       <header
         className={`${
           isSamarbete ? "font-c-body" : "font-header"
-        } px-9 p-12 laptop:px-18 fixed top-0 z-70 w-full h-16 flex ${
+        } px-9 p-8 laptop:px-18 fixed top-0 z-70 w-full h-6 flex ${
           currentPath === "/om-oss" ? "justify-end" : "justify-between"
         } items-center  animate-fadeIn ${
           headerBg
-            ? "bg-gray-blue/70 shadow-lg backdrop-blur-[15px] "
-            : "bg-light/0"
+            ? "bg-warm-white shadow-lg backdrop-blur-[15px] p-8 "
+            : "bg-light/0 p-12"
         }`}
       >
         {currentPath !== "/om-oss" &&
@@ -144,7 +143,9 @@ export const Header: React.FC = () => {
           ) : (
             <img
               src={
-                isLandingPage
+                isLandingPage && headerBg
+                  ? "https://res.cloudinary.com/dlp85vjwx/image/upload/v1746101541/itflows-logo-stone-800_nkoomt.svg"
+                  : isLandingPage
                   ? "https://res.cloudinary.com/dlp85vjwx/image/upload/v1744819259/itflows-logo-white_mbvqfy.svg"
                   : "https://res.cloudinary.com/dlp85vjwx/image/upload/v1745912964/itflows-logo-blue_r6ce5a.svg"
               }
@@ -173,7 +174,7 @@ export const Header: React.FC = () => {
                     isSamarbete
                       ? "text-collab-green bg-warm-white/98"
                       : isLandingPage
-                      ? "text-warm-white bg-dark-blue/98"
+                      ? "text-warm-white bg-warm-beige/98"
                       : "text-dark-blue bg-warm-white/98"
                   } flex justify-end px-10 `}
                   ref={dropdownRef}
@@ -199,6 +200,8 @@ export const Header: React.FC = () => {
             className={`flex gap-20 ${
               isSamarbete
                 ? "text-collab-green"
+                : isLandingPage && headerBg
+                ? "text-stone-800"
                 : isLandingPage
                 ? "text-white"
                 : "text-dark-blue"
@@ -220,9 +223,9 @@ export const Header: React.FC = () => {
 
                     {showDropdown && (
                       <ul
-                        className={`absolute left-[-35%] top-full mt-2 rounded-b-md shadow-xl p-2 z-60 flex flex-col ${
+                        className={`absolute left-[-35%] top-full rounded-b-md shadow-xl p-2 z-60 flex flex-col ${
                           headerBg &&
-                          "bg-gray-blue/70 z-10 backdrop-blur-[15px] mt-9"
+                          "bg-warm-white z-10 backdrop-blur-[15px] mt-2"
                         }`}
                         onMouseLeave={() => setShowDropdown(false)}
                       >

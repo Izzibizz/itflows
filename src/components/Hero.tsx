@@ -41,13 +41,13 @@ export const Hero: React.FC = () => {
         className="flex flex-col gap-16 laptop:gap-10 laptop:flex-row justify-between">
           <div className="flex gap-4 laptop:gap-10">
             <button
-              className="bg-red-beige text-white laptop:text-warm-black p-3 px-6 rounded-full w-fit h-fit text-xs laptop:text-xl cursor-pointer shadow-lg hover:scale-110 hover:text-white"
+              className="bg-warm-beige text-dark-red p-3 px-6 rounded-full w-fit h-fit text-xs laptop:text-xl cursor-pointer shadow-lg hover:scale-110 hover:bg-warm-white"
               onClick={() => navigate("/erbjudanden")}
             >
               Våra Erbjudanden
             </button>
             <button
-              className="bg-warm-white text-stone-700 p-3 px-6 rounded-full w-fit h-fit text-xs laptop:text-xl cursor-pointer shadow-lg hover:scale-110 hover:text-dark-red"
+              className="bg-warm-beige text-dark-red p-3 px-6 rounded-full w-fit h-fit text-xs laptop:text-xl cursor-pointer shadow-lg hover:scale-110 hover:bg-warm-white"
               onClick={() => navigate("/kontakt")}
             >
               Få Offert

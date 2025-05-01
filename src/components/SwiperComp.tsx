@@ -23,7 +23,7 @@ export const SwiperComp: React.FC = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="overflow-visible w-full flex flex-col">
+    <div className="overflow-visible w-full laptop:w-10/12 laptop:mx-auto flex flex-col">
       <Swiper
         effect={"coverflow"}
         autoplay={{
@@ -61,7 +61,6 @@ export const SwiperComp: React.FC = () => {
         {projects.map((project, index) => (
           <SwiperSlide
             key={index}
-            className=" bg-warm-white"
             onClick={() => navigate("/kunder")}
           >
             <img src={project.pictures[0]} className="pb-10" />
