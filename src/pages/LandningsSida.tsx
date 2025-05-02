@@ -5,6 +5,7 @@ import { ClientsOverview } from "../components/ClientsOverview";
 import { useCollabStore } from "../stores/useCollabStore";
 import { IntroductionAbout } from "../components/IntroductionAbout";
 import { TestimonialSwiper } from "../components/TestimonialSwiper";
+import { ContactComp } from "../components/ContactComp";
 
 export const LandningsSida: React.FC = () => {
   const { isLandingPage, setIsLandingPage } = useCollabStore();
@@ -22,6 +23,7 @@ export const LandningsSida: React.FC = () => {
       <ClientsOverview />
       <TestimonialSwiper/>
       <IntroductionAbout/>
+      <ContactComp/>
     </section>
   );
 };

@@ -2,6 +2,7 @@ import { SwiperComp } from "./SwiperComp";
 import { useNavigate } from "react-router-dom";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { HiOutlineArrowSmallRight } from "react-icons/hi2";
 
 export const ClientsOverview: React.FC = () => {
   const navigate = useNavigate();
@@ -40,16 +41,19 @@ export const ClientsOverview: React.FC = () => {
               tonalitet och strategi bygger itFlows digitala lösningar som
               sticker ut och som stannar kvar i minnet. 
             </p>
-            <p className="font-body">Här ser du ett urval av
-            våra uppdrag.</p>
             <motion.button
              initial={{ opacity: 0 }}
              animate={textIsInView ? { opacity: 1} : {}}
              transition={{ duration: 1.5, delay: 1.5, ease: "easeOut" }}
-              className="bg-dark-blue self-center tablet:self-start p-3 px-6 rounded-full w-fit h-fit text-sm cursor-pointer shadow-lg text-white font-body hover:scale-110"
+             className="text-lg w-fit font-header relative flex gap-2 items-center 
+             after:content-[''] after:block after:h-[1px] after:bg-stone-500 after:absolute after:left-0 after:bottom-0 
+             after:w-full 
+             laptop:after:w-0 laptop:hover:after:w-full 
+             after:transition-all after:duration-300 cursor-pointer"
               onClick={() => navigate("/kunder")}
             >
               Se alla projekt
+              <HiOutlineArrowSmallRight />
               </motion.button>
 
         </motion.div>
