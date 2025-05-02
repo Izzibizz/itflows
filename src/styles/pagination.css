@@ -80,6 +80,17 @@
   background:rgb(163 184 213);
   opacity:  0.5;
 }
+
+.testimonial .swiper-pagination-bullet {
+  border-color: none;
+  border-width: 0;
+  background:rgb(236, 237, 239);
+}
+
+.testimonial .swiper-pagination-bullet-active {
+  background: rgb(230 128 96);
+}
+
 button.swiper-pagination-bullet {
   border: none;
   margin: 0;
@@ -97,8 +108,10 @@ button.swiper-pagination-bullet {
 .swiper-pagination-bullet-active {
   opacity: var(--swiper-pagination-bullet-opacity, 1);
   transform: scale(1.5);
+  border-width: 0;
   background: rgb(230 128 96);
 }
+
 .swiper-vertical > .swiper-pagination-bullets,
 .swiper-pagination-vertical.swiper-pagination-bullets {
   right: var(--swiper-pagination-right, 8px);

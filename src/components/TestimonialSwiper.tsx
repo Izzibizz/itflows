@@ -45,7 +45,7 @@ export const TestimonialSwiper: React.FC = () => {
         loop={true}
         pagination={true}
         modules={[Pagination, Autoplay]}
-        className="w-full h-[300px] tablet:h-auto"
+        className="testimonial w-full h-[300px] tablet:h-auto"
       >
         {testimonials.map((testimonial, index) => (
           <SwiperSlide
