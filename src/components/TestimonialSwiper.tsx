@@ -24,7 +24,7 @@ export const TestimonialSwiper: React.FC = () => {
 
 
   return (
-    <section className="bg-warm-beige py-20">
+    <section className="bg-warm-beige py-4 laptop:py-20">
     <div className="overflow-visible w-full laptop:w-10/12 laptop:mx-auto flex flex-col">
       <Swiper
         autoplay={{
