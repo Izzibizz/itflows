@@ -56,7 +56,7 @@ export const SwiperComp: React.FC = () => {
         }}
         pagination={true}
         modules={[EffectCoverflow, Pagination, Autoplay]}
-        className="w-full h-[300px] tablet:h-auto"
+        className="my-custom-swiper w-full h-[300px] tablet:h-auto"
       >
         {projects.map((project, index) => (
           <SwiperSlide

@@ -31,9 +31,17 @@ export const TestimonialSwiper: React.FC = () => {
           delay: 4000,
           disableOnInteraction: false, 
         }}
-        speed={700}
+        speed={2000}
         grabCursor={true}
-        slidesPerView={1}
+        slidesPerView={2}
+        breakpoints={{
+          320: {
+            slidesPerView: 1,
+          },
+          640: {
+            slidesPerView: 2,
+          }
+        }}
         loop={true}
         pagination={true}
         modules={[Pagination, Autoplay]}

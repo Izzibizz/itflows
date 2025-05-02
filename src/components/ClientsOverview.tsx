@@ -1,13 +1,29 @@
 import { SwiperComp } from "./SwiperComp";
 import { useNavigate } from "react-router-dom";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 export const ClientsOverview: React.FC = () => {
   const navigate = useNavigate();
+  const swiperRef = useRef(null);
+  const textRef = useRef(null)
+  const swiperIsInView = useInView(swiperRef, { once: true });
+  const textIsInView = useInView(textRef, { once: true });
+
   return (
     <section>
       <div className="w-10/12 laptop:w-9/12 mx-auto py-30 laptop:pb-48 flex flex-col gap-10 laptop:gap-8">
+      <motion.div
+      ref={swiperRef}
+      initial={{ opacity: 0, y: 100 }}
+      animate={swiperIsInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 1.5, ease: "easeOut" }}
+    >
         <SwiperComp />
-        <div className="flex flex-col gap-6">
+        </motion.div>
+        <motion.div className="flex flex-col gap-6" ref={textRef} initial={{ opacity: 0, y: 200}}
+      animate={textIsInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 1.5, delay: 0.5, ease: "easeOut" }}>
           <div className="flex flex-col gap-2">
             <h3 className="font-header text-2xl tablet:text-4xl laptop:text-[35px] text-stone-700">
               Våra Kunder
@@ -22,17 +38,21 @@ export const ClientsOverview: React.FC = () => {
               viktiga för oss, vårt mål är att hjälpa dem förstå och formulera
               deras vision och sen förverkliga den. Med stark känsla för form,
               tonalitet och strategi bygger itFlows digitala lösningar som
-              sticker ut och som stannar kvar i minnet. Här ser du ett urval av
-              våra uppdrag.
+              sticker ut och som stannar kvar i minnet. 
             </p>
-            <button
+            <p className="font-body">Här ser du ett urval av
+            våra uppdrag.</p>
+            <motion.button
+             initial={{ opacity: 0 }}
+             animate={textIsInView ? { opacity: 1} : {}}
+             transition={{ duration: 1.5, delay: 1.5, ease: "easeOut" }}
               className="bg-dark-blue self-center tablet:self-start p-3 px-6 rounded-full w-fit h-fit text-sm cursor-pointer shadow-lg text-white font-body hover:scale-110"
               onClick={() => navigate("/kunder")}
             >
               Se alla projekt
-            </button>
+              </motion.button>
 
-        </div>
+        </motion.div>
       </div>
     </section>
   );

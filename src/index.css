@@ -45,8 +45,8 @@
   z-index: 10;
 }
 
-.swiper-slide-prev,
-.swiper-slide-next {
+.my-custom-swiper .swiper-slide-prev,
+.my-custom-swiper .swiper-slide-next {
   transform: scale(0.2);
   opacity: 0.4;
   z-index: 5;

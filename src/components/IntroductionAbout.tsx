@@ -1,20 +1,34 @@
 import { useNavigate } from "react-router-dom";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+
 
 export const IntroductionAbout: React.FC = () => {
   const navigate = useNavigate();
+  const textRef = useRef(null)
+  const headingRef = useRef(null)
+  const headingIsInView = useInView(headingRef, { once: true });
+  const textIsInView = useInView(textRef, { once: true });
 
   return (
     <section>
-      <div className="w-10/12 laptop:w-9/12 mx-auto py-30 laptop:pb-48 flex flex-col laptop:flex-row  justify-between">
+      <div className="w-10/12 laptop:w-9/12 mx-auto py-30 laptop:pb-48 flex flex-col laptop:flex-row gap-10 justify-between">
         <img
-          src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1746171778/izabel-lind-farnstrand-webbyra-itflows_hmjwea.webp"
-          className="laptop:w-1/3 max-w-[600px]"
+          src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1746174843/izabel-lind-farnstrand-webbyra-itflows-2_jcc3ec.webp"
+          className="laptop:w-1/3 laptop:max-w-[600px]"
         />
-        <div className="flex flex-col laptop:items-end laptop:justify-end">
-          <h3 className="font-header text-2xl tablet:text-4xl laptop:text-[35px] text-stone-700 mb-4">
+        <div 
+        className="flex flex-col laptop:items-end laptop:justify-end">
+          <motion.h3 className="font-header text-2xl tablet:text-4xl laptop:text-[35px] text-stone-700 mb-4"  ref={headingRef}
+        initial={{ opacity: 0, y: 100 }}
+        animate={headingIsInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 1.5, ease: "easeOut" }}>
             Om itFlows
-          </h3>
-          <div  className="laptop:w-8/12  text-justify font-body">
+          </motion.h3>
+          <motion.div  className="laptop:w-8/12  text-justify font-body flex flex-col gap-4"  ref={textRef}
+        initial={{ opacity: 0, y: 200 }}
+        animate={textIsInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 1.5, ease: "easeOut" }}>
           <p>
             itFlows är en webbyrå i Stockholm som skapar skräddarsydda, visuellt
             starka och strategiskt genomtänkta helhetslösningar för företag och
@@ -30,13 +44,18 @@ export const IntroductionAbout: React.FC = () => {
             noggrant utvalda fotografer och externa specialister, för att skapa
             en stark visuell helhet som lyfter varje kunds vision.
           </p>
-          </div>
-          <button
+        
+          </motion.div>
+          <motion.button
             className="bg-dark-blue self-center tablet:self-end p-3 px-6 rounded-full w-fit h-fit text-sm cursor-pointer shadow-lg text-white font-body hover:scale-110"
             onClick={() => navigate("/om-oss")}
+            ref={textRef}
+            initial={{ opacity: 0 }}
+        animate={textIsInView ? { opacity: 1} : {}}
+        transition={{ duration: 1.5, delay: 1.5, ease: "easeOut" }}
           >
             Läs mer
-          </button>
+          </motion.button>
         </div>
       </div>
     </section>
