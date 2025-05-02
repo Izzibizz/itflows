@@ -18,13 +18,13 @@ export const ClientsOverview: React.FC = () => {
       ref={swiperRef}
       initial={{ opacity: 0, y: 100 }}
       animate={swiperIsInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 1.5, ease: "easeOut" }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
     >
         <SwiperComp />
         </motion.div>
         <motion.div className="flex flex-col gap-6" ref={textRef} initial={{ opacity: 0, y: 200}}
       animate={textIsInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 1.5, delay: 0.5, ease: "easeOut" }}>
+      transition={{ duration: 0.7, delay: 0.5, ease: "easeOut" }}>
           <div className="flex flex-col gap-2">
             <h3 className="font-header text-2xl tablet:text-4xl laptop:text-[35px] text-stone-700">
               Våra Kunder
@@ -44,7 +44,7 @@ export const ClientsOverview: React.FC = () => {
             <motion.button
              initial={{ opacity: 0 }}
              animate={textIsInView ? { opacity: 1} : {}}
-             transition={{ duration: 1.5, delay: 1.5, ease: "easeOut" }}
+             transition={{ duration: 0.7, delay: 1.5, ease: "easeOut" }}
              className="text-lg w-fit font-header relative flex gap-2 items-center 
              after:content-[''] after:block after:h-[1px] after:bg-stone-500 after:absolute after:left-0 after:bottom-0 
              after:w-full 

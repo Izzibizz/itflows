@@ -6,8 +6,6 @@ import { HiOutlineArrowSmallRight } from "react-icons/hi2";
 export const IntroductionAbout: React.FC = () => {
   const navigate = useNavigate();
   const textRef = useRef(null);
-  const headingRef = useRef(null);
-  const headingIsInView = useInView(headingRef, { once: true });
   const textIsInView = useInView(textRef, { once: true });
 
   return (
@@ -17,22 +15,23 @@ export const IntroductionAbout: React.FC = () => {
           src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1746174843/izabel-lind-farnstrand-webbyra-itflows-2_jcc3ec.webp"
           className="laptop:w-1/3 laptop:max-w-[600px]"
         />
-        <div className="flex flex-col laptop:items-end laptop:justify-end">
+        <div className="flex flex-col laptop:items-end laptop:justify-end"
+                    >
           <motion.h3
             className="font-header text-2xl tablet:text-4xl laptop:text-[35px] text-stone-700 mb-4"
-            ref={headingRef}
+            ref={textRef}
             initial={{ opacity: 0, y: 100 }}
-            animate={headingIsInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 1.5, ease: "easeOut" }}
+            animate={textIsInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8,  ease: "easeOut" }}
           >
             Om itFlows
           </motion.h3>
           <motion.div
-            className="laptop:w-8/12  text-justify font-body flex flex-col gap-4"
-            ref={textRef}
+            className="laptop:w-8/12  text-justify font-body flex flex-col gap-4 mb-5"
+
             initial={{ opacity: 0, y: 200 }}
             animate={textIsInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 1.5, ease: "easeOut" }}
+            transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
           >
             <p>
               itFlows är en webbyrå i Stockholm som skapar skräddarsydda,
@@ -57,10 +56,9 @@ export const IntroductionAbout: React.FC = () => {
   laptop:after:w-0 laptop:hover:after:w-full 
   after:transition-all after:duration-300 cursor-pointer"
             onClick={() => navigate("/om-oss")}
-            ref={textRef}
             initial={{ opacity: 0 }}
-            animate={textIsInView ? { opacity: 1 } : {}}
-            transition={{ duration: 1.5, delay: 1.5, ease: "easeOut" }}
+            animate={textIsInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 1.5, ease: "easeOut" }}
           >
             Läs mer
             <HiOutlineArrowSmallRight />

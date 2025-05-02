@@ -29,7 +29,7 @@ export const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.5, duration: 0.7, ease: "easeOut" }}
-            className="text-xl tablet:text-[40px] font-body text-light tracking-wide italic"
+            className="text-xl tablet:text-[40px] font-header text-light tracking-wide"
           >
             Vi bygger. Du växer.
           </motion.h2>
@@ -43,8 +43,8 @@ export const Hero: React.FC = () => {
             <motion.button
                    initial={{ opacity: 0 }}
                    animate={{ opacity: 1 }}
-                   transition={{ delay: 3, duration: 1.5 }}
-              className="bg-warm-beige text-dark-red p-3 px-6 rounded-full w-fit h-fit text-xs tablet:text-xl cursor-pointer shadow-lg hover:scale-110 hover:bg-warm-white"
+                   transition={{ delay: 3, duration: 0.7 }}
+              className="bg-red-beige text-white p-3 px-6 rounded-full w-fit h-fit text-sm font-body tablet:text-xl cursor-pointer shadow-lg hover:scale-110 hover:bg-warm-white hover:text-dark-red"
               onClick={() => navigate("/erbjudanden")}
             >
               Våra Erbjudanden
@@ -52,8 +52,8 @@ export const Hero: React.FC = () => {
             <motion.button
                    initial={{ opacity: 0 }}
                    animate={{ opacity: 1 }}
-                   transition={{ delay: 4, duration: 1.5 }}
-              className="bg-warm-beige text-dark-red p-3 px-6 rounded-full w-fit h-fit text-xs tablet:text-xl cursor-pointer shadow-lg hover:scale-110 hover:bg-warm-white"
+                   transition={{ delay: 4, duration: 0.7 }}
+              className="bg-red-beige text-white p-3 px-6 rounded-full w-fit h-fit text-sm font-body  tablet:text-xl cursor-pointer shadow-lg hover:scale-110  hover:bg-warm-white hover:text-dark-red"
               onClick={() => navigate("/kontakt")}
             >
               Få Offert
