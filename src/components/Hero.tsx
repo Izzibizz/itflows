@@ -53,7 +53,7 @@ export const Hero: React.FC = () => {
               Få Offert
             </button>
           </div>
-          <Testimonial testimonial={testimonials[0]} position={"self-end"} />
+          <Testimonial testimonial={testimonials[0]} position={"self-end laptop:w-1/2 rounded-br-none rounded-tr-[120px] laptop:rounded-tr-[150px]"} />
         </motion.div>
       </div>
     </section>

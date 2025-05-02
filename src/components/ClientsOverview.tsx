@@ -4,10 +4,10 @@ import { useNavigate } from "react-router-dom";
 export const ClientsOverview: React.FC = () => {
   const navigate = useNavigate();
   return (
-    <section className="bg-warm-white">
+    <section>
       <div className="w-10/12 laptop:w-9/12 mx-auto py-30 laptop:pb-48 flex flex-col gap-10 laptop:gap-8">
         <SwiperComp />
-        <div className="flex flex-col gap-6 laptop:w-10/12 laptop:mx-auto">
+        <div className="flex flex-col gap-6">
           <div className="flex flex-col gap-2">
             <h3 className="font-header text-2xl tablet:text-4xl laptop:text-[35px] text-stone-700">
               Våra Kunder
@@ -16,7 +16,7 @@ export const ClientsOverview: React.FC = () => {
               Vi skapar unika uttryck för varje kund
             </h4>
             </div>
-            <p className="laptop:w-10/12 text-justify font-body">
+            <p className="laptop:w-8/12 text-justify font-body">
               Varje projekt är en skräddarsydd upplevelse, formad utifrån våra
               kunders vision, målgrupp och identitet. Våra kunder är otroligt
               viktiga för oss, vårt mål är att hjälpa dem förstå och formulera

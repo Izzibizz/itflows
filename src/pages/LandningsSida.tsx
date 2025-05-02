@@ -3,6 +3,8 @@ import { Hero } from "../components/Hero";
 import { Overview } from "../components/Overview";
 import { ClientsOverview } from "../components/ClientsOverview";
 import { useCollabStore } from "../stores/useCollabStore";
+import { IntroductionAbout } from "../components/IntroductionAbout";
+import { TestimonialSwiper } from "../components/TestimonialSwiper";
 
 export const LandningsSida: React.FC = () => {
   const { isLandingPage, setIsLandingPage } = useCollabStore();
@@ -18,6 +20,8 @@ export const LandningsSida: React.FC = () => {
       <Hero />
       <Overview />
       <ClientsOverview />
+      <TestimonialSwiper/>
+      <IntroductionAbout/>
     </section>
   );
 };
