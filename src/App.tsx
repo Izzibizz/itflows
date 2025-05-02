@@ -28,9 +28,9 @@ export const App: React.FC = () => {
   return (
     <>
     <ScrollToTop />
-    <div className={`max-w-screen min-h-screen flex flex-col overflow-hidden relative ${isSamarbete? "bg-warm-white font-c-body" : "bg-warm-white" } text-warm-black `}>
+    <div className={`max-w-screen min-h-screen flex flex-col overflow-hidden relative ${isSamarbete? "bg-warm-white font-c-body" : "bg-warm-white" } text-stone-700 `}>
       <Header />
-      <main className={`flex-grow mb-20 ${!isLandingPage && "pt-48 w-10/12 laptop:w-9/12 mx-auto "} `}>
+      <main className={`flex-grow mb-20 ${!isLandingPage && "pt-38 laptop:pt-48 w-10/12 laptop:w-9/12 mx-auto "} `}>
         <MainRoutes />
       </main>
       <Footer />
