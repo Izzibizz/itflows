@@ -27,10 +27,10 @@ export const SwiperComp: React.FC = () => {
       <Swiper
         effect={"coverflow"}
         autoplay={{
-          delay: 4000,
+          delay: 6000,
           disableOnInteraction: false, 
         }}
-        speed={700}
+        speed={1500}
         direction={"horizontal"}
         grabCursor={true}
         centeredSlides={true}

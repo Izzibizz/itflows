@@ -18,12 +18,22 @@
       "typeOfProject": ["branding", "design", "webbutveckling"]
     },
     {
-      "name": "Maja",
-      "year": 2023,
-      "company": "Studio M",
-      "title": "Musikalartist",
+      "name": "Emelie",
+      "year": 2025,
+      "company": "Carlie Consulting",
+      "title": "Konsulter inom restaurang och event",
       "text": "Designen blev helt magisk och kundresan var tydlig hela vägen.",
+      "website": "https://www.carlieconsulting.se",
+      "typeOfProject": ["design", "branding, webbutveckling"]
+    },
+    {
+      "name": "Ama Kyei",
+      "year": 2024,
+      "company": "Ama Kyei",
+      "title": "Profesionell dansare, koreograf och pedagog",
+      "text": "Att arbeta med itFlows var det bästa valet! Innan kämpade jag med att fatta beslut kring min webbsida, men Izabel förstod min vision och energi så väl att hon lyckades skapa en webbplats som känns som mig. ",
+      "longVersion": "Att arbeta med itFlows var det bästa valet! Innan kämpade jag med att fatta beslut kring min webbsida, men Izabel förstod min vision och energi så väl att hon lyckades skapa en webbplats som känns som mig. Hon var också väldigt lätt att kommunicera med. All feedbck jag fått om hemsidan (vilket har varit mycket) har varit så bra! Människor har nämnt att webbsidan är lätt att navigera på och väldigt tilltalande. Tack så mycket Izabel!!",
       "website": "https://www.studiom.se",
-      "typeOfProject": ["design", "branding"]
+      "typeOfProject": ["design", "branding, webbutveckling"]
     }
   ]

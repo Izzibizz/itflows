@@ -13,7 +13,7 @@ export const IntroductionAbout: React.FC = () => {
       <div className="w-10/12 laptop:w-9/12 mx-auto py-30 laptop:pb-48 flex flex-col laptop:flex-row gap-10 justify-between">
         <img
           src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1746174843/izabel-lind-farnstrand-webbyra-itflows-2_jcc3ec.webp"
-          className="laptop:w-1/3 laptop:max-w-[600px]"
+          className="laptop:w-1/3 laptop:max-w-[600px] object-cover"
         />
         <div className="flex flex-col laptop:items-end laptop:justify-end"
                     >
