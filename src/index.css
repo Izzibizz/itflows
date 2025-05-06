@@ -35,6 +35,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "belvare";
+  src: url("./assets/fonts/Belvare.ttf") format("Truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 .swiper-slide {
   transition: transform 0.3s ease, scale 0.3s ease;
 }
@@ -60,6 +68,7 @@
   --font-header: "quicking", sans-serif;
   --font-bold: "condensed", sans-serif;
   --font-collab: "voyage", serif;
+  --font-curly: "belvare", serif;
   --font-c-body: "Montserrat", sans-serif;
 
   --breakpoint-tablet: 600px;
@@ -81,6 +90,7 @@
   --color-collab-green: rgb(133 125 95);
 
   --animate-fadeIn: fadeIn 1s ease-in both;
+  --animate-longFadeIn: fadeIn 2.3s ease-in both;
   --animate-spin: spin 10s ease-in infinite;
 
   @keyframes fadeIn {

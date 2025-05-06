@@ -25,18 +25,25 @@ export const MovingCircle: React.FC = () => {
       timeRef.current += 0.005;
 
       const baseSize = window.innerWidth < 768 ? 180 : window.innerWidth < 1024 ? 220 : 270;
-      const wobble = Math.sin(timeRef.current) * 30;
-      const stretch = Math.cos(timeRef.current * 0.7) * 20;
+      const wobble = Math.sin(timeRef.current) * 30; // Wobble effect
+      const stretch = Math.cos(timeRef.current * 0.7) * 20; // Stretch effect
 
-      const width = baseSize * 2 + wobble;
-      const height = baseSize * 2 + stretch;
+      // Ensure the wobble and stretch are within a reasonable limit
+      const maxWobble = 30; // Maximum wobble effect
+      const maxStretch = 20; // Maximum stretch effect
+      const minSize = baseSize * 2; // Minimum size for width/height
 
-      const radiusX = 50 + Math.sin(timeRef.current * 0.9) * 30;
-      const radiusY = 50 + Math.cos(timeRef.current * 0.6) * 30;
+      const width = minSize + wobble;
+      const height = minSize + stretch;
+
+      // Keep radiusX and radiusY relatively equal to maintain the circular shape
+      const radiusX = 50 + Math.sin(timeRef.current * 0.9) * Math.min(wobble, maxWobble);
+      const radiusY = 50 + Math.cos(timeRef.current * 0.6) * Math.min(stretch, maxStretch);
 
       const x = window.innerWidth / 2 - width / 2;
       const y = window.innerHeight / 2 - height / 2;
 
+      // Create a border-radius to maintain circular shape with wobble/stretch
       const borderRadius = `${radiusX}% ${100 - radiusX}% ${radiusY}% ${100 - radiusY}% / ${radiusY}% ${radiusX}% ${100 - radiusY}% ${100 - radiusX}%`;
 
       setStyle({ width, height, borderRadius, x, y });
@@ -60,13 +67,11 @@ export const MovingCircle: React.FC = () => {
           transform: `translate(${style.x}px, ${style.y}px)`,
           width: `${style.width}px`,
           height: `${style.height}px`,
-          background: 'linear-gradient(135deg, rgb(250 232 218), rgb(230 128 96))',
+          background: 'linear-gradient(135deg, rgb(255 243 234), rgb(232 110 74))',
           borderRadius: style.borderRadius,
           filter: 'blur(30px)',
           willChange: 'transform',
-          position: 'absolute',
         }}
-        
       />
     </div>
   );
