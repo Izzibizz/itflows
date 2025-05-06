@@ -24,7 +24,7 @@ export const MovingCircle: React.FC = () => {
     const animate = () => {
       timeRef.current += 0.005;
 
-      const baseSize = window.innerWidth < 768 ? 100 : 150;
+      const baseSize = window.innerWidth < 768 ? 180 : window.innerWidth < 1024 ? 220 : 270;
       const wobble = Math.sin(timeRef.current) * 30;
       const stretch = Math.cos(timeRef.current * 0.7) * 20;
 
@@ -60,7 +60,7 @@ export const MovingCircle: React.FC = () => {
           transform: `translate(${style.x}px, ${style.y}px)`,
           width: `${style.width}px`,
           height: `${style.height}px`,
-          background: 'linear-gradient(135deg, #FBB182, #6588B8)',
+          background: 'linear-gradient(135deg, rgb(250 232 218), rgb(230 128 96))',
           borderRadius: style.borderRadius,
           filter: 'blur(30px)',
           willChange: 'transform',
