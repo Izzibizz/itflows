@@ -13,7 +13,7 @@ export const Branding: React.FC = () => {
 
     return ( 
       <section className="animate-fadeIn  flex flex-col gap-14 laptop:gap-18 ">
-        <div className=" h-[60vh] laptop:h-[60vh] w-full flex justify-center items-center flex flex-col relative z-20 uppercase ">
+        <div className=" h-[50vh] laptop:h-[60vh] w-full flex justify-center items-center flex flex-col relative z-20 uppercase ">
           <div className="flex flex-col justify-center items-center">
         <h1 className="font-bold text-[70px] laptop:text-[60px] text-center text-dark-blue">Branding</h1>
         <h2 className="font-bold text-4xl laptop:text-[40px] text-center text-warm-white animate-longFadeIn ">Bli ett företag folk minns<br className="hidden tablet:block"/> - inte bara scrollar förbi.<br className=" tablet:hidden"/></h2>
