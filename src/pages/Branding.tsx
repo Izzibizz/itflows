@@ -12,7 +12,7 @@ export const Branding: React.FC = () => {
   
 
     return ( 
-      <section className="animate-fadeIn  flex flex-col gap-14 laptop:gap-18 ">
+      <section className="animate-fadeIn  flex flex-col gap-14 laptop:gap-18 font-body">
         <div className=" h-[50vh] laptop:h-[60vh] w-full flex justify-center items-center flex flex-col relative z-20 uppercase ">
           <div className="flex flex-col justify-center items-center">
         <h1 className="font-bold text-[70px] laptop:text-[60px] text-center text-dark-blue">Branding</h1>
