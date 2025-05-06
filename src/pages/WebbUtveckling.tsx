@@ -13,7 +13,7 @@ export const WebbUtveckling: React.FC = () => {
 
   return (
       <section className="animate-fadeIn flex flex-col gap-14 laptop:gap-18 ">
-        <div className=" h-[50vh] laptop:h-[60vh] w-full flex justify-center items-center flex flex-col relative z-20 uppercase ">
+        <div className=" h-[50vh] tablet:h-[70vh] laptop:h-[60vh] w-full flex justify-center items-center flex flex-col relative z-20 uppercase ">
           <div className="flex flex-col justify-center items-center">
         <h1 className="font-bold text-[60px] laptop:text-[50px] text-dark-blue text-center">Webbutveckling</h1>
         <h2 className="font-bold text-3xl tablet:text-4xl laptop:text-[40px] text-center text-warm-white animate-longFadeIn">För dig som vill ha mer<br/> än en mall.</h2>
