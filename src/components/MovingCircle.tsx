@@ -24,7 +24,7 @@ export const MovingCircle: React.FC = () => {
     const animate = () => {
       timeRef.current += 0.005;
 
-      const baseSize = window.innerWidth < 768 ? 100 : 150;
+      const baseSize = 150;
       const wobble = Math.sin(timeRef.current) * 30;
       const stretch = Math.cos(timeRef.current * 0.7) * 20;
 
