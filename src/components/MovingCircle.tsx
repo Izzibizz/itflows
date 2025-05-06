@@ -24,7 +24,7 @@ export const MovingCircle: React.FC = () => {
     const animate = () => {
       timeRef.current += 0.005;
 
-      const baseSize = 150;
+      const baseSize = window.innerWidth < 768 ? 100 : 150;
       const wobble = Math.sin(timeRef.current) * 30;
       const stretch = Math.cos(timeRef.current * 0.7) * 20;
 
@@ -57,14 +57,16 @@ export const MovingCircle: React.FC = () => {
       <div
         className="absolute"
         style={{
-          left: `${style.x}px`,
-          top: `${style.y}px`,
+          transform: `translate(${style.x}px, ${style.y}px)`,
           width: `${style.width}px`,
           height: `${style.height}px`,
           background: 'linear-gradient(135deg, #FBB182, #6588B8)',
           borderRadius: style.borderRadius,
-          filter: 'blur(50px)',
+          filter: 'blur(30px)',
+          willChange: 'transform',
+          position: 'absolute',
         }}
+        
       />
     </div>
   );
