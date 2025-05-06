@@ -40,7 +40,7 @@ export const ContactForm: React.FC = () => {
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >
   ) => {
-    const { name, value, type } = e.target;
+    const { name, value } = e.target;
 
     if (name in formData.materials) {
       setFormData((prev) => ({
