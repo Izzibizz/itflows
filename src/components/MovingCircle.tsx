@@ -1,9 +1,15 @@
-
-
 import { useEffect, useRef, useState } from 'react';
 
+interface Style {
+  width: number;
+  height: number;
+  borderRadius: string;
+  x: number;
+  y: number;
+}
+
 export const MovingCircle: React.FC = () => {
-  const [style, setStyle] = useState({
+  const [style, setStyle] = useState<Style>({
     width: 400,
     height: 400,
     borderRadius: '50%',
@@ -12,7 +18,7 @@ export const MovingCircle: React.FC = () => {
   });
 
   const timeRef = useRef(0);
-  const requestRef = useRef<number>(null);
+  const requestRef = useRef<number | null>(null);
 
   useEffect(() => {
     const animate = () => {
@@ -39,13 +45,17 @@ export const MovingCircle: React.FC = () => {
     };
 
     requestRef.current = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(requestRef.current!);
+    return () => {
+      if (requestRef.current !== null) {
+        cancelAnimationFrame(requestRef.current);
+      }
+    };
   }, []);
 
   return (
     <div className="z-0 w-full h-full top-0 absolute left-0 overflow-hidden">
       <div
-        className="relative transition-all duration-75"
+        className="absolute"
         style={{
           left: `${style.x}px`,
           top: `${style.y}px`,
