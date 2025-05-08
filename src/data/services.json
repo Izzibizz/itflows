@@ -1,0 +1,141 @@
+
+  { "branding": {
+    "title": "Branding",
+    "h2": {
+      "beforeBreak": "Bli ett företag folk minns ",
+      "afterBreakTablet": "- inte bara scrollar förbi"
+    },
+    "info": [
+      {
+        "title": "Därför är branding avgörande för ditt företags framgång",
+        "highlight": "Därför",
+        "body": "Att satsa på branding är inte bara en visuell investering – det är en strategisk grundpelare som påverkar hur ditt företag uppfattas, vilka kunder du når och hur starkt du står i konkurrensen. Ditt varumärke är det första intrycket, det visuella språket, men också känslan och igenkänningen som gör att någon minns dig – eller glömmer dig. I en värld där flödet aldrig stannar och nya produkter och tjänster lanseras dagligen, är det inte tillräckligt att bara finnas. Om din kommunikation eller design ser ut som alla andras, riskerar du att smälta in och förbli osynlig – oavsett hur bra din tjänst faktiskt är. Branding hjälper dig att positionera dig, hitta en tydlig ton och ett formspråk som gör att du känns igen och kommer ihåg. Branding är inte ett fluffigt tillval – det är en investering i långsiktig tillväxt.",
+        "layout": "laptop:w-1/2",
+        "h3": ""
+      },
+      {
+        "title": "Du vet vad du gör – men vet dina kunder det?",
+        "highlight": "vet dina kunder",
+        "body": "Det är vanligt att företag har en inre känsla av sin verksamhet men har svårt att kommunicera det utåt på ett konsekvent sätt. Här spelar branding en avgörande roll. När vi jobbar tillsammans hjälper vi dig att konkretisera dina tankar. Vi ställer rätt frågor, speglar dina idéer och formulerar det som du kanske inte lyckats sätta ord på. En stark varumärkesplattform skapar klarhet – både för dig och för dina kunder.",
+        "layout": "laptop:w-1/3 laptop:self-end",
+        "h3": "tablet:text-end"
+      },
+      {
+        "title": "Branding håller ihop allt – från logotyp till inlägg",
+        "highlight": "håller ihop",
+        "body": "En hemsida byggd med kod är mer skalbar och kan växa tillsammans med ditt företag. När du använder drag-and-drop plattformar är du ofta låst till de funktioner som finns tillgängliga och om din verksamhet växer och dina behov förändras kan du behöva byta plattform. Med en kodad lösning kan vi lägga till nya funktioner och göra förbättringar i takt med att ditt företag växer.",
+        "layout": "laptop:w-1/2",
+        "h3": ""
+      },
+      {
+        "title": "Professionellt intryck bygger förtroende",
+        "highlight": "förtroende",
+        "body": "Kunder väljer inte alltid den billigaste eller mest påträngande lösningen – de väljer den de litar på. Ett professionellt och genomarbetat varumärke signalerar seriositet och kompetens. När du ser ut att ha koll, tror man att du har det. Det är så du vinner förtroende innan ett enda ord har sagts – och det är förtroende som konverterar till affärer.",
+        "layout": "laptop:w-1/2 laptop:self-end tablet:text-end",
+        "h3": "tablet:text-end"
+      },
+      {
+        "title": "Absolut att det krävs mod för att vara tydlig – men det lönar sig",
+        "highlight": "tydlig",
+        "body": "Många företag vågar inte smalna av, ta ställning eller lyfta fram vad som verkligen gör dem unika. Men ju tydligare du är med din identitet, desto lättare blir det för rätt kunder att hitta dig. Branding hjälper dig att definiera den riktningen – vilka värden du står för, vad du vill signalera och hur du skiljer dig från mängden. Och när det görs rätt, kommer det också att kännas naturligt och självklart för dina kunder.",
+        "layout": "laptop:w-1/2 laptop:self-center",
+        "h3": "tablet:text-end"
+      },
+      {
+        "title": "Du behöver inte ha alla svar – det är därför vi finns",
+        "highlight": "Du",
+        "body": "Det är lätt att fastna i sitt eget perspektiv och svårt att se sitt varumärke utifrån. Därför är det ofta avgörande att ta in hjälp utifrån. Vi hjälper dig att reda i tankarna: Vad är det du egentligen erbjuder? Vad är du inte erbjuder? Vem är din målgrupp – på riktigt? Vilka konkurrenter har du, och hur positionerar de sig? Med tydlig analys och erfarenhet som stöd, formar vi en strategi och ett uttryck som känns äkta och effektivt.",
+        "layout": "laptop:w-1/2",
+        "h3": ""
+      }
+    ]
+  },
+  "webbutveckling":
+  {
+    "title": "Webbutveckling",
+    "h2": {
+      "beforeBreak": "För dig som vill ha mer ",
+      "afterBreakTablet": "än en generisk mall"
+    },
+    "info": [
+      {
+        "title": "Oändliga möjligheter och full kontroll",
+        "highlight": "Oändliga",
+        "body": "När du arbetar med en webbyrå som använder kod får du tillgång till en obegränsad mängd möjligheter. Med drag-and-drop verktyg är du alltid begränsad till vad mallarna erbjuder, vilket tyvärr kan göra att din webbplats känns generisk, standardiserad och inte särskilt kreativ. Genom att koda hemsidan kan vi skapa exakt det du har i åtanke – utan några begränsningar. Oavsett om du har en väldigt specifik designidé eller om du vill implementera en komplex funktionalitet, kan vi lösa det utan att kompromissa. Allt kan byggas från grunden, vilket gör att vi kan skapa en unik webbplats som verkligen reflekterar ditt varumärke. Vi skapar något unikt som skiljer sig från mängden och verkligen fångar användarens uppmärksamhet.",
+        "layout": "laptop:w-2/3",
+        "h3": ""
+      },
+      {
+        "title": "Hur man ändrar eller lägger upp nytt innehåll?",
+        "highlight": "ändrar",
+        "body": "En annan stor fördel med att arbeta med kod är att vi kan bygga en administrativ backend som passar just din hemsida och dina behov. Med hjälp av ett användarvänligt admin-system kan du själv enkelt uppdatera och lägga till innehåll utan att behöva röra vid designen. Du slipper sitta och justera layouten för varje nytt inlägg eller uppdatering, istället kan du lägga upp nytt innehåll på ett enkelt och snabbt sätt med bara några klick. Det bästa är att det följer designen automatiskt. Du slipper få huvudvärk och sparar tid - vilket gör att uppdateringar av hemsidan är lättare att få gjorda.",
+        "layout": "laptop:w-3/4 laptop:self-end tablet:text-end",
+        "h3": "tablet:text-end"
+      },
+      {
+        "title": "Din kodade hemsida kan enkelt växa med dig",
+        "highlight": "enkelt växa",
+        "body": "En hemsida byggd med kod är mer skalbar och kan växa tillsammans med ditt företag. När du använder drag-and-drop plattformar är du ofta låst till de funktioner som finns tillgängliga och om din verksamhet växer och dina behov förändras kan du behöva byta plattform. Med en kodad lösning kan vi lägga till nya funktioner och göra förbättringar i takt med att ditt företag växer.",
+        "layout": "laptop:w-1/2",
+        "h3": ""
+      }
+    ]
+  },
+  "design": {
+    "title": "Design",
+    "h2": {
+      "beforeBreak": "Luta dig tillbaka. Vi ",
+      "afterBreakTablet": "tar hand om formen"
+    },
+    "info": [
+      {
+        "title": "Varför du ska ta hjälp med din design",
+        "highlight": "Varför",
+        "body": "Har du försökt sätta dig in i hemsideplattformar och fastnat, eller upplever att det är svårt att hålla en enhetlig tråd genom alla sidor så resultatet ändå blir sådär? Att göra sin egen design, till sin egen hemsida, kan vara svårare än man trott av flera anledningar. Först och främst har man ingen distans till sin egen produkt - det kan vara svårt att se helheten och det är lätt att fastna kring beslut. Det andra är att det är en helt egen färdighet att kunna designa användarvänliga hemsidor - hur grym du än må vara på att driva fram ditt varumärke, behöver du inte bemästra allt inom alla områden själv. Designen är ett större projekt än vad man kan tro - och om resultatet är viktigt - ta in någon som kan hjälpa dig.",
+        "layout": "laptop:w-2/3"
+      },
+      {
+        "title": "Design som guidar och engagerar användaren",
+        "highlight": "guidar",
+        "body": "Design är inte bara en yta – det är ett sätt att leda användaren rätt. Vad ska synas först? Hur ska en besökare förstå vad du erbjuder och vad du vill att de ska göra? Vi designar med både öga och hjärna – så att det ser fantastiskt ut, men också fungerar intuitivt. Resultatet blir tydligare kommunikation och fler som agerar på din sida.",
+        "layout": "laptop:w-1/2 laptop:self-end"
+      }
+,      
+      {
+        "title": "Så här går processen till, från uppstartsmöte till färdig hemsida",
+        "highlight": "processen",
+        "body": "För att utforma en proffsig genomtänkt design som lyfter ditt företag börjar vi med att gå igenom din bransch, målgrupp och vad andra aktörer i din genre gör. Vi pratar också om vad du själv gillar – färger, stilar, känsla, och vilka associationer du vill väcka. Därefter tar vi fram en moodboard som ger en visuell riktning. Vi diskuterar och justerar den tillsammans så att vi landar i något som känns rätt för dig. När vi är överens gör vi en första designskiss. Den jobbar vi sedan vidare med i ett par rundor tills vi landar i ett formspråk som håller ihop allt – från startsida till minsta knapp.",
+        "layout": "laptop:w-3/4 laptop:self-end"
+      }
+    ]
+  },
+  "helhetskoncept": {
+    "title": "Helhetskoncept",
+    "h2": {
+      "beforeBreak": "En enhetlig upplevelse som ",
+      "afterBreakTablet": "bygger förtroende"
+    },
+    "info": [
+      {
+        "title": "Att få ihop allt – vi förstår att det är mycket",
+        "highlight": "vi förstår",
+        "body": "Att bygga en hemsida är sällan bara att bygga en hemsida. Det handlar om att hitta rätt ord, få ihop design, bilder, färger, logotyp, innehåll – och se till att allt talar samma språk. Det är lätt att känna sig överväldigad. Vi skapade vårt helhetskoncept som ett direkt svar på det behov vi sett hos många av våra kunder. Startups kommer ofta till oss utan något färdigt material alls – och etablerade företag har ofta mycket, men spretigt: mobilbilder blandas med äldre loggor och olika färgpaletter. Sidan saknar ofta en tydlig riktning eller röd tråd, inte för att man är slarvig – utan för att det är genuint svårt. Med vårt helhetskoncept erbjuder vi en lösning på just det: vi ser till att allt hänger ihop. Du får en professionell, enhetlig helhet – och kan luta dig tillbaka medan vi styr upp detaljerna.",
+        "layout": "laptop:w-2/3"
+      },
+      {
+        "title": "Design som guidar och engagerar användaren",
+        "highlight": "guidar",
+        "body": "Design är inte bara en yta – det är ett sätt att leda användaren rätt. Vad ska synas först? Hur ska en besökare förstå vad du erbjuder och vad du vill att de ska göra? Vi designar med både öga och hjärna – så att det ser fantastiskt ut, men också fungerar intuitivt. Resultatet blir tydligare kommunikation och fler som agerar på din sida.",
+        "layout": "laptop:w-1/2 laptop:self-end"
+      }
+,      
+      {
+        "title": "Så här går processen till, från uppstartsmöte till färdig hemsida",
+        "highlight": "processen",
+        "body": "För att utforma en proffsig genomtänkt design som lyfter ditt företag börjar vi med att gå igenom din bransch, målgrupp och vad andra aktörer i din genre gör. Vi pratar också om vad du själv gillar – färger, stilar, känsla, och vilka associationer du vill väcka. Därefter tar vi fram en moodboard som ger en visuell riktning. Vi diskuterar och justerar den tillsammans så att vi landar i något som känns rätt för dig. När vi är överens gör vi en första designskiss. Den jobbar vi sedan vidare med i ett par rundor tills vi landar i ett formspråk som håller ihop allt – från startsida till minsta knapp.",
+        "layout": "laptop:w-3/4 laptop:self-end"
+      }
+    ]
+  }
+}
+

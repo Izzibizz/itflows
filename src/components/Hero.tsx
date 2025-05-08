@@ -44,16 +44,16 @@ export const Hero: React.FC = () => {
                    initial={{ opacity: 0 }}
                    animate={{ opacity: 1 }}
                    transition={{ delay: 4, duration: 0.7 }}
-              className="bg-red-beige text-white p-3 px-6 rounded-full w-fit h-fit text-sm font-body tablet:text-xl cursor-pointer shadow-lg hover:scale-110 hover:bg-warm-white hover:text-dark-red"
+              className="bg-[url('https://res.cloudinary.com/dlp85vjwx/image/upload/v1746692720/blur-button-red_kgopnc.svg')] bg-cover bg-center text-white p-4 px-8 rounded-full w-full h-20 text-sm font-body tablet:text-xl cursor-pointer hover:scale-110 hover:text-dark-red"
               onClick={() => navigate("/erbjudanden")}
             >
-              Våra Erbjudanden
+              Erbjudanden
             </motion.button>
             <motion.button
                    initial={{ opacity: 0 }}
                    animate={{ opacity: 1 }}
                    transition={{ delay: 4.5, duration: 0.7 }}
-              className="bg-red-beige text-white p-3 px-6 rounded-full w-fit h-fit text-sm font-body  tablet:text-xl cursor-pointer shadow-lg hover:scale-110  hover:bg-warm-white hover:text-dark-red"
+              className="bg-[url('https://res.cloudinary.com/dlp85vjwx/image/upload/v1746692720/blur-button-red_kgopnc.svg')] bg-cover bg-center text-white p-4 px-8 rounded-full w-full h-20 text-sm font-body  tablet:text-xl cursor-pointer hover:scale-110 hover:text-dark-red"
               onClick={() => navigate("/kontakt")}
             >
               Få Offert

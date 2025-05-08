@@ -8,7 +8,11 @@ interface Style {
   y: number;
 }
 
-export const MovingCircle: React.FC = () => {
+interface MovingCircleProps {
+  circleColors: string
+}
+
+export const MovingCircle: React.FC<MovingCircleProps> = ({ circleColors }) => {
   const [style, setStyle] = useState<Style>({
     width: 400,
     height: 400,
@@ -67,7 +71,7 @@ export const MovingCircle: React.FC = () => {
           transform: `translate(${style.x}px, ${style.y}px)`,
           width: `${style.width}px`,
           height: `${style.height}px`,
-          background: 'linear-gradient(135deg, rgb(255, 246, 226), rgb(250, 183, 152), rgb(238, 142, 113), rgb(255, 111, 106))',
+          background: `linear-gradient(135deg, ${circleColors}`,
           borderRadius: style.borderRadius,
           filter: 'blur(30px)',
           willChange: 'transform',

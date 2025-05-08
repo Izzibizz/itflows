@@ -1,29 +1,30 @@
 [
     {
-      "title": "Webbutveckling",
-      "path": "/webbutveckling",
-      "bgColor": "bg-warm-beige",
-      "textColor": "text-warm-white",
-      "description": [
-        "Vi bygger hemsidor från grunden",
-        "Inga drag-and-drop-plattformer används, inga färdiga mallar, bara 100% kod. Du får unika lösningar anpassade efter dina behov och mål, där du kan logga in och uppdatera innehåll utan att tänka på att upprätthålla designen. "
-      ]
-    },
-    {
-      "title": "Design",
-      "path": "/design",
-      "bgColor": "bg-red-beige",
-      "textColor": "text-warm-white",
+      "title": "Branding",
+      "path": "/branding",
+      "bgColor": "bg-[url('https://res.cloudinary.com/dlp85vjwx/image/upload/v1746700347/beige-yellow_nhzusu.jpg')]",
+      "textColor": "text-dark-blue",
       "description": [
         "Designexpertis med unik design",
         "Vill du inte ha samma hemsida som alla andra? Vi går tillsammans igenom dina behov, mål och önskemål  och formger en användarvänlig, smidig och visuellt tilltalande webbplats som sticker ut från mängden."
       ]
     },
     {
-      "title": "Branding",
-      "path": "/branding",
-      "bgColor": "bg-light-beige",
+      "title": "Design",
+      "path": "/design",
+      "bgColor": "bg-[url('https://res.cloudinary.com/dlp85vjwx/image/upload/v1746699866/light-blur_zfcfta.jpg')]",
       "textColor": "text-dark-blue",
+      "description": [
+        "Vi bygger hemsidor från grunden",
+        "Inga drag-and-drop-plattformer används, inga färdiga mallar, bara 100% kod. Du får unika lösningar anpassade efter dina behov och mål, där du kan logga in och uppdatera innehåll utan att tänka på att upprätthålla designen. "
+      ] 
+    },
+    {
+
+      "title": "Webbutveckling",
+      "path": "/webbutveckling",
+      "bgColor": "bg-[url('https://res.cloudinary.com/dlp85vjwx/image/upload/v1746700095/red_xbu8ez.jpg')]",
+      "textColor": "text-warm-white",
       "description": [
         "Ditt företag behöver en tydlig identitet",
         "Vi hjälper dig skapa ett minnesvärt visuellt intryck som speglar ditt företags själ. itFlows kan skapa din logotyp, illustrationer, sätta färgpalett och typografi. Allt för att du ska nå rätt målgrupp och sticka ut i mängden."
@@ -32,7 +33,7 @@
     {
       "title": "Helhetskoncept",
       "path": "/helhetskoncept",
-      "bgColor": "bg-light-blue",
+      "bgColor": "bg-[url('https://res.cloudinary.com/dlp85vjwx/image/upload/v1746704590/bl%C3%A5-oskarp_rdwu5j.jpg')]",
       "textColor": "text-warm-white",
       "description": [
         "En hemsida som känns genomtänkt",

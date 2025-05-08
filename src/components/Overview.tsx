@@ -35,7 +35,7 @@ export const Overview: React.FC = () => {
           return (
             <div
               key={path}
-              className={`${bgColor} aspect-square laptop:aspect-[3/4] desktop:aspect-square flex flex-col items-center justify-center text-center ${textColor} p-4 cursor-pointer transition-all duration-500 `}
+              className={`${bgColor} bg-cover bg-center aspect-square laptop:aspect-[3/4] desktop:aspect-square flex flex-col items-center justify-center text-center ${textColor} p-4 cursor-pointer transition-all duration-500 `}
               onMouseEnter={() => toggleOpen(index)}
               onMouseLeave={() => toggleOpen(null)}
               onClick={() => navigate(path)}

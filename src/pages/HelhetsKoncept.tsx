@@ -1,7 +1,7 @@
 /* import { useNavigate } from "react-router-dom" */
 import { useEffect } from "react"
 import { useCollabStore } from "../stores/useCollabStore"
-import { MovingCircle } from "../components/MovingCircle"
+import { ServiceComp } from "../components/ServiceComp"
 
 export const HelhetsKoncept: React.FC = () => {
 /* 
@@ -16,11 +16,7 @@ export const HelhetsKoncept: React.FC = () => {
 
     return (
       <section className="animate-fadeIn ">
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 flex flex-col justify-center uppercase ">
-        <h1 className="font-bold text-[60px] laptop:text-[50px] text-dark-blue text-center">Helhetskoncept</h1>
-        <h2 className="font-bold text-3xl tablet:text-4xl laptop:text-[40px] text-center text-warm-white ">En enhetlig upplevelse som <br/> bygger förtroende.</h2>
-        </div>
-        <MovingCircle/>
+        <ServiceComp circleColors= " rgb(255, 246, 226), rgb(208, 218, 229), rgb(172, 189, 204), rgb(76, 98, 125))" textColor="text-red-beige" />
       </section>
     )
   }

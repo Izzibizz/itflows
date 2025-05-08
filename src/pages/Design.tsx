@@ -1,6 +1,6 @@
 import { useEffect } from "react"
 import { useCollabStore } from "../stores/useCollabStore"
-import { MovingCircle } from "../components/MovingCircle"
+import { ServiceComp } from "../components/ServiceComp"
 
 export const Design: React.FC = () => {
   
@@ -12,11 +12,8 @@ export const Design: React.FC = () => {
   
     return (
       <section className="animate-fadeIn ">
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 flex flex-col justify-center uppercase ">
-        <h1 className="font-bold text-[70px] laptop:text-[60px] text-dark-blue text-center">Design</h1>
-        <h2 className="font-bold text-3xl tablet:text-4xl laptop:text-[40px] text-center text-warm-white ">Luta dig tillbaka. vi  <br className="hidden tablet:block"/>tar hand om formen<br className=" tablet:hidden"/></h2>
-        </div>
-        <MovingCircle/>
+     <ServiceComp circleColors= " rgb(255, 246, 226), rgb(163, 184, 213), rgb(159, 154, 189), rgb(101, 136, 184))" textColor="text-light-beige" />
+     <img src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1746693489/47356d71637fef8545556703025dbab5_qtjzyu.jpg" className="w-full h-full object-cover"/>
       </section>
     )
   }
