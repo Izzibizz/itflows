@@ -49,6 +49,10 @@
   font-style: normal;
 }
 
+body {
+  background-color: #FFFAF3;
+}
+
 
 .swiper-slide {
   transition: transform 0.3s ease, scale 0.3s ease;
