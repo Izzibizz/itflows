@@ -28,8 +28,8 @@ export const MovingCircle: React.FC<MovingCircleProps> = ({ circleColors }) => {
     const animate = () => {
       timeRef.current += 0.005;
 
-      const baseSize = window.innerWidth < 768 ? 180 : window.innerWidth < 1024 ? 220 : 270;
-      const wobble = Math.sin(timeRef.current) * 30; // Wobble effect
+      const baseSize = window.innerWidth < 768 ? 190 : window.innerWidth < 1024 ? 220 : 270;
+      const wobble = Math.sin(timeRef.current) * 40; // Wobble effect
       const stretch = Math.cos(timeRef.current * 0.7) * 20; // Stretch effect
 
       // Ensure the wobble and stretch are within a reasonable limit
