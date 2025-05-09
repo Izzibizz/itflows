@@ -16,7 +16,7 @@ export const HelhetsKoncept: React.FC = () => {
 
     return (
       <section className="animate-fadeIn ">
-        <ServiceComp circleColors= " rgb(255, 246, 226), rgb(208, 218, 229), rgb(172, 189, 204), rgb(76, 98, 125))" textColor="text-dark-blue" imageMobile="" imageLaptop="" />
+        <ServiceComp circleColors= " rgb(255, 246, 226), rgb(208, 218, 229), rgb(172, 189, 204), rgb(76, 98, 125))" textColor="text-dark-blue" imageMobile="https://res.cloudinary.com/dlp85vjwx/image/upload/v1746789469/helhetkoncept-mobile-st%C3%B6rre_um1u3q.svg" imageLaptop="https://res.cloudinary.com/dlp85vjwx/image/upload/v1746788142/helhetskoncept-laptop_rwshuh.svg" />
       </section>
     )
   }

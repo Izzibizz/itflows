@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { MovingCircle } from "../components/MovingCircle";
-import { SlArrowDown, SlArrowUp } from "react-icons/sl";
 import data from "../data/services.json";
 
 interface ServiceInfoBlock {
@@ -89,9 +88,9 @@ export const ServiceComp: React.FC<MovingCircleProps> = ({
 
       {service.info.length > 0 && (
         <div className={`${service.info[0].layout} flex flex-col gap-2 z-20`}>
-          <h3 className="font-header text-stone-700 text-3xl">
+          <h3 className="font-header text-stone-700 text-2xl laptop:text-3xl">
             {service.info[0].title.split(service.info[0].highlight)[0]}
-            <span className="font-wide text-4xl">
+            <span className="font-wide tracking-wide text-3xl laptop:text-4xl">
               {service.info[0].highlight}
             </span>
             {service.info[0].title.split(service.info[0].highlight)[1]}
@@ -106,25 +105,25 @@ export const ServiceComp: React.FC<MovingCircleProps> = ({
           {isMobile && (
             <button
               onClick={() => toggleExpand(0)}
-              className="text-sm w-fit cursor-pointer flex items-center gap-2 self-end"
+              className="text-sm w-fit cursor-pointer flex items-center gap-2 self-end border-t-1  border-r-1 mt-2 pt-1 pr-2"
             >
               {expandedIndexes.includes(0) ? (
                 <>
-                  Visa mindre <SlArrowUp />
+                  Visa mindre
                 </>
               ) : (
                 <>
-                  Läs mer <SlArrowDown />
+                  Läs mer
                 </>
               )}
             </button>
           )}
         </div>
       )}
-
+        <h3 className="font-wide tracking-wide text-3xl tracking-wide laptop:text-4xl">Hur går det till?</h3>
       <img
         src={window.innerWidth < 1025 ? imageMobile : imageLaptop}
-        className="w-full laptop:w-2/3 mx-auto object-cover"
+        className={`w-full ${service.title === "Helhetskoncept" ? "laptop:w-10/12" : "laptop:w-2/3"} mx-auto object-cover`}
       />
     <div className="grid laptop:grid-cols-2 gap-20">
       {service.info.slice(1).map((item, i) => {
@@ -137,9 +136,9 @@ export const ServiceComp: React.FC<MovingCircleProps> = ({
             key={index}
             className={` flex flex-col gap-2 z-20`}
           >
-            <h3 className={`font-header text-stone-700 text-3xl ${item.h3}`}>
+            <h3 className={`font-header text-stone-700 text-2xl laptop:text-3xl ${item.h3}`}>
               {before}
-              <span className="font-wide text-4xl">{item.highlight}</span>
+              <span className="font-wide tracking-wide text-3xl laptop:text-4xl">{item.highlight}</span>
               {after}
             </h3>
             <p
@@ -152,15 +151,15 @@ export const ServiceComp: React.FC<MovingCircleProps> = ({
             {isMobile && (
               <button
                 onClick={() => toggleExpand(index)}
-                className="text-sm w-fit cursor-pointer flex items-center gap-2 self-end"
+                className="text-sm w-fit cursor-pointer flex items-center gap-2 self-end border-t-1 border-r-1 mt-2 pt-1 pr-2"
               >
                 {isExpanded ? (
                   <>
-                    Visa mindre <SlArrowUp />
+                    Visa mindre 
                   </>
                 ) : (
                   <>
-                    Läs mer <SlArrowDown />
+                    Läs mer 
                   </>
                 )}
               </button>
