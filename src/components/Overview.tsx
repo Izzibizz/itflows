@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import { NavLink, useNavigate} from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 import overviewCards from "../data/overviewCards.json";
 
 export const Overview: React.FC = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
   const [isDesktop, setIsDesktop] = useState<boolean>(window.innerWidth >= 1025); 
   const navigate = useNavigate()
 
@@ -16,55 +16,29 @@ export const Overview: React.FC = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const toggleOpen = (index: number | null) => {
-    if (!isDesktop) return;
-    setOpenIndex(openIndex === index ? null : index);
-  };
 
 
-  useEffect(() => {
-    setOpenIndex(null)
-  }, [])
 
   return (
     <section className="grid grid-cols-2 laptop:grid-cols-4 relative">
       {overviewCards.map(
-        ({ title, path, bgColor, textColor, description }, index) => {
-          const isOpen = openIndex === index;
+        ({ title, path }) => {
+        
 
           return (
             <div
               key={path}
-              className={`${bgColor} bg-cover bg-center aspect-square laptop:aspect-[3/4] desktop:aspect-square flex flex-col items-center justify-center text-center ${textColor} p-4 cursor-pointer transition-all duration-500 `}
-              onMouseEnter={() => toggleOpen(index)}
-              onMouseLeave={() => toggleOpen(null)}
+              className={`group bg-warm-white border-b-2 border-x-1 border-t-0 border-stone-700 bg-cover bg-center aspect-square laptop:aspect-[3/4] desktop:aspect-square flex flex-col items-center justify-center text-center text-stone-700 p-4 cursor-pointer transition-all duration-500 `}
+         
               onClick={() => navigate(path)}
             >
               <h3
-                className={`text-xl tablet:text-4xl transition-opacity duration-300 font-bold tracking-wide ${
-                  isOpen ? "opacity-0" : "opacity-100"
-                }`}
+                className={`text-xl tablet:text-4xl transition-opacity duration-300 font-bold tracking-wide group-hover:italic `}
               >
                 {title}
               </h3>
 
-              <div
-                className={`transition-all duration-500 ease-in-out overflow-hidden flex flex-col gap-4 items-center text-justify w-10/12 mx-auto font-body ${
-                  isOpen && isDesktop
-                    ? "max-h-[500px] opacity-100"
-                    : "max-h-0 opacity-0"
-                }`}
-              >
-                {description.map((line, i) => (
-                  <p key={i} className={i === 0 ? "text-xl text-center font-header" : "text-sm italic"}>{line}</p>
-                ))}
-                <NavLink
-                  to={path}
-                  className="bg-dark-blue text-warm-white p-2 px-6 mt-2 mb-4 rounded-full w-fit h-fit cursor-pointer shadow-lg hover:scale-110 hover:bg-warm-white hover:text-dark-blue"
-                >
-                  Läs mer
-                </NavLink>
-              </div>
+           
             </div>
           );
         }

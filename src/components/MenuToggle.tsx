@@ -23,12 +23,12 @@ interface MenuToggleProps {
         >
           <span
             className={`absolute block h-0.5 w-full ${isSamarbete ? "bg-warm-black" : isLandingPage && headerBg ? "bg-stone-800" : isLandingPage ? "bg-warm-white" : "bg-dark-blue"} transition-transform duration-300 
-              ${isOpen ? "top-1/2 -translate-y-1/2 rotate-45 bg-warm-white" : "top-1/3"}`}
+              ${isOpen && isLandingPage ? "top-1/2 -translate-y-1/2 rotate-45 bg-warm-white" : isOpen ? "top-1/2 -translate-y-1/2 rotate-45 bg-dark-blue" : "top-1/3"}`}
           ></span>
 
           <span
             className={`absolute block h-0.5 w-full ${isSamarbete ? "bg-warm-black"  : isLandingPage && headerBg ? "bg-stone-800" : isLandingPage ? "bg-warm-white" : "bg-dark-blue" } transition-transform duration-300 
-              ${isOpen ? "top-1/2 -translate-y-1/2 -rotate-45 bg-warm-white" : "top-2/3 translate-x-2"}`}
+              ${isOpen && isLandingPage ? "top-1/2 -translate-y-1/2 -rotate-45 bg-warm-white" : isOpen ? "top-1/2 -translate-y-1/2 -rotate-45 bg-dark-blue" : "top-2/3 translate-x-2"}`}
           ></span>
         </button>
       );

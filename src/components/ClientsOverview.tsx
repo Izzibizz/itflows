@@ -12,7 +12,7 @@ export const ClientsOverview: React.FC = () => {
 
   return (
     <section>
-      <div className="w-10/12 laptop:w-9/12 mx-auto py-30 laptop:pb-48 flex flex-col gap-10 laptop:gap-8">
+      <div className="w-10/12 laptop:w-9/12 mx-auto py-30 laptop:py-48 flex flex-col gap-10 laptop:gap-8">
       <motion.div
       ref={swiperRef}
       initial={{ opacity: 0, y: 100 }}

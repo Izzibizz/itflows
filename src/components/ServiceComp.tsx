@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { MovingCircle } from "../components/MovingCircle";
 import { SlArrowDown, SlArrowUp } from "react-icons/sl";
@@ -9,6 +9,7 @@ interface ServiceInfoBlock {
   highlight: string;
   body: string;
   layout: string;
+  h3: string;
 }
 
 interface ServiceData {
@@ -21,15 +22,21 @@ interface ServiceData {
 }
 
 interface MovingCircleProps {
-    circleColors: string;
-    textColor: string;
-    imageMobile: string;
-    imageLaptop: string;
+  circleColors: string;
+  textColor: string;
+  imageMobile: string;
+  imageLaptop: string;
 }
 
-export const ServiceComp: React.FC<MovingCircleProps> = ({circleColors, textColor, imageMobile, imageLaptop }) => {
+export const ServiceComp: React.FC<MovingCircleProps> = ({
+  circleColors,
+  textColor,
+  imageMobile,
+  imageLaptop,
+}) => {
   const location = useLocation();
   const [expandedIndexes, setExpandedIndexes] = useState<number[]>([]);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
 
   type Services = Record<string, ServiceData>;
 
@@ -47,6 +54,15 @@ export const ServiceComp: React.FC<MovingCircleProps> = ({circleColors, textColo
       prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
     );
   };
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768); // <768px = mobil
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   if (!service) return <div>Hittar inte tjänsten.</div>;
 
@@ -55,7 +71,9 @@ export const ServiceComp: React.FC<MovingCircleProps> = ({circleColors, textColo
   return (
     <section className="animate-fadeIn flex flex-col gap-14 laptop:gap-18 font-body">
       <div className="h-[50vh] tablet:h-[70vh] laptop:h-[60vh] w-full flex justify-center items-center flex-col relative z-20 uppercase">
-        <h1 className={`font-bold text-[60px] laptop:text-[80px] text-center ${textColor}`}>
+        <h1
+          className={`font-bold text-[60px] laptop:text-[80px] text-center ${textColor}`}
+        >
           {service.title}
         </h1>
         {service.h2 && (
@@ -67,81 +85,90 @@ export const ServiceComp: React.FC<MovingCircleProps> = ({circleColors, textColo
           </h2>
         )}
       </div>
-      <MovingCircle circleColors={circleColors}/>
-    
+      <MovingCircle circleColors={circleColors} />
+
       {service.info.length > 0 && (
-  <div className={`${service.info[0].layout} flex flex-col gap-2 z-20`}>
-    <h3 className="font-header text-dark-blue text-3xl">
-      {service.info[0].title.split(service.info[0].highlight)[0]}
-      <span className="font-wide text-4xl">{service.info[0].highlight}</span>
-      {service.info[0].title.split(service.info[0].highlight)[1]}
-    </h3>
-    <p
-      className={`text-justify transition-all duration-300 ${
-        expandedIndexes.includes(0) ? "" : "line-clamp-3"
-      }`}
-    >
-      {service.info[0].body}
-    </p>
-    <button
-      onClick={() => toggleExpand(0)}
-      className="text-sm w-fit cursor-pointer flex items-center gap-2 self-end"
-    >
-      {expandedIndexes.includes(0) ? (
-        <>
-          Visa mindre <SlArrowUp />
-        </>
-      ) : (
-        <>
-          Läs mer <SlArrowDown />
-        </>
+        <div className={`${service.info[0].layout} flex flex-col gap-2 z-20`}>
+          <h3 className="font-header text-stone-700 text-3xl">
+            {service.info[0].title.split(service.info[0].highlight)[0]}
+            <span className="font-wide text-4xl">
+              {service.info[0].highlight}
+            </span>
+            {service.info[0].title.split(service.info[0].highlight)[1]}
+          </h3>
+          <p
+            className={`text-justify transition-all duration-300 ${
+              isMobile && !expandedIndexes.includes(0) ? "line-clamp-3" : ""
+            }`}
+          >
+            {service.info[0].body}
+          </p>
+          {isMobile && (
+            <button
+              onClick={() => toggleExpand(0)}
+              className="text-sm w-fit cursor-pointer flex items-center gap-2 self-end"
+            >
+              {expandedIndexes.includes(0) ? (
+                <>
+                  Visa mindre <SlArrowUp />
+                </>
+              ) : (
+                <>
+                  Läs mer <SlArrowDown />
+                </>
+              )}
+            </button>
+          )}
+        </div>
       )}
-    </button>
-  </div>
-)}
 
-<img src={window.innerWidth < 1025 ? imageMobile : imageLaptop} className="w-full laptop:w-2/3 mx-auto object-cover" />
+      <img
+        src={window.innerWidth < 1025 ? imageMobile : imageLaptop}
+        className="w-full laptop:w-2/3 mx-auto object-cover"
+      />
+    <div className="grid laptop:grid-cols-2 gap-20">
+      {service.info.slice(1).map((item, i) => {
+        const index = i + 1;
+        const isExpanded = expandedIndexes.includes(index);
+        const [before, after] = item.title.split(item.highlight);
 
-
-{service.info.slice(1).map((item, i) => {
-  const index = i + 1;
-  const isExpanded = expandedIndexes.includes(index);
-  const [before, after] = item.title.split(item.highlight);
-
-  return (
-    <div
-      key={index}
-      className={`${item.layout} flex flex-col gap-2 z-20`}
-    >
-      <h3 className="font-header text-dark-blue text-3xl">
-        {before}
-        <span className="font-wide text-4xl">{item.highlight}</span>
-        {after}
-      </h3>
-      <p
-        className={`text-justify transition-all duration-300 ${
-          isExpanded ? "" : "line-clamp-3"
-        }`}
-      >
-        {item.body}
-      </p>
-      <button
-        onClick={() => toggleExpand(index)}
-        className="text-sm w-fit cursor-pointer flex items-center gap-2 self-end"
-      >
-        {isExpanded ? (
-          <>
-            Visa mindre <SlArrowUp />
-          </>
-        ) : (
-          <>
-            Läs mer <SlArrowDown />
-          </>
-        )}
-      </button>
-    </div>
-  );
-})}
+        return (
+          <div
+            key={index}
+            className={` flex flex-col gap-2 z-20`}
+          >
+            <h3 className={`font-header text-stone-700 text-3xl ${item.h3}`}>
+              {before}
+              <span className="font-wide text-4xl">{item.highlight}</span>
+              {after}
+            </h3>
+            <p
+              className={`text-justify transition-all duration-300 ${
+                isMobile && !isExpanded ? "line-clamp-3" : ""
+              }`}
+            >
+              {item.body}
+            </p>
+            {isMobile && (
+              <button
+                onClick={() => toggleExpand(index)}
+                className="text-sm w-fit cursor-pointer flex items-center gap-2 self-end"
+              >
+                {isExpanded ? (
+                  <>
+                    Visa mindre <SlArrowUp />
+                  </>
+                ) : (
+                  <>
+                    Läs mer <SlArrowDown />
+                  </>
+                )}
+              </button>
+            )}
+          </div>
+        );
+      })}
+      </div>
     </section>
   );
 };

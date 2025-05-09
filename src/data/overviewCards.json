@@ -23,7 +23,7 @@
 
       "title": "Webbutveckling",
       "path": "/webbutveckling",
-      "bgColor": "bg-[url('https://res.cloudinary.com/dlp85vjwx/image/upload/v1746700095/red_xbu8ez.jpg')]",
+      "bgColor": "/* bg-[url('https://res.cloudinary.com/dlp85vjwx/image/upload/v1746778950/b2079775e176bfc82ccb9af9e96d3978_agasjc.jpg')] */",
       "textColor": "text-warm-white",
       "description": [
         "Ditt företag behöver en tydlig identitet",
