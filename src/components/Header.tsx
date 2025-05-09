@@ -14,7 +14,7 @@ type NavLinkItem = {
 export const Header: React.FC = () => {
   const { isSamarbete, isLandingPage, headerBg, setHeaderBg } = useCollabStore();
   const [isOpen, setIsOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1025);
   const [showDropdown, setShowDropdown] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();

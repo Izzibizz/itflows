@@ -22,7 +22,7 @@ export const VideoBg = () => {
         loop
         muted
         playsInline
-        className={`hide-controls absolute inset-0 w-full h-full max-h-[120vh] laptop:max-h-[95vh] object-cover z-0`}
+        className={`hide-controls absolute inset-0 w-full h-full max-h-[100vh] laptop:max-h-[120vh] object-cover z-0`}
       >
         <source
           src={ isLaptop? "https://res.cloudinary.com/dlp85vjwx/video/upload/v1745864887/Sequence_01_5_gkogqj.mp4" : "https://res.cloudinary.com/dlp85vjwx/video/upload/v1745942988/Sequence_01_7_ydjmi4.mp4"}

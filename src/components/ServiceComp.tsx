@@ -68,7 +68,7 @@ export const ServiceComp: React.FC<MovingCircleProps> = ({
   console.log("currentkey", currentKey);
 
   return (
-    <section className="animate-fadeIn flex flex-col gap-10 laptop:gap-14 font-body">
+    <section className="animate-longFadeIn flex flex-col gap-10 laptop:gap-14 font-body">
       <div className="h-[50vh] tablet:h-[70vh] laptop:h-[60vh] w-full flex justify-center items-center flex-col relative z-20 uppercase">
         <h1
           className={`font-bold text-[60px] laptop:text-[80px] text-center ${textColor}`}
@@ -125,7 +125,7 @@ export const ServiceComp: React.FC<MovingCircleProps> = ({
         src={window.innerWidth < 1025 ? imageMobile : imageLaptop}
         className={`w-full ${service.title === "Helhetskoncept" ? "laptop:w-10/12" : "laptop:w-2/3"} mx-auto object-cover`}
       />
-    <div className="grid laptop:grid-cols-2 gap-10 laptop:gap-20">
+    <div className="grid laptop:grid-cols-2 gap-10 laptop:gap-20 border-y-1 py-4 laptop:py-8 my-4 laptop:mt-16">
       {service.info.slice(1).map((item, i) => {
         const index = i + 1;
         const isExpanded = expandedIndexes.includes(index);
@@ -134,7 +134,7 @@ export const ServiceComp: React.FC<MovingCircleProps> = ({
         return (
           <div
             key={index}
-            className={` flex flex-col gap-2 z-20`}
+            className={` ${window.innerWidth < 1025 && index === 1 && "border-b pb-4"} flex flex-col gap-2 z-20`}
           >
             <h3 className={`font-header text-stone-700 text-2xl laptop:text-3xl ${item.h3}`}>
               {before}

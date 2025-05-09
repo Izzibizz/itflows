@@ -67,7 +67,7 @@ export const ContactForm: React.FC = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col laptop:flex-row gap-4 laptop:gap-14 mx-auto font-body bg-light-beige rounded-4xl drop-shadow-xl p-10"
+      className="flex flex-col tablet:flex-row gap-4 laptop:gap-14 font-body bg-gradient-to-b from-light-beige rounded-4xl drop-shadow-xl p-10"
     >
       <div className="gap-4 flex flex-col">
         <label>
@@ -228,14 +228,13 @@ export const ContactForm: React.FC = () => {
             <option value="annat">Annat</option>
           </select>
         </label>
-      </div>
-
-      <button
+        <button
         type="submit"
-        className="bg-dark-blue text-white p-3 rounded-full hover:scale-105 transition-all w-fit self-start cursor-pointer"
+        className="bg-dark-blue text-white p-3 rounded-full hover:scale-105 transition-all w-fit self-start tablet:self-end cursor-pointer"
       >
         Skicka förfrågan
       </button>
+      </div>
     </form>
   );
 };

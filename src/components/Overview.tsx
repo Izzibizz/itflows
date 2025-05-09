@@ -19,7 +19,7 @@ export const Overview: React.FC = () => {
           return (
             <div
               key={path}
-              className={`group bg-warm-white border-b-2 border-x-1 border-t-0 border-stone-700 bg-cover bg-center aspect-square laptop:aspect-[3/4] desktop:aspect-square flex flex-col items-center justify-center text-center text-stone-700 p-4 cursor-pointer transition-all duration-500 `}
+              className={`group bg-warm-white border-b-2 border-x-1 border-t-2 border-stone-700 bg-cover bg-center aspect-square laptop:aspect-[3/4] desktop:aspect-square flex flex-col items-center justify-center text-center text-stone-700 p-4 cursor-pointer transition-all duration-500 `}
          
               onClick={() => navigate(path)}
             >
