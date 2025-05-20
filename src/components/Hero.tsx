@@ -58,14 +58,14 @@ export const Hero: React.FC = () => {
               Få Offert
             </button>
           </div>
-          <Testimonial testimonial={testimonials[0]} position={"self-end laptop:hidden rounded-br-none rounded-tr-[120px]"} />
+          <Testimonial testimonial={testimonials[0]} style={"self-end bg-warm-white laptop:hidden rounded-br-none rounded-tr-[120px]"} />
         </motion.div>
         <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2.2, duration: 2 }}
         className="flex flex-col w-full">
-        <Testimonial testimonial={testimonials[0]} position={"self-end hidden laptop:flex max-w-[800px] laptop:w-2/3 laptop:mt-20 rounded-br-none rounded-tr-[120px] laptop:rounded-tr-[150px]"} />
+        <Testimonial testimonial={testimonials[0]} style={"self-end bg-warm-white hidden laptop:flex max-w-[800px] laptop:w-2/3 laptop:mt-20 rounded-br-none rounded-tr-[120px] laptop:rounded-tr-[150px]"} />
         </motion.div>
       </div>
     </section>

@@ -1,0 +1,51 @@
+[
+  {
+    "title": "Uppstartsmöte med behovsanalys",
+    "description":
+      "Vi börjar med ett möte där vi går igenom din verksamhet, målgrupp och syfte med hemsidan. Du får dela med dig av vad du gillar i form av stil, färger, känsla och referenser. Vi tittar även på konkurrenter och branschstandarder för att hitta rätt riktning.",
+    "image":
+      "https://res.cloudinary.com/dlp85vjwx/image/upload/v1747752223/samarbete-steg-for-steg-1_lmlomt.png"
+  },
+  {
+    "title": "Moodboard och idéer",
+    "description": "Utifrån vårt samtal sätter vi ihop ett moodboard med färgpalett, layoutidéer, typsnitt, bildmanér och andra visuella element – så du kan känna in helheten innan vi går vidare.",
+    "image":
+      "https://res.cloudinary.com/dlp85vjwx/image/upload/v1747752223/samarbete-steg-for-steg-2_uhl0ay.png"
+  },
+  {
+    "title": "Designskiss & layoutförslag",
+    "description": "Vi tar fram ett första förslag på startsidans layout med färger, typsnitt, knappar, menyer, illustrationer, logga och grundläggande struktur. Här får du en tydlig känsla för designens uttryck.",
+    "image":
+      "https://res.cloudinary.com/dlp85vjwx/image/upload/v1747752223/samarbete-steg-for-steg-3_pug3ln.png"
+  },
+  {
+    "title": "Feedback & justeringar",
+    "description": "Du får möjlighet att tycka till, ge feedback och komma med önskemål under processen. Vi justerar och finslipar design eller redigerar foton tills allt känns helt rätt – både visuellt och funktionellt. ",
+    "image":
+      "https://res.cloudinary.com/dlp85vjwx/image/upload/v1747752223/samarbete-steg-for-steg-4_ui6sac.png"
+  },
+  {
+    "title": "Fotografering",
+    "description": "Då vi kommit en bit på vägen och har en bild av design, stil och färgpalett planerar vi vilka bilder vi ska ta; miljöer, typ av bilder (porträtt, plats, produkt), färger och klädval etc. Vi fotar sen professionellt material som går i linje med din nya identitet.",
+    "image":
+      "https://res.cloudinary.com/dlp85vjwx/image/upload/v1747752223/samarbete-steg-for-steg-5_p2vtat.png"
+  },
+  {
+    "title": "Vidareutveckling + Feedback & justeringar",
+    "description": "När grunddesignen är satt bygger vi vidare med undersidor, kontaktformulär, call to actions, sektioner och komponenter – i linje med det visuella konceptet. Nu kan vi även komplettera med AI-genererade stämningsbilder, videos eller illustrationer. Vi går igenom utvecklingen och du kommer med synpunkter samt har möjlighet till att önska bildredigering.",
+    "image":
+      "https://res.cloudinary.com/dlp85vjwx/image/upload/v1747752223/samarbete-steg-for-steg-6_um8s4y.png"
+  },
+  {
+    "title": "Kvalitetssäkring & Lansering",
+    "description": "Efter en sista omgång av feedback och godkännande testar vi sidan i olika webbläsare och skärmstorlekar, alla dess funktioner, kopplar domän, publicerar – och du är live!",
+    "image":
+      "https://res.cloudinary.com/dlp85vjwx/image/upload/v1747752224/samarbete-steg-for-steg-7_c4vvie.png"
+  },
+  {
+    "title": "En färdig hemsida du är stolt över",
+    "description": "Du är i mål – äntligen har du hemsidan du längtat efter. En du stolt delar på dina sociala medier, som väcker ny energi i företaget och dina kunder, och ger dig både komplimanger och merförsäljning.",
+    "image":
+      "https://res.cloudinary.com/dlp85vjwx/image/upload/v1747752224/samarbete-steg-for-steg-8_toptyk.png"
+  }
+]

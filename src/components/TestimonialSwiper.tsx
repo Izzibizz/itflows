@@ -52,7 +52,7 @@ export const TestimonialSwiper: React.FC = () => {
             key={index}
             className="py-10 flex"
           >
-          <Testimonial testimonial={testimonial} position="w-10/12 laptop:w-2/3 max-w-[800px] mx-auto rounded-bl-none rounded-tl-[120px] laptop:rounded-tl-[150px]"/>
+          <Testimonial testimonial={testimonial} style="w-10/12 bg-warm-white laptop:w-2/3 max-w-[800px] mx-auto rounded-bl-none rounded-tl-[120px] laptop:rounded-tl-[150px]"/>
           </SwiperSlide>
         ))}
       </Swiper>

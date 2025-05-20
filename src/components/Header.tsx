@@ -103,6 +103,32 @@ export const Header: React.FC = () => {
     };
   }, []);
 
+useEffect(() => {
+  const handleClickOutside = (event: MouseEvent) => {
+    if (
+      dropdownRef.current &&
+      event.target instanceof Node &&
+      !dropdownRef.current.contains(event.target) &&
+      !(buttonRef.current && buttonRef.current.contains(event.target))
+    ) {
+      closeMenu();
+    }
+  };
+
+  if (isOpen) {
+    document.body.style.overflow = 'hidden';
+    document.addEventListener("mousedown", handleClickOutside);
+  } else {
+    document.body.style.overflow = '';
+    document.removeEventListener("mousedown", handleClickOutside);
+  }
+
+  return () => {
+    document.body.style.overflow = '';
+    document.removeEventListener("mousedown", handleClickOutside);
+  };
+}, [isOpen]);
+
   console.log(currentPath);
 
   return (
