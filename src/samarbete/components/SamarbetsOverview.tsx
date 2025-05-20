@@ -32,12 +32,12 @@ useEffect(() => {
 }, []);
 
   return (
-    <section className="py-40 flex flex-col gap-20">
+    <section className="py-40 laptop:py-48 flex flex-col gap-20 laptop:gap-24">
       <div className="flex flex-col gap-6">
-        <h2 className="font-collab text-4xl laptop:text-[30px]">
+        <h2 className="font-collab text-4xl laptop:text-[40px]">
           Hur går det till?
         </h2>
-        <h3 className="laptop:max-w-1/3">
+        <h3 className="text-xl laptop:max-w-1/3">
           Såhär går det till steg för steg från första mötet då vi försöker
           förstå visionen hela vägen till en färdig hemsida
         </h3>
@@ -68,7 +68,7 @@ useEffect(() => {
       ))}
     </div>
   ) : (
-      <div className="hidden laptop:flex gap-20">
+      <div className="hidden laptop:flex gap-40">
         <div className="flex flex-col">
          {steps.map((step, index) => (
     
@@ -81,7 +81,7 @@ useEffect(() => {
  
       ))}
            </div>
-             <div className="flex flex-col justify-evenly">
+             <div className="flex flex-col justify-evenly gap-4">
       {steps.map((step, index) => (
       <div key={`text-${index}`} className="flex flex-col gap-2">
         <h4 className="font-collab text-2xl">{step.title}</h4>
