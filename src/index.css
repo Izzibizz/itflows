@@ -8,7 +8,7 @@
 }
 
 @font-face {
-  font-family: "voyage";
+  font-family: "voyageBold";
   src: url("./assets/fonts/voyage-bold.otf") format("Opentype");
   font-weight: 700;
   font-style: normal;
@@ -16,8 +16,8 @@
 
 @font-face {
   font-family: "voyage";
-  src: url("./assets/fonts/voyage-Regular.otf") format("Opentype");
-  font-weight: 400;
+  src: url("./assets/fonts/voyage-regular.otf") format("Opentype");
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -79,6 +79,7 @@ body {
   --font-header: "quicking", sans-serif;
   --font-bold: "condensed", sans-serif;
   --font-collab: "voyage", serif;
+  --font-collab-bold: "voyageBold", serif;
   --font-curly: "belvare", serif;
   --font-wide: "francy", sans-serif;
   --font-c-body: "Montserrat", sans-serif;

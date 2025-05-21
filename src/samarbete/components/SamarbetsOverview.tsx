@@ -60,7 +60,7 @@ useEffect(() => {
             className="w-full h-full"
           />
         </div>
-            <span className="font-c-body">Klicka på de olika stegen för mer info</span>
+            <span className="font-c-body">Klicka på de olika stegen nedan för mer info</span>
             </div>
             </>
         )}
