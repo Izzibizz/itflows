@@ -21,7 +21,7 @@ export const LandningsSida: React.FC = () => {
       <Hero />
       <Overview />
       <ClientsOverview />
-      <TestimonialSwiper/>
+      <TestimonialSwiper style="bg-warm-white" bubbleStyle="bg-collab-beige"/>
       <IntroductionAbout/>
       <ContactComp/>
     </section>

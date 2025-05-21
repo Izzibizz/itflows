@@ -5,7 +5,7 @@ export const BookingCTAComp: React.FC = () => {
     const navigate = useNavigate()
 
   return (
-    <section className={` ${window.innerWidth < 678 ? "bg-[url('https://res.cloudinary.com/dlp85vjwx/image/upload/v1746804756/dator-itflows-webbutveckling-izabel-lind-2_s1p3vp.jpg')]" : "bg-[url('https://res.cloudinary.com/dlp85vjwx/image/upload/v1746804856/h%C3%A4nder_tgqqwf.jpg')]" } bg-cover bg-center py-20 px-10 text-warm-white flex flex-col tablet:flex-row gap-6`}>
+    <section className={` bg-warm-beige h-fit py-20 px-10 text-warm-white flex flex-col tablet:flex-row gap-6 z-20`}>
       <div className="flex flex-col gap-1 tablet:w-1/2">
       <h3 className="font-wide text-4xl">Boka en tid för konsultation</h3>
       <h4 className="font-header text-2xl tablet:w-10/12">Konsultationen är kostnadsfri och det kan vara ditt första steg mot hemsidan du längtat efter.</h4>

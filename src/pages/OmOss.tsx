@@ -69,7 +69,7 @@ export const OmOss: React.FC = () => {
         <div className=" laptop:w-10/12 flex flex-col laptop:flex-row gap-3 laptop:gap-10" ref={text3Ref}>
         <img src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1746194309/izabel-lind-farnstrand-webbyra-itflows-grudnare_wj1zn0.webp" className="laptop:w-1/3 object-cover"/>
         <div className="flex flex-col gap-3">
-          <h2 className="font-header text-4xl">Personerna bakom itFlows</h2>
+          <h2 className="font-header text-4xl">Bakom itFlows</h2>
           <p className="font-body text-justify">
             Grundaren Izabel Lind är konstnär, designer och webbutvecklare med
             lång erfarenhet av att skapa hemsidor och ännu längre av visuell
