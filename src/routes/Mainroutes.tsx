@@ -13,6 +13,7 @@ import { Erbjudanden } from "../pages/Erbjudanden"
 import { OmPartners } from "../samarbete/pages/OmPartners";
 import { Samarbete } from "../samarbete/pages/Samarbete";
 import { Prislista } from "../samarbete/pages/Prislista";
+import { SamarbeteKontakt } from "../samarbete/pages/SamarbeteKontakt";
 
 export const MainRoutes: React.FC = () => {
   return (
@@ -32,6 +33,7 @@ export const MainRoutes: React.FC = () => {
         <Route path="/samarbete/om-oss" element={<OmPartners/>}/>
         <Route path="/samarbete/prislista" element={<Prislista/>}/>
         <Route path="/samarbete/studio-mamama" element={<Samarbete/>}/>
+         <Route path="/samarbete/kontakt" element={<SamarbeteKontakt/>}/>
         </Routes>
     </div>
   )

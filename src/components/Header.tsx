@@ -12,7 +12,8 @@ type NavLinkItem = {
 };
 
 export const Header: React.FC = () => {
-  const { isSamarbete, isLandingPage, headerBg, setHeaderBg } = useCollabStore();
+  const { isSamarbete, isLandingPage, headerBg, setHeaderBg } =
+    useCollabStore();
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1025);
   const [showDropdown, setShowDropdown] = useState(false);
@@ -28,30 +29,35 @@ export const Header: React.FC = () => {
       path: "/tjanster",
       children: [
         { name: "Branding", path: "/branding" },
-        { name: "Webbutveckling", path: "/webbutveckling" },
         { name: "Design", path: "/design" },
+        { name: "Webbutveckling", path: "/webbutveckling" },
         { name: "Helhetskoncept", path: "/helhetskoncept" },
         { name: "Erbjudanden", path: "/erbjudanden" },
       ],
     },
-    { name: "Kunder", path: "/kunder" },
+    /*    { name: "Kunder", path: "/kunder" }, */
+    { name: "itFlows + Studio Mamama", path: "/samarbete/studio-mamama" },
     { name: "Om oss", path: "/om-oss" },
     { name: "Kontakt", path: "/kontakt" },
   ];
 
   const collabNav: NavLinkItem[] = [
-    { name: "Hem", path: "/" },
     { name: "Prislista", path: "/samarbete/prislista" },
     { name: "Om oss", path: "/samarbete/om-oss" },
     { name: "Kontakt", path: "/samarbete/kontakt" },
+    { name: "itFlows", path: "/" }
   ];
 
   const omOssNav: NavLinkItem[] = [{ name: "Hem", path: "/" }, ...navLinksBase];
+  
+  const collabOmNav: NavLinkItem[] = [{name: "Startsida", path: "/samarbete/studio-mamama"}, ...collabNav] 
 
   const navChildren =
     navLinksBase.find((link) => link.name === "Tjänster")?.children ?? [];
 
-  const navLinks = isSamarbete
+const navLinks = ( currentPath === "/samarbete/om-oss" ||  currentPath ===  "/samarbete/prislista" ||  currentPath === "/samarbete/kontakt" )
+    ? collabOmNav
+    :  isSamarbete
     ? collabNav
     : currentPath === "/om-oss"
     ? omOssNav
@@ -103,31 +109,31 @@ export const Header: React.FC = () => {
     };
   }, []);
 
-useEffect(() => {
-  const handleClickOutside = (event: MouseEvent) => {
-    if (
-      dropdownRef.current &&
-      event.target instanceof Node &&
-      !dropdownRef.current.contains(event.target) &&
-      !(buttonRef.current && buttonRef.current.contains(event.target))
-    ) {
-      closeMenu();
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        event.target instanceof Node &&
+        !dropdownRef.current.contains(event.target) &&
+        !(buttonRef.current && buttonRef.current.contains(event.target))
+      ) {
+        closeMenu();
+      }
+    };
+
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.body.style.overflow = "";
+      document.removeEventListener("mousedown", handleClickOutside);
     }
-  };
 
-  if (isOpen) {
-    document.body.style.overflow = 'hidden';
-    document.addEventListener("mousedown", handleClickOutside);
-  } else {
-    document.body.style.overflow = '';
-    document.removeEventListener("mousedown", handleClickOutside);
-  }
-
-  return () => {
-    document.body.style.overflow = '';
-    document.removeEventListener("mousedown", handleClickOutside);
-  };
-}, [isOpen]);
+    return () => {
+      document.body.style.overflow = "";
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen]);
 
   console.log(currentPath);
 
@@ -135,8 +141,8 @@ useEffect(() => {
     <>
       <header
         className={`${
-          isSamarbete ? "font-c-body" : "font-header"
-        } px-9 p-8 laptop:px-18 fixed top-0 z-70 w-full h-6 flex ${
+          isSamarbete ? "font-c-body h-14 p-10" : "font-header h-6 p-8"
+        } px-9  laptop:px-18 fixed top-0 z-70 w-full  flex ${
           currentPath === "/om-oss" ? "justify-end" : "justify-between"
         } items-center  animate-fadeIn ${
           headerBg
@@ -150,7 +156,7 @@ useEffect(() => {
               <img
                 src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1744875992/itflows-logo-green_lb3upj.svg"
                 alt="logo itflows"
-                className="w-[100px] tablet:w-[200px] laptop:hover:scale-105 cursor-pointer mr-8"
+                className="w-[100px] tablet:w-[110px] laptop:hover:scale-105 cursor-pointer mr-4 laptop:mr-6"
                 onClick={() => logoClick()}
               />
               <FaPlus className="text-collab-green" />
@@ -162,7 +168,7 @@ useEffect(() => {
                 <img
                   src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1744875557/logga-studio-mamama_va4bfr.svg"
                   alt="logo studio mamama"
-                  className="w-[100px] tablet:w-[200px] laptop:hover:scale-105 cursor-pointer"
+                  className="w-[100px] tablet:w-[140px] laptop:hover:scale-105 cursor-pointer"
                 />
               </a>
             </div>
