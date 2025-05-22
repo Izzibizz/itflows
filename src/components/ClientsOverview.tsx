@@ -17,19 +17,19 @@ export const ClientsOverview: React.FC = () => {
       ref={swiperRef}
       initial={{ opacity: 0, y: 100 }}
       animate={swiperIsInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 1, ease: "easeOut" }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
     >
         <SwiperComp />
         </motion.div>
         <motion.div className="flex flex-col gap-6" initial={{ opacity: 0, y: 200}}
       animate={swiperIsInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 1, delay: 1, ease: "easeOut" }}>
+      transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}>
           <div className="flex flex-col gap-2">
             <h3 className="font-header text-2xl tablet:text-4xl laptop:text-[35px] text-stone-700">
               Våra Kunder
             </h3>
             <h4 className="font-heading italic text-lg tablet:text-xl">
-              Vi skapar unika uttryck för varje kund
+              itFlows skapar unika uttryck för varje kund
             </h4>
             </div>
             <p className="laptop:w-8/12 text-justify font-body">
@@ -43,7 +43,7 @@ export const ClientsOverview: React.FC = () => {
             <motion.button
              initial={{ opacity: 0 }}
              animate={swiperIsInView ? { opacity: 1} : {}}
-             transition={{ duration: 1, delay: 1.5, ease: "easeOut" }}
+             transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
              className="text-lg w-fit font-header relative flex gap-2 items-center 
              after:content-[''] after:block after:h-[1px] after:bg-stone-500 after:absolute after:left-0 after:bottom-0 
              after:w-full 

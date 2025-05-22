@@ -22,7 +22,7 @@ export const IntroductionAbout: React.FC = () => {
             ref={textRef}
             initial={{ opacity: 0, y: 100 }}
             animate={textIsInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8,  ease: "easeOut" }}
+            transition={{ duration: 0.5,  ease: "easeOut" }}
           >
             Om itFlows
           </motion.h3>
@@ -31,7 +31,7 @@ export const IntroductionAbout: React.FC = () => {
 
             initial={{ opacity: 0, y: 200 }}
             animate={textIsInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
+            transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
           >
             <p>
               itFlows är en webbyrå i Stockholm som skapar skräddarsydda,

@@ -50,9 +50,8 @@
 }
 
 body {
-  background-color: #FFFAF3;
+  background-color: #fffaf3;
 }
-
 
 .swiper-slide {
   transition: transform 0.3s ease, scale 0.3s ease;
@@ -70,7 +69,6 @@ body {
   opacity: 0.4;
   z-index: 5;
 }
-
 
 @import "tailwindcss";
 
@@ -108,6 +106,7 @@ body {
   --animate-fadeIn: fadeIn 1s ease-in both;
   --animate-longFadeIn: fadeIn 2.3s ease-in both;
   --animate-spin: spin 10s ease-in infinite;
+  --animate-banner: banner 10s linear infinite;
 
   @keyframes fadeIn {
     from {
@@ -125,5 +124,12 @@ body {
       transform: rotate(360deg);
     }
   }
-  
+  @keyframes banner {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
 }

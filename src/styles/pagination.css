@@ -84,11 +84,11 @@
 .testimonial .swiper-pagination-bullet {
   border-color: none;
   border-width: 0;
-  background:rgb(236, 237, 239);
+  background:rgb(162, 171, 187);
 }
 
 .testimonial .swiper-pagination-bullet-active {
-  background: rgb(230 128 96);
+  background: rgb(237, 208, 199);
 }
 
 button.swiper-pagination-bullet {
