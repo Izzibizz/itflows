@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import { MovingCircle } from "../components/MovingCircle";
 import data from "../data/services.json";
@@ -35,7 +35,6 @@ export const ServiceComp: React.FC<MovingCircleProps> = ({
 }) => {
   const location = useLocation();
   const [expandedIndexes, setExpandedIndexes] = useState<number[]>([]);
-  const [isMobile, setIsMobile] = useState<boolean>(false);
 
   type Services = Record<string, ServiceData>;
 
@@ -53,15 +52,7 @@ export const ServiceComp: React.FC<MovingCircleProps> = ({
       prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
     );
   };
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768); // <768px = mobil
-    };
 
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
 
   if (!service) return <div>Hittar inte tjänsten.</div>;
 
