@@ -1,13 +1,14 @@
-import projectsJson from "../data/projectsData.json";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useNavigate } from "react-router-dom";
+import { Swiper as SwiperClass } from 'swiper/types';
 
 import { EffectCoverflow, Pagination, Autoplay  } from "swiper/modules";
 import "../styles/swiper.css";
 import "../styles/effect-coverflow.css";
 import "../styles/pagination.css";
 
-type Project = {
+interface ProjectProps {
   name: string;
   year: number;
   company: string;
@@ -17,14 +18,23 @@ type Project = {
   website: string;
   typeOfProject: string[];
 };
-const projects: Project[] = projectsJson;
 
-export const SwiperComp: React.FC = () => {
+
+interface SwiperProps {
+  projects: ProjectProps[];             
+  onSlideChange: (index: number) => void;
+}
+
+export const SwiperComp: React.FC<SwiperProps> = ({onSlideChange, projects}) => {
   const navigate = useNavigate();
 
   return (
     <div className="overflow-visible w-full laptop:w-10/12 laptop:mx-auto flex flex-col">
       <Swiper
+      onSlideChange={(swiper) => onSlideChange(swiper.activeIndex)}
+      onSlideChangeTransitionEnd={(swiper) => {
+    onSlideChange(swiper.realIndex);
+  }}
         effect={"coverflow"}
         autoplay={{
           delay: 6000,

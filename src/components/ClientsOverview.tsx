@@ -1,14 +1,35 @@
+import { useState, useEffect } from "react";
 import { SwiperComp } from "./SwiperComp";
 import { useNavigate } from "react-router-dom";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { HiOutlineArrowSmallRight } from "react-icons/hi2";
+import { Testimonial } from "./Testimonial";
+import projectsJson from "../data/projectsData.json";
 
 export const ClientsOverview: React.FC = () => {
   const navigate = useNavigate();
+  const [ isLaptop, setIsLaptop ] = useState(window.innerWidth > 1280)
   const swiperRef = useRef(null);
   const swiperIsInView = useInView(swiperRef, { once: true });
+  const [ testimonialIndex, setTestimonialIndex ] = useState(0)
+  const projects = projectsJson
   
+  const setIndex = (index:number) => {
+    setTestimonialIndex(index)
+  }
+
+    useEffect(() => {
+  const handleResize = () => {
+    setIsLaptop( window.innerWidth > 1280);
+  };
+
+  handleResize();
+  window.addEventListener("resize", handleResize);
+  return () => window.removeEventListener("resize", handleResize);
+}, []);
+
+    console.log(testimonialIndex)
 
   return (
     <section>
@@ -19,8 +40,9 @@ export const ClientsOverview: React.FC = () => {
       animate={swiperIsInView ? { opacity: 1 } : {}}
       transition={{ duration: 2, ease: "easeOut" }}
     >
-        <SwiperComp />
+        <SwiperComp onSlideChange={setIndex} projects={projects}/>
         </motion.div>
+        <div className="flex flex-col laptop:flex-row">
         <motion.div className="flex flex-col gap-6" initial={{ opacity: 0}}
       animate={swiperIsInView ? { opacity: 1} : {}}
       transition={{ duration: 2, delay: 0.3, ease: "easeOut" }}>
@@ -56,6 +78,10 @@ export const ClientsOverview: React.FC = () => {
               </motion.button>
 
         </motion.div>
+        { isLaptop &&
+        <Testimonial testimonial={projects[testimonialIndex]} style={`bg-light-beige w-full self-end h-fit x-auto rounded-bl-none rounded-tl-[120px] laptop:rounded-tl-[150px]`}/>
+}
+        </div>
       </div>
     </section>
   );

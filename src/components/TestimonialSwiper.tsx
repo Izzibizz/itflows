@@ -38,15 +38,7 @@ export const TestimonialSwiper: React.FC<SwiperProps> = ({style, bubbleStyle}) =
         }}
         speed={2000}
         grabCursor={true}
-        slidesPerView={2}
-        breakpoints={{
-          320: {
-            slidesPerView: 1,
-          },
-          640: {
-            slidesPerView: 2,
-          }
-        }}
+        slidesPerView={1}
         loop={true}
         pagination={true}
         modules={[Pagination, Autoplay]}

@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom"
 import { useEffect } from "react";
 import { useCollabStore } from "../stores/useCollabStore";
 import { ServiceComp } from "../components/ServiceComp";
+import { BookingCTAComp } from "../components/BookingCTAComp";
 
 export const HelhetsKoncept: React.FC = () => {
   
@@ -55,6 +56,7 @@ export const HelhetsKoncept: React.FC = () => {
         />
 
       </div>
+      <BookingCTAComp />
     </section>
   );
 };
