@@ -26,7 +26,7 @@ export const Testimonial: React.FC<TestimonialProps> = ({
     >
       <div className="flex gap-2 tablet:gap-4 laptop:gap-6 items-center">
       <p className="italic">"{testimonial.text}"</p>
-        <img src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1747904859/circle_eafw4m.png" className={isSamarbete ? "hidden" : "h-5 w-5 tablet:w-7 tablet:h-7 laptop:w-10 laptop:h-10"} />
+        <img src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1747904859/circle_eafw4m.png" className={isSamarbete ? "hidden" : "hidden tablet:block tablet:w-7 tablet:h-7 laptop:w-10 laptop:h-10"} />
       </div>
       <p className="text-[10px] tablet:text-xs">
         {testimonial.name}, {testimonial.title}

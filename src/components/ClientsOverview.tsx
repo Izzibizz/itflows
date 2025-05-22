@@ -15,15 +15,15 @@ export const ClientsOverview: React.FC = () => {
       <div className="w-10/12 laptop:w-9/12 mx-auto py-30 laptop:py-48 flex flex-col gap-10 laptop:gap-8">
       <motion.div
       ref={swiperRef}
-      initial={{ opacity: 0, y: 100 }}
-      animate={swiperIsInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.5, ease: "easeOut" }}
+      initial={{ opacity: 0}}
+      animate={swiperIsInView ? { opacity: 1 } : {}}
+      transition={{ duration: 2, ease: "easeOut" }}
     >
         <SwiperComp />
         </motion.div>
-        <motion.div className="flex flex-col gap-6" initial={{ opacity: 0, y: 200}}
-      animate={swiperIsInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}>
+        <motion.div className="flex flex-col gap-6" initial={{ opacity: 0}}
+      animate={swiperIsInView ? { opacity: 1} : {}}
+      transition={{ duration: 2, delay: 0.3, ease: "easeOut" }}>
           <div className="flex flex-col gap-2">
             <h3 className="font-header text-2xl tablet:text-4xl laptop:text-[35px] text-stone-700">
               Våra Kunder

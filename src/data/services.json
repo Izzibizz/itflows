@@ -35,11 +35,11 @@
         "h3": "tablet:text-end"
       },
       {
-        "title": "Absolut att det krävs mod för att vara tydlig, men det lönar sig",
+        "title": "Absolut att det krävs mod för att vara tydlig",
         "highlight": "tydlig",
         "body": "Många företag vågar inte smalna av, ta ställning eller lyfta fram vad som verkligen gör dem unika. Men ju tydligare du är med din identitet, desto lättare blir det för rätt kunder att hitta dig. Branding hjälper dig att definiera den riktningen – vilka värden du står för, vad du vill signalera och hur du skiljer dig från mängden. Och när det görs rätt, kommer det också att kännas naturligt och självklart för dina kunder.",
         "layout": "laptop:w-1/2 laptop:self-center",
-        "h3": "tablet:text-end"
+        "h3": "tablet:text-end laptop:text-start"
       },
       {
         "title": "Du behöver inte ha alla svar – det är därför vi finns",

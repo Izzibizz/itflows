@@ -105,7 +105,7 @@ body {
 
   --animate-fadeIn: fadeIn 1s ease-in both;
   --animate-longFadeIn: fadeIn 2.3s ease-in both;
-  --animate-spin: spin 10s ease-in infinite;
+  --animate-rotate: rotate 1s ease-in;
   --animate-banner: banner 10s linear infinite;
 
   @keyframes fadeIn {
@@ -116,12 +116,12 @@ body {
       opacity: 1;
     }
   }
-  @keyframes spin {
+  @keyframes rotate {
     from {
       transform: rotate(0deg);
     }
     to {
-      transform: rotate(360deg);
+      transform: rotate(45deg);
     }
   }
   @keyframes banner {

@@ -96,36 +96,31 @@ export const ServiceComp: React.FC<MovingCircleProps> = ({
             {service.info[0].title.split(service.info[0].highlight)[1]}
           </h3>
           <p
-            className={`text-justify transition-all duration-300 ${
-              isMobile && !expandedIndexes.includes(0) ? "line-clamp-3" : ""
+            className={`transition-all duration-300 ${
+              !expandedIndexes.includes(0) ? "line-clamp-2" : ""
             }`}
           >
             {service.info[0].body}
           </p>
-          {isMobile && (
             <button
               onClick={() => toggleExpand(0)}
-              className="text-sm w-fit cursor-pointer flex items-center gap-2 self-end border-t-1  border-r-1 mt-2 pt-1 pr-2"
+              className="text-sm w-fit cursor-pointer flex items-center gap-2 self-end "
             >
               {expandedIndexes.includes(0) ? (
-                <>
-                  Visa mindre
-                </>
+                <img src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1747906933/plus_jwn5fm.png" alt="minimera kryss" className="rotate-45 transition-all duration-200 transform w-6 h-6 tablet:w-8 tablet:h-8"/>
               ) : (
-                <>
-                  Läs mer
-                </>
+                 <img src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1747906933/plus_jwn5fm.png" alt="plus" className="w-6 h-6 tablet:w-8 tablet:h-8"/>
               )}
             </button>
-          )}
         </div>
       )}
         <h3 className="font-wide tracking-wide text-3xl tracking-wide laptop:text-4xl">Hur går det till?</h3>
       <img
         src={window.innerWidth < 1025 ? imageMobile : imageLaptop}
+        alt="step by step - steg för steg"
         className={`w-full ${service.title === "Helhetskoncept" ? "laptop:w-10/12" : "laptop:w-2/3"} mx-auto object-cover`}
       />
-    <div className="grid laptop:grid-cols-2 gap-10 laptop:gap-20 border-y-1 py-4 laptop:py-8 my-4 laptop:mt-16">
+    <div className="grid laptop:grid-cols-2 gap-10 laptop:gap-20 border-t-1 py-4 laptop:py-8 my-4 laptop:mt-16">
       {service.info.slice(1).map((item, i) => {
         const index = i + 1;
         const isExpanded = expandedIndexes.includes(index);
@@ -134,7 +129,7 @@ export const ServiceComp: React.FC<MovingCircleProps> = ({
         return (
           <div
             key={index}
-            className={` ${window.innerWidth < 1025 && index === 1 && "border-b pb-4"} flex flex-col gap-2 z-20`}
+            className={` ${ index >= 1 && "border-b pb-4"} flex flex-col gap-2 z-20`}
           >
             <h3 className={`font-header text-stone-700 text-2xl laptop:text-3xl ${item.h3}`}>
               {before}
@@ -142,28 +137,22 @@ export const ServiceComp: React.FC<MovingCircleProps> = ({
               {after}
             </h3>
             <p
-              className={`text-justify transition-all duration-300 ${
-                isMobile && !isExpanded ? "line-clamp-3" : ""
+              className={`transition-all duration-300 ${
+                 !isExpanded ? "line-clamp-2" : ""
               }`}
             >
               {item.body}
             </p>
-            {isMobile && (
               <button
                 onClick={() => toggleExpand(index)}
-                className="text-sm w-fit cursor-pointer flex items-center gap-2 self-end border-t-1 border-r-1 mt-2 pt-1 pr-2"
+                className="text-sm w-fit cursor-pointer flex items-center gap-2 self-end"
               >
                 {isExpanded ? (
-                  <>
-                    Visa mindre 
-                  </>
-                ) : (
-                  <>
-                    Läs mer 
-                  </>
-                )}
+                 <img src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1747906933/plus_jwn5fm.png" alt="minimera kryss" className="rotate-45 transition-all duration-200 transform  w-6 h-6 tablet:w-8 tablet:h-8"/>
+              ) : (
+                 <img src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1747906933/plus_jwn5fm.png" alt="plus"  className="w-6 h-6 tablet:w-8 tablet:h-8"/>
+              )}
               </button>
-            )}
           </div>
         );
       })}

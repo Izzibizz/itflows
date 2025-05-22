@@ -65,8 +65,8 @@ export const Hero: React.FC = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2.2, duration: 2 }}
-        className="flex flex-col w-full">
-        <Testimonial testimonial={testimonials[0]} style={"self-end bg-warm-white hidden laptop:flex max-w-[800px] laptop:w-2/3 laptop:mt-10 rounded-br-none rounded-tr-[120px] laptop:rounded-tr-[150px]"} />
+        className="flex-col w-full  hidden laptop:flex ">
+        <Testimonial testimonial={testimonials[0]} style={"self-end bg-warm-white max-w-[800px] laptop:w-2/3 laptop:mt-10 rounded-br-none rounded-tr-[120px] laptop:rounded-tr-[150px]"} />
         </motion.div>
       </div>
       <Banner/>
