@@ -10,6 +10,7 @@ export const IntroductionAbout: React.FC = () => {
 
   return (
     <section>
+      <div className="w-10/12 mx-auto h-[2px] bg-stone-600"/>
       <div className="w-10/12 laptop:w-9/12 mx-auto py-30 laptop:pb-48 flex flex-col laptop:flex-row gap-10 justify-between">
         <img
           src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1746174843/izabel-lind-farnstrand-webbyra-itflows-2_jcc3ec.webp"
@@ -65,6 +66,7 @@ export const IntroductionAbout: React.FC = () => {
           </motion.button>
         </div>
       </div>
+            <div className="w-10/12 mx-auto h-[2px] bg-stone-600"/>
     </section>
   );
 };

@@ -11,14 +11,14 @@ export const ContactComp: React.FC = () => {
     const textIsInView = useInView(textRef, { once: true });
 
   return (
-    <section className="w-10/12 laptop:w-9/12 mx-auto py-30 laptop:pb-48 flex flex-col">
+    <section className="w-10/12 laptop:w-9/12 mx-auto py-30 flex flex-col">
        <div 
         className="flex flex-col">
           <motion.h3 className="font-header text-[13vw] laptop:text-[5vw] text-stone-700 mb-4"  ref={headingRef}
         initial={{ opacity: 0, y: 100 }}
         animate={headingIsInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.5, ease: "easeOut" }}>
-            Kontakta oss
+            Kontakt
           </motion.h3>
           <motion.div  className="laptop:w-8/12  text-4xl text-justify font-body flex flex-col gap-4"  ref={textRef}
         initial={{ opacity: 0, y: 200 }}
