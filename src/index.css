@@ -87,20 +87,24 @@ body {
   --breakpoint-desktop: 1280px;
 
   --color-warm-white: rgb(255 250 243);
-  --color-light-beige: rgb(250 232 218);
-  --color-gray: rgb(185 176 178);
-  --color-gray-blue: rgb(175 173 179);
   --color-warm-black: rgb(47 26 14);
+
   --color-dark-red: rgb(151 67 51);
   --color-medium-red: rgb(200 91 69);
   --color-red-beige: rgb(230 128 96);
+  --color-light-beige: rgb(250 232 218);
   --color-brown-beige: rgb(229 157 109);
   --color-warm-beige: rgb(251 177 130);
+
   --color-purple: rgb(104, 109, 137);
   --color-white-blue: rgb(226, 235, 248);
   --color-light-blue: rgb(163 184 213);
   --color-dark-blue: rgb(101 136 184);
+  --color-gray: rgb(185 176 178);
+  --color-gray-blue: rgb(175 173 179);
+
   --color-collab-green: rgb(133 125 95);
+  --color-collab-red: rgb(210 113 70);
   --color-collab-beige: rgb(250 235 214);
 
   --animate-fadeIn: fadeIn 1s ease-in both;
