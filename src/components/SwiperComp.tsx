@@ -1,7 +1,6 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useNavigate } from "react-router-dom";
-import { Swiper as SwiperClass } from 'swiper/types';
 
 import { EffectCoverflow, Pagination, Autoplay  } from "swiper/modules";
 import "../styles/swiper.css";
