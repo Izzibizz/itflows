@@ -74,12 +74,12 @@ export const PrisInfo = () => {
             <div
               className={`${
                 index === 0 && "border-t border-dotted"
-              } flex flex-col gap-2 col-span-1 tablet:col-start-3 tablet:col-end-5 pl-6 tablet:pl-0 tablet:items-center laptop:items-start justify-center`}
+              } flex flex-col gap-2 col-span-1 tablet:col-start-3 tablet:col-end-5 pl-4 pt-4 tablet:p-0 tablet:items-center laptop:items-start justify-center`}
             >
               <h3 className="hidden laptop:block font-collab text-2xl laptop:text-4xl">
                 {paket.title}
               </h3>
-                 <p className="tablet:hidden text-sm italic">{paket.for}</p>
+                 <p className="tablet:hidden text-xs italic">{paket.for}</p>
             </div>
 
             {/* Vad som ingår-knapp */}
@@ -92,7 +92,7 @@ export const PrisInfo = () => {
                 onClick={() => toggleOpen(index)}
                 className="flex gap-2 items-center cursor-pointer pt-1 tablet:hidden"
               >
-                <p className="underline decoration-dotted underline-offset-6 text-lg">
+                <p className="underline decoration-dotted underline-offset-6 text-sm">
                   Vad som ingår:
                 </p>
                 <IoIosArrowDown
