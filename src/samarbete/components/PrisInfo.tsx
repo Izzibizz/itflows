@@ -134,7 +134,7 @@ export const PrisInfo = () => {
                     {item}
                   </li>
                 ))}
-                <h4 className="tablet:hidden bg-collab-beige rounded-2xl w-fit p-2 px-4 self-end">
+                <h4 className="tablet:hidden bg-collab-beige rounded-2xl w-fit p-2 px-4 self-end mt-6">
                   {paket.price}
                 </h4>
               </ul>
