@@ -36,6 +36,7 @@ export const SamarbeteWhyComp = () => {
             skapar förtroende och väcker känslor. Och det är precis där du
             vinner dina kunder.
           </p>
+          <img src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1748600883/skra_sruapb.svg" alt="text, vi skrattar, skapar och levererar med hög kvalitet" className="w-9/12 mt-10 self-end tablet:hidden"/>
           <h4 className="font-collab text-3xl desktop:text-[30px] pt-6">
             Från barndomsvänner till kreativa partners
           </h4>

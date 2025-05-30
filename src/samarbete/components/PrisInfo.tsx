@@ -66,7 +66,7 @@ export const PrisInfo: React.FC<refProps>= ( {priceRef}) => {
                 index === 0 && "border-t border-dotted"
               } flex flex-col items-center justify-center gap-4 col-span-1 row-span-2 tablet:col-start-1 tablet:col-end-3 tablet:row-span-1`}
             >
-              <div className={` ${index === 0 ? "bg-collab-whitegreen" : index === 1 ? "bg-collab-lightgreen" : "bg-collab-mediumgreen"} laptop:border self-center border-dotted rounded-full h-[150px] w-[150px] tablet:h-[100px] tablet:w-[100px] laptop:h-[150px] laptop:w-[150px] flex items-center justify-center text-[30px] tablet:text-[40px] laptop:text-[60px] font-collab `}>
+              <div className={` ${ isMobile && index === 0 ? "bg-collab-whitegreen" : isMobile && index === 1 ? "bg-collab-lightgreen" : isMobile && "bg-collab-mediumgreen"} tablet:border self-center border-dotted rounded-full h-[150px] w-[150px] tablet:h-[100px] tablet:w-[100px] laptop:h-[150px] laptop:w-[150px] flex items-center justify-center text-[30px] tablet:text-[40px] laptop:text-[60px] font-collab `}>
                {isMobile ? paket.title : index + 1 }
               </div>
               <h3 className="hidden tablet:block laptop:hidden text-center font-collab text-2xl laptop:text-4xl">

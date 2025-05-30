@@ -34,19 +34,19 @@ export const SamarbetsHero: React.FC<RefProps> = ({ overviewRef, priceRef }) => 
       <Testimonial
         testimonial={testimonials[0]}
         style={
-          "tablet:hidden self-end bg-collab-beige rounded-br-none rounded-tr-[120px]"
+          "tablet:hidden self-end mt-10 bg-collab-beige rounded-br-none rounded-tr-[120px]"
         }
       />
       <div className="relative tablet:hidden">
         <img
           src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1747730179/itflows-studio-mamama_vikw63.jpg"
           alt="itflows studio mamama"
-          className="self-end laptop:self-start laptop:max-h-3/4 mt-24 laptop:mt-0 object-right object-cover aspect-[3/4]"
+          className="self-end mt-24 laptop:mt-0 object-right object-cover aspect-[3/4]"
         />
         <img
           src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1748596040/f%C3%B6retag-font_akkegj.svg"
           alt="text ditt företag förtjänar det"
-          className="w-[200px] laptop:hidden absolute top-0 right-0"
+          className="w-[200px] absolute top-0 right-0"
         />
       </div>
               <img
