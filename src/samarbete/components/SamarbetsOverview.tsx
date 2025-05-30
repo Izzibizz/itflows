@@ -39,7 +39,7 @@ useEffect(() => {
 }, []);
 
   return (
-    <section className="pt-10 laptop:pt-30 pb-40 laptop:pb-48 flex flex-col gap-10 laptop:gap-24 bg-" ref={overviewRef}>
+    <section className="pt-30 pb-40 laptop:pb-48 flex flex-col gap-10 laptop:gap-24 bg-" ref={overviewRef}>
 
 {isSmallScreen ? (
  <div className="relative flex flex-col overflow-hidden">

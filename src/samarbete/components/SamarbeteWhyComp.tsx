@@ -16,7 +16,7 @@ export const SamarbeteWhyComp = () => {
 }, []);
 
   return (
-    <section className="py-30 flex flex-col gap-10">
+    <section className="pt-30 flex flex-col gap-10">
       <div className="flex flex-col desktop:flex-row justify-between gap-10">
         <div className="flex flex-col gap-6 desktop:w-1/3 desktop:max-w-[600px] desktop:mx-auto">
           <h3 className="font-collab text-4xl desktop:text-[40px]">

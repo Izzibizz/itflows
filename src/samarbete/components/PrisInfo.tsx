@@ -36,7 +36,7 @@ export const PrisInfo: React.FC<refProps>= ( {priceRef}) => {
   })
 
   return (
-    <section className="flex flex-col gap-10 laptop:gap-20 desktop:max-w-[1300px] desktop:mx-auto " ref={priceRef}>
+    <section className="flex flex-col gap-10 laptop:gap-20 desktop:max-w-[1300px] desktop:mx-auto pt-30" ref={priceRef}>
       <div className="flex flex-col gap-8">
         <h3 className="font-collab text-4xl desktop:text-[40px]">
           Välj det paket som passar dig

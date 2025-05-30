@@ -30,7 +30,7 @@ export const SamarbetsHero: React.FC<RefProps> = ({ overviewRef, priceRef }) => 
   }, [isTablet])
 
   return (
-    <section className="flex flex-col-reverse tablet:min-h-[40vh] laptop:min-h-[70vh] laptop:flex-row items-stretch gap-6 laptop:gap-24 pb-20">
+    <section className="flex flex-col-reverse tablet:min-h-[40vh] laptop:min-h-[70vh] laptop:flex-row items-stretch gap-6 laptop:gap-24 tablet:pb-20">
       <Testimonial
         testimonial={testimonials[0]}
         style={
