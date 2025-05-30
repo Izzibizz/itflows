@@ -40,17 +40,21 @@ export const PrisInfo = () => {
             } border-dotted`}
           >
             {/* Siffra */}
-           <div className={`${index === 0 && "border-t border-dotted"} flex col-span-1 row-span-2 tablet:col-start-1 tablet:col-end-3 tablet:row-span-1`} ><div className="border self-center border-dotted rounded-full h-[150px] w-[150px] flex items-center justify-center text-[60px] font-collab ">
+           <div className={`${index === 0 && "border-t border-dotted"} flex flex-col items-center justify-center gap-4 col-span-1 row-span-2 tablet:col-start-1 tablet:col-end-3 tablet:row-span-1`} ><div className="border self-center border-dotted rounded-full h-[150px] w-[150px] tablet:h-[100px] tablet:w-[100px] laptop:h-[150px] laptop:w-[150px] flex items-center justify-center text-[50px] tablet:text-[40px] laptop:text-[60px] font-collab ">
               {index + 1}
+     
             </div>
+                      <h3 className="hidden tablet:block laptop:hidden text-center font-collab text-2xl laptop:text-4xl">
+                {paket.title}
+              </h3>
             </div>
 
             {/* Titel och pris */}
             <div className={`${index === 0 && "border-t border-dotted"} flex flex-col gap-2 col-span-1 tablet:col-start-3 tablet:col-end-5 pl-6 tablet:pl-0 tablet:items-center laptop:items-start justify-center`}>
-              <h3 className="font-collab text-2xl laptop:text-4xl">
+              <h3 className="tablet:hidden laptop:block font-collab text-2xl laptop:text-4xl">
                 {paket.title}
               </h3>
-              <h4 className="tablet:hidden">Pris: {paket.price}</h4>
+              <h4 className="tablet:hidden bg-collab-green text-warm-white rounded-2xl w-fit p-2 px-4">{paket.price}</h4>
             </div>
 
             {/* Vad som ingår-knapp */}
