@@ -1,71 +1,116 @@
 import { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
-import paketData from "../../data/prislista.json"
+import paketData from "../../data/prislista.json";
 
 type Package = {
   title: string;
   price: string;
+  included: string[];
 };
 
 const paketInfo: Package[] = paketData;
 
 export const PrisInfo = () => {
+  const [openStates, setOpenStates] = useState([false, false, false]);
 
- const [openStates, setOpenStates] = useState([false, false, false]);
-
-
- const toggleOpen = (index: number) => {
-  setOpenStates((prev) =>
-    prev.map((isOpen, i) => (i === index ? !isOpen : isOpen))
-  );
-};
+  const toggleOpen = (index: number) => {
+    setOpenStates((prev) =>
+      prev.map((isOpen, i) => (i === index ? !isOpen : isOpen))
+    );
+  };
   return (
-    <section className="flex flex-col gap-10">
-      <h3 className="font-collab text-4xl desktop:text-[40px]">
-        Välj det paket som passar dig
-      </h3>
-      <h4 className="font-c-body text-xl tablet:max-w-[600px]">
-        Stort eller litet – varje paket är byggt med omsorg. <span className="font-medium">Du</span> väljer nivån, <span className="font-medium">vi </span> 
-        ser till att känslan och resultatet levererar.
-      </h4>
-      <div className="flex flex-col desktop:w-11/12">
-       {paketInfo.map((paket, index) => (
+    <section className="flex flex-col gap-10 laptop:gap-20 ">
+      <div className="flex flex-col gap-8">
+        <h3 className="font-collab text-4xl desktop:text-[40px]">
+          Välj det paket som passar dig
+        </h3>
+        <h4 className="font-c-body text-xl tablet:max-w-[600px]">
+          Stort eller litet – varje paket är byggt med omsorg.{" "}
+          <span className="font-medium">Du</span> väljer nivån,{" "}
+          <span className="font-medium">vi </span>
+          ser till att känslan och resultatet levererar.
+        </h4>
+      </div>
+      <div className="flex flex-col desktop:max-w-[1300px] desktop:mx-auto">
+        {paketInfo.map((paket, index) => (
           <div
             key={index}
-            className={`flex ${
-              index === paketInfo.length - 1
-                ? "border-y"
-                : "border-t"
+            className={`grid grid-cols-[auto_1fr] tablet:grid-cols-12 ${
+              index === paketInfo.length - 1 ? "border-y" : index === 0 ? "" : "border-t"
             } border-dotted`}
           >
-            <div className="border border-dotted p-6 rounded-full h-[150px] w-[150px] items-center flex justify-center text-[60px] font-collab">
+            {/* Siffra */}
+           <div className={`${index === 0 && "border-t border-dotted"} flex col-span-1 row-span-2 tablet:col-start-1 tablet:col-end-3 tablet:row-span-1`} ><div className="border self-center border-dotted rounded-full h-[150px] w-[150px] flex items-center justify-center text-[60px] font-collab ">
               {index + 1}
             </div>
-            <div className="p-6 flex flex-col gap-2">
-              <h3 className="font-collab text-2xl">{paket.title}</h3>
-              <h4>Pris: {paket.price}</h4>
+            </div>
+
+            {/* Titel och pris */}
+            <div className={`${index === 0 && "border-t border-dotted"} flex flex-col gap-2 col-span-1 tablet:col-start-3 tablet:col-end-5 pl-6 tablet:pl-0 tablet:items-center laptop:items-start justify-center`}>
+              <h3 className="font-collab text-2xl laptop:text-4xl">
+                {paket.title}
+              </h3>
+              <h4 className="tablet:hidden">Pris: {paket.price}</h4>
+            </div>
+
+            {/* Vad som ingår-knapp */}
+            <div className={` ${index === 0 && "tablet:border-t border-dotted"} flex flex-col col-span-1 tablet:col-start-5 tablet:col-end-10   pl-6 tablet:pl-0`}>
               <button
                 onClick={() => toggleOpen(index)}
-                className="flex gap-3 items-center laptop:hidden cursor-pointer"
+                className="flex gap-2 items-center cursor-pointer pt-1 tablet:hidden"
               >
-                <p>Vad som ingår</p>
+                <p className="underline decoration-dotted underline-offset-6">
+                  Vad som ingår:
+                </p>
                 <IoIosArrowDown
                   className={`transition-transform duration-300 ${
                     openStates[index] ? "rotate-180" : ""
                   }`}
                 />
               </button>
-              {openStates[index] && (
-                <ul className="pt-2 text-sm">
-                  <li>✔ Punkt 1</li>
-                  <li>✔ Punkt 2</li>
-                  <li>✔ Punkt 3</li>
-                </ul>
-              )}
+              <ul className="py-6 text-sm col-span-full hidden tablet:flex px-6 flex-col">
+                {paket.included.map((item, i) => (
+                  <li key={i} className="list-disc ml-4">
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </div>
+
+            {/* Pris (desktop only) */}
+            <div className={`hidden tablet:flex justify-between flex-col rounded-tr-[50px] gap-4 ${index === 0 ? "bg-collab-lightgreen text-warm-black" : index === 1 ? "bg-collab-mediumgreen text-warm-black" : "bg-collab-green text-warm-white"} p-6 col-span-1 tablet:col-start-10 tablet:col-end-13 `}>
+              
+                    <div className="hidden tablet:flex flex-col gap-4">
+              <h4>Passar till</h4>
+              <p>Små företag</p>
+            </div>
+            <p className="text-xl self-end">{paket.price}</p>
+            </div>
+
+            {/* Lista – visas under allt i mobil/tablet */}
+            {openStates[index] && (
+              <ul className="p-6 text-sm col-span-full laptop:hidden col-span-1">
+                {paket.included.map((item, i) => (
+                  <li key={i} className="list-disc ml-4">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
         ))}
+              <div className="flex flex-col gap-6 p-6 py-10 mt-8 bg-collab-beige rounded-4xl">
+        <h3 className="font-collab text-xl laptop:text-3xl">Tillägg:</h3>
+        <ul className="list-disc px-6">
+            <li>Guide och mall (fotografering)</li>
+            <li>Filter</li>
+            <li>Copy (t.ex. Rubrik- och budskapsformulering)</li>
+            <li>Prenumerationsmail - mall / design</li>
+            <li>Webbhotell & mail-setup</li>
+        </ul>
       </div>
+      </div>
+
     </section>
   );
 };

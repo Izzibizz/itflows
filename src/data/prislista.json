@@ -1,5 +1,45 @@
 [
-  { "title": "Lilla", "price": "29 995 kr" },
-  { "title": "Mellan", "price": "38 995 kr" },
-  { "title": "Stora", "price": "55 995 kr" }
+  {
+    "title": "Lilla",
+    "price": "29 995 kr",
+    "included": [
+      "5 st bilder",
+      "1 fotograferingstillfälle",
+      "Hemsida: Enkel landningssida",
+      "Möten Design: 3 tillfällen",
+      "Feedback foton: 1 tillfälle",
+      "Design: Färgsättning, typsnitt och stil",
+      "Enkel analys (1 h)"
+    ]
+  },
+  {
+    "title": "Mellan",
+    "price": "38 995 kr",
+    "included": [
+      "10 st bilder",
+      "2 fotograferingstillfällen",
+      "Hemsida: Liten koncept-hemsida (t.ex. enkel webshop)",
+      "Möten Design: 4 tillfällen",
+      "Feedback foton: 2 tillfällen",
+      "Design: färgsättning, typsnitt och stil",
+      "Logga: (2 vändor)",
+      "Medel analys (2 h)"
+    ]
+  },
+  {
+    "title": "Stora",
+    "price": "55 995 kr",
+    "included": [
+      "20 st bilder",
+      "2 fotograferingar inkl. miljöbilder/kontorsbilder",
+      "Hemsida: Avancerad koncept-sida ex. webshop / medlemsportal",
+      "Flerspråkig lösning",
+      "Möten Design: 6 tillfällen",
+      "Feedback foton: 2 tillfälle",
+      "Design: färgsättning, typsnitt och stil",
+      "Logga: (5 vändor)",
+      "Illustrationer (max 6 st) / AI-effektbilder / videomaterial (max 1)",
+      "Avancerad analys (3 h)"
+    ]
+  }
 ]

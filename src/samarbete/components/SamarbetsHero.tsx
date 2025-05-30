@@ -11,7 +11,7 @@ export const SamarbetsHero: React.FC<RefProps> = ({ overviewRef }) => {
   };
 
   return (
-    <section className="flex flex-col-reverse laptop:flex-row items-stretch gap-6 laptop:gap-26">
+    <section className="flex flex-col-reverse laptop:flex-row items-stretch gap-6 laptop:gap-24">
       <Testimonial
         testimonial={testimonials[0]}
         style={
@@ -22,7 +22,7 @@ export const SamarbetsHero: React.FC<RefProps> = ({ overviewRef }) => {
         <img
           src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1747730179/itflows-studio-mamama_vikw63.jpg"
           alt="itflows studio mamama"
-          className="self-end laptop:self-start laptop:w-1/3  mt-24 laptop:mt-0 object-right object-cover aspect-[3/4]"
+          className="self-end laptop:self-start laptop:max-h-3/4 mt-24 laptop:mt-0 object-right object-cover aspect-[3/4]"
         />
         <img
           src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1748440267/ditt_f%C3%B6retag-f-mobile_l6binc.svg"
@@ -30,7 +30,12 @@ export const SamarbetsHero: React.FC<RefProps> = ({ overviewRef }) => {
           className="w-[200px] laptop:hidden absolute top-0 right-0"
         />
       </div>
-      <div className="flex flex-col tablet:flex-row tablet:gap-6 laptop:gap-0 laptop:flex-col laptop:min-h-[600px]">
+              <img
+          src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1747730179/itflows-studio-mamama_vikw63.jpg"
+          alt="itflows studio mamama"
+          className="hidden laptop:block self-end laptop:self-start laptop:max-w-1/3 mt-24 laptop:mt-0 object-right object-cover aspect-[3/4]"
+        />
+      <div className="flex flex-col tablet:flex-row tablet:gap-6 laptop:gap-0 laptop:flex-col justify-between">
         <div className="flex flex-col gap-6 laptop:mt-10 relative">
           <h2 className="font-collab text-4xl laptop:text-[60px]">
             Ett helhetskoncept
@@ -61,7 +66,7 @@ export const SamarbetsHero: React.FC<RefProps> = ({ overviewRef }) => {
         <Testimonial
           testimonial={testimonials[0]}
           style={
-            "hidden laptop:flex mt-auto self-end bg-collab-beige rounded-br-none rounded-tr-[120px] desktop:max-w-10/12"
+            "hidden laptop:flex bg-collab-beige rounded-br-none self-end rounded-tr-[120px] desktop:max-w-10/12"
           }
         />
       </div>
