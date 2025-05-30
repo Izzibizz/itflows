@@ -10,7 +10,8 @@
       "Feedback foton: 1 tillfälle",
       "Design: Färgsättning, typsnitt och stil",
       "Enkel analys (1 h)"
-    ]
+    ],
+    "for": "För dig som vill komma igång med en stark första sida med mindre innehåll"
   },
   {
     "title": "Mellan",
@@ -22,9 +23,10 @@
       "Möten Design: 4 tillfällen",
       "Feedback foton: 2 tillfällen",
       "Design: färgsättning, typsnitt och stil",
-      "Logga: (2 vändor)",
-      "Medel analys (2 h)"
-    ]
+      "Medel analys (2 h)",
+      "Logga: enkel (2 vändor)"
+    ],
+    "for": "För dig som vet vad du vill och behöver mer, men inom en smart budget"
   },
   {
     "title": "Stora",
@@ -37,9 +39,10 @@
       "Möten Design: 6 tillfällen",
       "Feedback foton: 2 tillfälle",
       "Design: färgsättning, typsnitt och stil",
-      "Logga: (5 vändor)",
-      "Illustrationer (max 6 st) / AI-effektbilder / videomaterial (max 1)",
-      "Avancerad analys (3 h)"
-    ]
+      "Avancerad analys (3 h)",
+      "Logga: avancerad (5 vändor)",
+      "Illustrationer (max 6 st) / AI-effektbilder / videomaterial (max 1)"
+    ],
+    "for": "För dig med en tydlig plan och stora ambitioner, och vill satsa fullt ut"
   }
 ]

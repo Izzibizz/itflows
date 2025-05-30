@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import paketData from "../../data/prislista.json";
 
@@ -6,18 +6,31 @@ type Package = {
   title: string;
   price: string;
   included: string[];
+  for: string;
 };
 
 const paketInfo: Package[] = paketData;
 
 export const PrisInfo = () => {
   const [openStates, setOpenStates] = useState([false, false, false]);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768)
 
   const toggleOpen = (index: number) => {
     setOpenStates((prev) =>
       prev.map((isOpen, i) => (i === index ? !isOpen : isOpen))
     );
   };
+
+  useEffect(() => {
+     const handleResize = () => {
+  setIsMobile(window.innerWidth < 768);
+  };
+
+  handleResize(); 
+  window.addEventListener("resize", handleResize);
+  return () => window.removeEventListener("resize", handleResize);
+  })
+
   return (
     <section className="flex flex-col gap-10 laptop:gap-20 ">
       <div className="flex flex-col gap-8">
@@ -36,34 +49,50 @@ export const PrisInfo = () => {
           <div
             key={index}
             className={`grid grid-cols-[auto_1fr] tablet:grid-cols-12 ${
-              index === paketInfo.length - 1 ? "border-y" : index === 0 ? "" : "border-t"
+              index === paketInfo.length - 1
+                ? "border-y"
+                : index === 0
+                ? ""
+                : "border-t"
             } border-dotted`}
           >
             {/* Siffra */}
-           <div className={`${index === 0 && "border-t border-dotted"} flex flex-col items-center justify-center gap-4 col-span-1 row-span-2 tablet:col-start-1 tablet:col-end-3 tablet:row-span-1`} ><div className="border self-center border-dotted rounded-full h-[150px] w-[150px] tablet:h-[100px] tablet:w-[100px] laptop:h-[150px] laptop:w-[150px] flex items-center justify-center text-[50px] tablet:text-[40px] laptop:text-[60px] font-collab ">
-              {index + 1}
-     
-            </div>
-                      <h3 className="hidden tablet:block laptop:hidden text-center font-collab text-2xl laptop:text-4xl">
+            <div
+              className={`${
+                index === 0 && "border-t border-dotted"
+              } flex flex-col items-center justify-center gap-4 col-span-1 row-span-2 tablet:col-start-1 tablet:col-end-3 tablet:row-span-1`}
+            >
+              <div className="border self-center border-dotted rounded-full h-[150px] w-[150px] tablet:h-[100px] tablet:w-[100px] laptop:h-[150px] laptop:w-[150px] flex items-center justify-center text-[30px] tablet:text-[40px] laptop:text-[60px] font-collab ">
+               {isMobile ? paket.title : index + 1 }
+              </div>
+              <h3 className="hidden tablet:block laptop:hidden text-center font-collab text-2xl laptop:text-4xl">
                 {paket.title}
               </h3>
             </div>
 
             {/* Titel och pris */}
-            <div className={`${index === 0 && "border-t border-dotted"} flex flex-col gap-2 col-span-1 tablet:col-start-3 tablet:col-end-5 pl-6 tablet:pl-0 tablet:items-center laptop:items-start justify-center`}>
-              <h3 className="tablet:hidden laptop:block font-collab text-2xl laptop:text-4xl">
+            <div
+              className={`${
+                index === 0 && "border-t border-dotted"
+              } flex flex-col gap-2 col-span-1 tablet:col-start-3 tablet:col-end-5 pl-6 tablet:pl-0 tablet:items-center laptop:items-start justify-center`}
+            >
+              <h3 className="hidden laptop:block font-collab text-2xl laptop:text-4xl">
                 {paket.title}
               </h3>
-              <h4 className="tablet:hidden bg-collab-green text-warm-white rounded-2xl w-fit p-2 px-4">{paket.price}</h4>
+                 <p className="tablet:hidden text-sm italic">{paket.for}</p>
             </div>
 
             {/* Vad som ingår-knapp */}
-            <div className={` ${index === 0 && "tablet:border-t border-dotted"} flex flex-col col-span-1 tablet:col-start-5 tablet:col-end-10   pl-6 tablet:pl-0`}>
+            <div
+              className={` ${
+                index === 0 && "tablet:border-t border-dotted"
+              } flex flex-col col-span-1 tablet:col-start-5 tablet:col-end-10   pl-6 tablet:pl-0`}
+            >
               <button
                 onClick={() => toggleOpen(index)}
                 className="flex gap-2 items-center cursor-pointer pt-1 tablet:hidden"
               >
-                <p className="underline decoration-dotted underline-offset-6">
+                <p className="underline decoration-dotted underline-offset-6 text-lg">
                   Vad som ingår:
                 </p>
                 <IoIosArrowDown
@@ -82,39 +111,47 @@ export const PrisInfo = () => {
             </div>
 
             {/* Pris (desktop only) */}
-            <div className={`hidden tablet:flex justify-between flex-col rounded-tr-[50px] gap-4 ${index === 0 ? "bg-collab-lightgreen text-warm-black" : index === 1 ? "bg-collab-mediumgreen text-warm-black" : "bg-collab-green text-warm-white"} p-6 col-span-1 tablet:col-start-10 tablet:col-end-13 `}>
-              
-                    <div className="hidden tablet:flex flex-col gap-4">
-              <h4>Passar till</h4>
-              <p>Små företag</p>
-            </div>
-            <p className="text-xl self-end">{paket.price}</p>
+            <div
+              className={`hidden tablet:flex justify-between flex-col rounded-tr-[50px] gap-4 ${
+                index === 0
+                  ? "bg-collab-lightgreen text-warm-black"
+                  : index === 1
+                  ? "bg-collab-mediumgreen text-warm-black"
+                  : "bg-collab-green text-warm-white"
+              } p-6 col-span-1 tablet:col-start-10 tablet:col-end-13 `}
+            >
+              <div className="hidden tablet:flex flex-col gap-4">
+                {paket.for}
+              </div>
+              <p className="text-xl self-end">{paket.price}</p>
             </div>
 
             {/* Lista – visas under allt i mobil/tablet */}
             {openStates[index] && (
-              <ul className="p-6 text-sm col-span-full laptop:hidden col-span-1">
+              <ul className="p-6 text-sm col-span-full laptop:hidden col-span-1 flex flex-col">
                 {paket.included.map((item, i) => (
                   <li key={i} className="list-disc ml-4">
                     {item}
                   </li>
                 ))}
+                <h4 className="tablet:hidden bg-collab-beige rounded-2xl w-fit p-2 px-4 self-end">
+                  {paket.price}
+                </h4>
               </ul>
             )}
           </div>
         ))}
-              <div className="flex flex-col gap-6 p-6 py-10 mt-8 bg-collab-beige rounded-4xl">
-        <h3 className="font-collab text-xl laptop:text-3xl">Tillägg:</h3>
-        <ul className="list-disc px-6">
+        <div className="flex flex-col gap-6 p-6 py-10 mt-8 bg-collab-beige rounded-4xl">
+          <h3 className="font-collab text-xl laptop:text-3xl">Tillägg:</h3>
+          <ul className="list-disc px-6">
             <li>Guide och mall (fotografering)</li>
             <li>Filter</li>
             <li>Copy (t.ex. Rubrik- och budskapsformulering)</li>
             <li>Prenumerationsmail - mall / design</li>
             <li>Webbhotell & mail-setup</li>
-        </ul>
+          </ul>
+        </div>
       </div>
-      </div>
-
     </section>
   );
 };
