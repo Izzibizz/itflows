@@ -9,9 +9,13 @@ type Package = {
   for: string;
 };
 
+interface refProps {
+    priceRef?: React.RefObject<HTMLDivElement | null>;
+}
+
 const paketInfo: Package[] = paketData;
 
-export const PrisInfo = () => {
+export const PrisInfo: React.FC<refProps>= ( {priceRef}) => {
   const [openStates, setOpenStates] = useState([false, false, false]);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768)
 
@@ -32,7 +36,7 @@ export const PrisInfo = () => {
   })
 
   return (
-    <section className="flex flex-col gap-10 laptop:gap-20 ">
+    <section className="flex flex-col gap-10 laptop:gap-20 desktop:max-w-[1300px] desktop:mx-auto " ref={priceRef}>
       <div className="flex flex-col gap-8">
         <h3 className="font-collab text-4xl desktop:text-[40px]">
           Välj det paket som passar dig
@@ -44,7 +48,7 @@ export const PrisInfo = () => {
           ser till att känslan och resultatet levererar.
         </h4>
       </div>
-      <div className="flex flex-col desktop:max-w-[1300px] desktop:mx-auto">
+      <div className="flex flex-col ">
         {paketInfo.map((paket, index) => (
           <div
             key={index}
@@ -62,7 +66,7 @@ export const PrisInfo = () => {
                 index === 0 && "border-t border-dotted"
               } flex flex-col items-center justify-center gap-4 col-span-1 row-span-2 tablet:col-start-1 tablet:col-end-3 tablet:row-span-1`}
             >
-              <div className="border self-center border-dotted rounded-full h-[150px] w-[150px] tablet:h-[100px] tablet:w-[100px] laptop:h-[150px] laptop:w-[150px] flex items-center justify-center text-[30px] tablet:text-[40px] laptop:text-[60px] font-collab ">
+              <div className={` ${index === 0 ? "bg-collab-whitegreen" : index === 1 ? "bg-collab-lightgreen" : "bg-collab-mediumgreen"} laptop:border self-center border-dotted rounded-full h-[150px] w-[150px] tablet:h-[100px] tablet:w-[100px] laptop:h-[150px] laptop:w-[150px] flex items-center justify-center text-[30px] tablet:text-[40px] laptop:text-[60px] font-collab `}>
                {isMobile ? paket.title : index + 1 }
               </div>
               <h3 className="hidden tablet:block laptop:hidden text-center font-collab text-2xl laptop:text-4xl">

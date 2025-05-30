@@ -1,9 +1,8 @@
+import { PrisInfo } from "../components/PrisInfo"
 
 export const Prislista: React.FC = () => {
   return (
-    <section className=" animate-fadeIn">
-      prislista
-    </section>
+<PrisInfo/>
   )
 }
 

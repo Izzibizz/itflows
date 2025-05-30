@@ -39,7 +39,7 @@ useEffect(() => {
 }, []);
 
   return (
-    <section className="py-40 laptop:py-48 flex flex-col gap-10 laptop:gap-24 bg-" ref={overviewRef}>
+    <section className="pt-30 pb-40 laptop:pb-48 flex flex-col gap-10 laptop:gap-24 bg-" ref={overviewRef}>
 
 {isSmallScreen ? (
  <div className="relative flex flex-col overflow-hidden">
@@ -47,7 +47,7 @@ useEffect(() => {
         <h2 className="font-collab text-4xl laptop:text-[40px]">
           Hur går det till?
         </h2>
-        <h3 className="text-xl laptop:max-w-1/2 text-justify laptop:text-end">
+        <h3 className="laptop:text-xl laptop:max-w-1/2 text-justify laptop:text-end">
           Såhär går det till <span className="font-semibold">steg för steg</span> från första mötet då vi lär känna varandra och tillsammans försöker
           förstå och förtydliga visionen - hela vägen till en färdig hemsida. 
         </h3>

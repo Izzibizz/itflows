@@ -82,7 +82,7 @@ body {
   --font-wide: "francy", sans-serif;
   --font-c-body: "Montserrat", sans-serif;
 
-  --breakpoint-tablet: 600px;
+  --breakpoint-tablet: 768px;
   --breakpoint-laptop: 1025px;
   --breakpoint-desktop: 1280px;
 
@@ -105,6 +105,7 @@ body {
 
   --color-collab-green: rgb(133 125 95);
   --color-collab-mediumgreen: rgb(162 154 125);
+  --color-collab-whitegreen: rgb(228 222 200);
   --color-collab-lightgreen: rgb(195 188 160);
   --color-collab-red: rgb(210 113 70);
   --color-collab-beige: rgb(250 235 214);

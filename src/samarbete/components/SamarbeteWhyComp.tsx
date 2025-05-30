@@ -18,7 +18,7 @@ export const SamarbeteWhyComp = () => {
   return (
     <section className="py-30 flex flex-col gap-10">
       <div className="flex flex-col desktop:flex-row justify-between gap-10">
-        <div className="flex flex-col gap-6 desktop:w-1/3 desktop:max-w-[600px]">
+        <div className="flex flex-col gap-6 desktop:w-1/3 desktop:max-w-[600px] desktop:mx-auto">
           <h3 className="font-collab text-4xl desktop:text-[40px]">
             Därför vill du jobba med oss
           </h3>
@@ -62,13 +62,13 @@ export const SamarbeteWhyComp = () => {
            Läs mer
           </button>
         </div>
-        <div className="relative flex w-full h-[700px] tablet:h-[900px] desktop:w-2/3 desktop:max-w-[900px] py-40 laptop:py-0 laptop:px-40">
-          <img src={ isSmallScreen ? "https://res.cloudinary.com/dlp85vjwx/image/upload/v1748440767/utveckl.iz-mobil_ln8afv.svg" : "https://res.cloudinary.com/dlp85vjwx/image/upload/v1748438132/utvecklaren_Izabel_czjxxy.svg"} alt="Izabel utvecklare" className={`${ isSmallScreen ? "bottom-0 left-20" : "bottom-20 left-[-10px]" } w-[200px] absolute `}/>
+        <div className="relative flex w-full h-[700px] tablet:h-[1500px] desktop:w-2/3 desktop:h-1/2 desktop:max-w-[900px] py-40 laptop:py-0 laptop:px-40">
+          <img src={ isSmallScreen ? "https://res.cloudinary.com/dlp85vjwx/image/upload/v1748596043/utvecklaren-font_xgxmg6.svg" : "https://res.cloudinary.com/dlp85vjwx/image/upload/v1748597389/utv.izabe.font_yvn0q5.svg"} alt="Izabel utvecklare" className={`${ isSmallScreen ? "bottom-10 left-10 w-[180px] tablet:w-[250px]" : "bottom-20 left-[-10px]  w-[250px]" } absolute `}/>
         <img
           src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1748273899/it-flows-studio-mamama_rg2i7h.jpg"
-          className="object-cover w-full"
+          className="object-cover w-full h-full aspect-[3/4]"
         />
-         <img src={ isSmallScreen ? "https://res.cloudinary.com/dlp85vjwx/image/upload/v1748441375/emma-mbil_btcg1i.svg" : "https://res.cloudinary.com/dlp85vjwx/image/upload/v1748439022/fotografen-emma_t3bzso.svg"} alt="Emma fotograf" className={`${ isSmallScreen ? "top-0 right-20  w-[200px] " : "right-[-10px] top-30  w-[280px]  "}absolute `}/>
+         <img src={ isSmallScreen ? "https://res.cloudinary.com/dlp85vjwx/image/upload/v1748596047/emma-font_d0tax5.svg" : "https://res.cloudinary.com/dlp85vjwx/image/upload/v1748597385/fotograf-emma-font_scpm9m.svg"} alt="Emma fotograf" className={`${ isSmallScreen ? "top-20 right-14  w-[230px] tablet:w-[300px]" : "right-[-10px] top-30  w-[280px]  "} absolute `}/>
         </div>
       </div>
     </section>

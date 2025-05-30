@@ -1,17 +1,36 @@
+import { useState, useEffect } from "react"
 import { Testimonial } from "../../components/Testimonial";
 import testimonials from "../../data/samarbetsTestimonials.json";
 
 type RefProps = {
   overviewRef: React.RefObject<HTMLDivElement | null>;
+  priceRef: React.RefObject<HTMLDivElement | null>;
 };
 
-export const SamarbetsHero: React.FC<RefProps> = ({ overviewRef }) => {
+export const SamarbetsHero: React.FC<RefProps> = ({ overviewRef, priceRef }) => {
+  const [ isTablet, setIsTablet ] = useState(window.innerWidth >= 768 && window.innerWidth <1024)
+
   const scrolltoOverview = () => {
+    if (isTablet) {
+      priceRef.current?.scrollIntoView({ behavior: "smooth" });
+    } else {
     overviewRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
+
+  useEffect(() => {
+   const handleResize = () => {
+  setIsTablet(window.innerWidth >= 768 && window.innerWidth <1024);
+  };
+
+  handleResize(); // Run once
+  window.addEventListener("resize", handleResize);
+  return () => window.removeEventListener("resize", handleResize);
+  }, [isTablet])
+
   return (
-    <section className="flex flex-col-reverse laptop:flex-row items-stretch gap-6 laptop:gap-24">
+    <section className="flex flex-col-reverse tablet:min-h-[40vh] laptop:min-h-[70vh] laptop:flex-row items-stretch gap-6 laptop:gap-24 pb-20">
       <Testimonial
         testimonial={testimonials[0]}
         style={
@@ -25,7 +44,7 @@ export const SamarbetsHero: React.FC<RefProps> = ({ overviewRef }) => {
           className="self-end laptop:self-start laptop:max-h-3/4 mt-24 laptop:mt-0 object-right object-cover aspect-[3/4]"
         />
         <img
-          src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1748440267/ditt_f%C3%B6retag-f-mobile_l6binc.svg"
+          src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1748596040/f%C3%B6retag-font_akkegj.svg"
           alt="text ditt företag förtjänar det"
           className="w-[200px] laptop:hidden absolute top-0 right-0"
         />
@@ -35,9 +54,9 @@ export const SamarbetsHero: React.FC<RefProps> = ({ overviewRef }) => {
           alt="itflows studio mamama"
           className="hidden laptop:block self-end laptop:self-start laptop:max-w-1/3 mt-24 laptop:mt-0 object-right object-cover aspect-[3/4]"
         />
-      <div className="flex flex-col tablet:flex-row tablet:gap-6 laptop:gap-0 laptop:flex-col justify-between">
-        <div className="flex flex-col gap-6 laptop:mt-10 relative">
-          <h2 className="font-collab text-4xl laptop:text-[60px]">
+      <div className="flex flex-col tablet:flex-row tablet:gap-6 laptop:gap-20 laptop:flex-col justify-between">
+        <div className="flex flex-col gap-6  laptop:mt-10 relative">
+          <h2 className="font-collab text-4xl tablet:text-[50px] laptop:text-[60px]">
             Ett helhetskoncept
           </h2>
           <h3 className="text-c-body text-lg desktop:max-w-[700px] ">
@@ -48,12 +67,12 @@ export const SamarbetsHero: React.FC<RefProps> = ({ overviewRef }) => {
             className="bg-collab-green text-white p-3 px-6 rounded-full w-fit h-fit text-sm font-c-body tablet:text-base cursor-pointer shadow-lg hover:scale-110 hover:bg-collab-red hover:text-warm-white"
             onClick={() => scrolltoOverview()}
           >
-            Mer om erbjudandet
+           {isTablet ? "Se våra paket" : " Mer om erbjudandet"}
           </button>
           <img
-            src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1748440267/ditt_f%C3%B6retag-f-mobile_l6binc.svg"
+            src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1748596040/f%C3%B6retag-font_akkegj.svg"
             alt="text ditt företag förtjänar det"
-            className="w-[250px] hidden laptop:block desktop:right-20 absolute top-3/4 right-0"
+            className="w-[250px] hidden tablet:block desktop:right-20 absolute bottom-[-10%] laptop:bottom-[-20%] right-0"
           />
         </div>
 
