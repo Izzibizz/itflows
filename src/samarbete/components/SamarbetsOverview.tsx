@@ -13,7 +13,7 @@ export const SamarbetsOverview: React.FC<RefProps> = ({overviewRef}) => {
 
 const [isSmallScreen, setIsSmallScreen] = useState<boolean>(window.innerWidth < 1300);
   const [ isModalOpen, setIsModalOpen ] = useState<boolean>(false);
-  const [ clickedDescription, setClickedDescription ] = useState<string>("")
+  const [ clickedDescription, setClickedDescription ] = useState<string[]>([""])
   const [ clickedTitle, setClickedTitle ] = useState<string>("")
   const [ clickedIndex, setClickedIndex ] =  useState<number | null>(null)
 
@@ -21,7 +21,7 @@ const [isSmallScreen, setIsSmallScreen] = useState<boolean>(window.innerWidth < 
     setIsModalOpen(false);
   };
 
-  const setInfo = (description: string, title:string, index:number) => {
+  const setInfo = (description: string[], title:string, index:number) => {
     setClickedDescription(description)
     setClickedTitle(title)
     setClickedIndex(index)
