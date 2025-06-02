@@ -81,13 +81,14 @@ export const SamarbetsHero: React.FC<RefProps> = ({ overviewRef, priceRef }) => 
           alt="studio mamama itflows"
           className="hidden tablet:block laptop:hidden self-end w-1/3 object-right object-cover aspect-[3/4] rounded-4xl"
         />
-
+  <a href="https://lightbodyyoga.se" target="_blank" rel="noopener noreferrer">
         <Testimonial
           testimonial={testimonials[0]}
           style={
             "hidden laptop:flex bg-collab-beige rounded-br-none self-end rounded-tr-[120px] desktop:max-w-10/12"
           }
         />
+        </a>
       </div>
     </section>
   );

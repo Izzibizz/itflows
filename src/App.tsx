@@ -5,6 +5,7 @@ import { MainRoutes } from "./routes/Mainroutes";
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useCollabStore } from "./stores/useCollabStore";
+import { StickyCTA } from "./samarbete/components/StickyCTA";
 
 export const App: React.FC = () => {
 
@@ -33,6 +34,7 @@ export const App: React.FC = () => {
       <main className={`flex-grow mb-20 ${!isLandingPage && "pt-38 laptop:pt-48 w-10/12 mx-auto "} `}>
         <MainRoutes />
       </main>
+      {isSamarbete && <StickyCTA />}
       <Footer />
     </div>
     </>
