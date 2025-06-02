@@ -33,7 +33,8 @@ export const KontaktaOssComp: React.FC<RefProps> = ({ kontaktRef, style }) => {
         <div className="flex gap-4 laptop:gap-10">
           <div className="flex items-end gap-10 bg-collab-green laptop:bg-warm-white p-6 laptop:p-0 text-warm-white w-fit laptop:text-warm-black rounded-4xl">
             <a
-              href="mailto:info@itflows.se"
+              href="mailto:info@itflows.se?subject=Bokning konsultation&body=Hej, jag skulle vilja boka en första konsultation. Namn: företag: telefonnummer:"
+               aria-label="Email me at info@itflows.se"
               className="relative w-fit flex gap-2 items-center after:content-[''] after:block after:w-0 after:h-[1px] after:bg-stone-500 after:absolute after:left-0 after:bottom-0 after:transition-all after:duration-300 hover:after:w-full text-xl font-c-body"
             >
               {" "}
