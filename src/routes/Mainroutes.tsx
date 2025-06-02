@@ -10,7 +10,7 @@ import { Design } from "../pages/Design"
 import { Branding } from "../pages/Branding"
 import { HelhetsKoncept } from "../pages/HelhetsKoncept"
 import { Erbjudanden } from "../pages/Erbjudanden"
-import { OmPartners } from "../samarbete/pages/OmPartners";
+import { OmOssSamarbete } from "../samarbete/pages/OmOssSamarbete";
 import { Samarbete } from "../samarbete/pages/Samarbete";
 import { Prislista } from "../samarbete/pages/Prislista";
 import { SamarbeteKontakt } from "../samarbete/pages/SamarbeteKontakt";
@@ -30,7 +30,7 @@ export const MainRoutes: React.FC = () => {
         <Route path="/om-oss" element={<OmOss/>}/>
         <Route path="/kontakt" element={<Kontakt/>}/>
 
-        <Route path="/samarbete/om-oss" element={<OmPartners/>}/>
+        <Route path="/samarbete/om-oss" element={<OmOssSamarbete/>}/>
         <Route path="/samarbete/prislista" element={<Prislista/>}/>
         <Route path="/samarbete/studio-mamama" element={<Samarbete/>}/>
          <Route path="/samarbete/kontakt" element={<SamarbeteKontakt/>}/>

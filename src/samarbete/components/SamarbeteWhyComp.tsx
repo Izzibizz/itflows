@@ -37,13 +37,13 @@ useEffect(() => {
 
   return (
     <section className={`${style} flex flex-col gap-10 `}>
-      <div className="flex flex-col desktop:flex-row justify-between gap-10">
+      <div className={`flex flex-col ${isEndpoint ? "desktop:flex-row-reverse" : "desktop:flex-row" } justify-between gap-10`}>
         <div className="flex flex-col gap-6 desktop:w-1/3 desktop:max-w-[700px]">
           <h3 className="font-collab text-4xl desktop:text-[40px]">
             Därför vill du jobba med oss
           </h3>
           <p className="text-justify">
-            Vi skapar helhetslösningar som känns – på riktigt. Vi vet hur det
+            Vi skapar helhets&shy;lösningar som känns – på riktigt. Vi vet hur det
             känns att ha en vision, men inte riktigt veta hur man ska ta den
             hela vägen. Många företagare står där – med en idé, en produkt eller
             en dröm – men utan en tydlig bild av hur allt ska se ut, kännas
@@ -62,9 +62,9 @@ useEffect(() => {
           </h4>
           <p className="text-justify">
             Vi, Emma och Izabel, har känt varandra sedan vi var små och har
-            samarbetat i olika projekt genom hela livet – från danstävlingar och
-            skolprojekt till filmidéer och nu inom företagsvärlden. Vi är båda
-            kreativa skapare med ett starkt entreprenörskap som driver oss
+            samarbetat i olika projekt genom hela livet – från dans&shy;tävlingar och
+            skol&shy;projekt till filmidéer och nu inom företags&shy;världen. Vi är båda
+            kreativa skapare med ett starkt entreprenör&shy;skap som driver oss
             framåt. Tillsammans delar vi en tydlig vision och ett brinnande
             driv, och vårt samarbete är både inspirerande och effektivt. Vi har
             roligt på vägen samtidigt som vi tar både varandra och våra
