@@ -3,9 +3,10 @@
     "title": "Lilla",
     "price": "29 995 kr",
     "included": [
-      "5 st bilder",
+      "5 professionella bilder",
       "1 fotograferingstillfälle",
       "Hemsida: Enkel landningssida",
+      "Koppling av domön + support",
       "Möten Design: 3 tillfällen",
       "Feedback foton: 1 tillfälle",
       "Design: Färgsättning, typsnitt och stil",
@@ -17,14 +18,16 @@
     "title": "Mellan",
     "price": "38 995 kr",
     "included": [
-      "10 st bilder",
-      "2 fotograferingstillfällen",
+      "10 professionella bilder",
+      "2 fotograferingstillfällen, möjlighet att fota på olika platser",
       "Hemsida: Liten koncept-hemsida (t.ex. enkel webshop)",
+      "Koppling av domön + support",
+      "Genomgång av admin (1 h)",
       "Möten Design: 4 tillfällen",
       "Feedback foton: 2 tillfällen",
       "Design: färgsättning, typsnitt och stil",
       "Medel analys (2 h)",
-      "Logga: enkel (2 vändor)"
+      "Logga: enkel variant (2 vändor)"
     ],
     "for": "För dig som vet vad du vill och behöver mer, men inom en smart budget"
   },
@@ -32,16 +35,21 @@
     "title": "Stora",
     "price": "55 995 kr",
     "included": [
-      "20 st bilder",
-      "2 fotograferingar inkl. miljöbilder/kontorsbilder",
+      "20 professionella bilder",
+      "2 fotograferingar, porträtt, produkt + miljöbilder/kontorsbilder",
       "Hemsida: Avancerad koncept-sida ex. webshop / medlemsportal",
+      "Koppling av domön + support",
+      "Genomgång av admin (1 h)",
       "Flerspråkig lösning",
       "Möten Design: 6 tillfällen",
       "Feedback foton: 2 tillfälle",
       "Design: färgsättning, typsnitt och stil",
       "Avancerad analys (3 h)",
-      "Logga: avancerad (5 vändor)",
-      "Illustrationer (max 6 st) / AI-effektbilder / videomaterial (max 1)"
+      "Logga (5 revisioner inkl. leverans i alla nödvändiga format)",
+      "Illustrationer (upp till 6 st, unikt framtagna)", 
+      "AI-effektbilder (max 3 st) eller 1 kort videomaterial",
+      "Sociala medier anpassade bilder (6 st)",
+      "Lanseringsstrategi light (idéer & struktur)"
     ],
     "for": "För dig med en tydlig plan och stora ambitioner, och vill satsa fullt ut"
   }

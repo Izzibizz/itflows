@@ -41,7 +41,7 @@ export const SamarbetsHero: React.FC<RefProps> = ({ overviewRef, priceRef }) => 
         <img
           src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1747730179/itflows-studio-mamama_vikw63.jpg"
           alt="itflows studio mamama"
-          className="self-end mt-24 laptop:mt-0 object-right object-cover aspect-[3/4]"
+          className="self-end mt-24 laptop:mt-0 object-right object-cover aspect-[3/4] rounded-4xl"
         />
         <img
           src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1748596040/f%C3%B6retag-font_akkegj.svg"
@@ -79,7 +79,7 @@ export const SamarbetsHero: React.FC<RefProps> = ({ overviewRef, priceRef }) => 
         <img
           src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1747730179/itflows-studio-mamama_vikw63.jpg"
           alt="studio mamama itflows"
-          className="hidden tablet:block laptop:hidden self-end w-1/3 object-right object-cover aspect-[3/4]"
+          className="hidden tablet:block laptop:hidden self-end w-1/3 object-right object-cover aspect-[3/4] rounded-4xl"
         />
 
         <Testimonial

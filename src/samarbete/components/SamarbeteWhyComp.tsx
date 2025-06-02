@@ -1,9 +1,20 @@
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react"
 
-export const SamarbeteWhyComp = () => {
-  const [ isSmallScreen, setisSmallScreen ] = useState(window.innerWidth < 1024)
+interface RefProps {
+  kontaktRef?: React.RefObject<HTMLDivElement | null>;
+}
+
+export const SamarbeteWhyComp: React.FC<RefProps> = ({kontaktRef}) => {
+  const [ isSmallScreen, setisSmallScreen ] = useState(window.innerWidth < 1024) 
+  const [isClicked, setIsClicked] = useState(false)
   const navigate = useNavigate();
+
+  const scrollToKontakt = () => {
+    setIsClicked(true)
+    if (kontaktRef)
+   kontaktRef.current?.scrollIntoView({ behavior: "smooth" });
+  }
 
   useEffect(() => {
  const handleResize = () => {
@@ -15,6 +26,8 @@ export const SamarbeteWhyComp = () => {
   return () => window.removeEventListener("resize", handleResize);
 }, []);
 
+
+console.log(isClicked)
   return (
     <section className="pt-30 flex flex-col gap-10">
       <div className="flex flex-col desktop:flex-row justify-between gap-10">
@@ -56,18 +69,27 @@ export const SamarbeteWhyComp = () => {
             verksamhet unik. Och vi lovar: det blir både roligt, inspirerande
             och riktigt, riktigt bra.
           </p>
+          <div className="flex gap-6">
           <button
             className="bg-red-beige text-white p-3 px-6 rounded-full w-fit h-fit text-sm font-c-body tablet:text-base cursor-pointer shadow-lg hover:scale-110 hover:bg-warm-white hover:text-dark-red"
             onClick={() => navigate("/samarbete/om-oss")}
           >
            Läs mer
           </button>
+               <button
+            className="bg-red-beige text-white p-3 px-6 rounded-full w-fit h-fit text-sm font-c-body tablet:text-base cursor-pointer shadow-lg hover:scale-110 hover:bg-warm-white hover:text-dark-red"
+            onClick={() => scrollToKontakt()}
+          >
+           Kontakta oss
+          </button>
+          </div>
         </div>
         <div className="relative flex w-full h-[700px] tablet:h-[1500px] desktop:w-2/3 desktop:h-1/2 desktop:max-w-[900px] py-40 laptop:py-0 laptop:px-40">
           <img src={ isSmallScreen ? "https://res.cloudinary.com/dlp85vjwx/image/upload/v1748596043/utvecklaren-font_xgxmg6.svg" : "https://res.cloudinary.com/dlp85vjwx/image/upload/v1748597389/utv.izabe.font_yvn0q5.svg"} alt="Izabel utvecklare" className={`${ isSmallScreen ? "bottom-10 left-10 w-[180px] tablet:w-[250px]" : "bottom-20 left-[-10px]  w-[250px]" } absolute `}/>
         <img
           src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1748273899/it-flows-studio-mamama_rg2i7h.jpg"
-          className="object-cover w-full h-full aspect-[3/4]"
+          alt="izabel och emma"
+          className="object-cover w-full h-full aspect-[3/4] rounded-4xl"
         />
          <img src={ isSmallScreen ? "https://res.cloudinary.com/dlp85vjwx/image/upload/v1748596047/emma-font_d0tax5.svg" : "https://res.cloudinary.com/dlp85vjwx/image/upload/v1748597385/fotograf-emma-font_scpm9m.svg"} alt="Emma fotograf" className={`${ isSmallScreen ? "top-20 right-14  w-[230px] tablet:w-[300px]" : "right-[-10px] top-30  w-[280px]  "} absolute `}/>
         </div>

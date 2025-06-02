@@ -1,9 +1,10 @@
+import { KontaktaOssComp } from "../components/KontaktaOssComp"
 
 
 export const SamarbeteKontakt = () => {
   return (
     <section>
-      kontakta oss
+      <KontaktaOssComp/>
     </section>
   )
 }
