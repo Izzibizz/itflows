@@ -1,18 +1,18 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect } from "react";
 import { SamarbeteWhyComp } from "../components/SamarbeteWhyComp";
 
 export const OmOssSamarbete: React.FC = () => {
-    const [ isLaptop, setIsLaptop ] = useState(window.innerWidth > 1024) 
+  const [isLaptop, setIsLaptop] = useState(window.innerWidth > 1024);
 
-     useEffect(() => {
-   const handleResize = () => {
-  setIsLaptop(window.innerWidth > 1024);
-  };
+  useEffect(() => {
+    const handleResize = () => {
+      setIsLaptop(window.innerWidth > 1024);
+    };
 
-  handleResize(); // Run once
-  window.addEventListener("resize", handleResize);
-  return () => window.removeEventListener("resize", handleResize);
-  }, [isLaptop])
+    handleResize(); // Run once
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [isLaptop]);
 
   return (
     <section className=" animate-fadeIn flex flex-col gap-10 laptop:gap-28">
@@ -40,7 +40,11 @@ export const OmOssSamarbete: React.FC = () => {
               className="max-w-[300px] tablet:max-w-[380px]"
             />
             <img
-              src={isLaptop ? "https://res.cloudinary.com/dlp85vjwx/image/upload/v1748873080/med-hj%C3%A4rta_hbiuje.svg" : "https://res.cloudinary.com/dlp85vjwx/image/upload/v1748873354/levererar-med-hj%C3%A4rtat-mobil_vmstur.svg"}
+              src={
+                isLaptop
+                  ? "https://res.cloudinary.com/dlp85vjwx/image/upload/v1748873080/med-hj%C3%A4rta_hbiuje.svg"
+                  : "https://res.cloudinary.com/dlp85vjwx/image/upload/v1748873354/levererar-med-hj%C3%A4rtat-mobil_vmstur.svg"
+              }
               alt="Vi levererar projekt med hjärta"
               className="max-w-[200px] tablet:max-w-[300px] self-end"
             />
@@ -72,10 +76,13 @@ export const OmOssSamarbete: React.FC = () => {
           <div className="flex flex-col gap-4">
             <p className="laptop:max-w-[400px]">
               Emma är en passionerad content creator och utbildad fotograf med
-              över 10 års erfarenhet bakom kameran. Hon fångar stunder och
-              känslor så att fotona verkligen and. Med ett öga för både känsla
-              och strategi jobbar hon med visuell kommunikation,
-              marknads&shy;föring och innehålls&shy;planering.{" "}
+              över 10 års erfarenhet bakom kameran. Emma är expert på att skapa
+              trygg stämning framför kameran – och det syns i resultatet.
+              Bilderna känns levande, äkta och fulla av din energi.
+            </p>
+            <p>
+              Med ett öga för både känsla och strategi jobbar hon med visuell
+              kommunikation, marknads&shy;föring och innehålls&shy;planering.
             </p>
           </div>
         </div>
@@ -92,9 +99,11 @@ export const OmOssSamarbete: React.FC = () => {
           <p className="laptop:max-w-[400px]">
             Izabel är konstnär i grunden med en master i Fri Konst på Kungliga
             Konsthögskolan. Efter en Frontend-utbildning applicerar hon nu sin
-            kreativitet på genomtänkta system och visuell teknik – hon bygger
-            användarvänliga intuitiva hemsidor som sticker ut, engagerar och
-            håller hög visuell kvalitet.
+            kreativitet på genomtänkta system och visuell teknik – genom att koda
+            användarvänliga, snygga och intuitiva hemsidor från grunden.
+            </p>
+            <p>Med en stark känsla för estetik skapar
+            hon allt från webbdesign och illustrationer till grafisk design till t.ex. tryckmaterial.
           </p>
         </div>
       </div>
