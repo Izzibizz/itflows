@@ -1,17 +1,19 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react"
 
 interface RefProps {
   kontaktRef?: React.RefObject<HTMLDivElement | null>;
+  style?: string;
 }
 
-export const SamarbeteWhyComp: React.FC<RefProps> = ({kontaktRef}) => {
+export const SamarbeteWhyComp: React.FC<RefProps> = ({kontaktRef, style}) => {
   const [ isSmallScreen, setisSmallScreen ] = useState(window.innerWidth < 1024) 
-  const [isClicked, setIsClicked] = useState(false)
+  const [ isEndpoint, setIsEndpoint ] = useState(false)
   const navigate = useNavigate();
+  const location = useLocation()
+  const currentPath = location.pathname;
 
   const scrollToKontakt = () => {
-    setIsClicked(true)
     if (kontaktRef)
    kontaktRef.current?.scrollIntoView({ behavior: "smooth" });
   }
@@ -26,12 +28,17 @@ export const SamarbeteWhyComp: React.FC<RefProps> = ({kontaktRef}) => {
   return () => window.removeEventListener("resize", handleResize);
 }, []);
 
+useEffect(() => {
+ if (currentPath === "/samarbete/om-oss") {
+  setIsEndpoint(true)
+ }
+}, [currentPath])
 
-console.log(isClicked)
+
   return (
-    <section className="pt-30 flex flex-col gap-10">
+    <section className={`${style} flex flex-col gap-10 `}>
       <div className="flex flex-col desktop:flex-row justify-between gap-10">
-        <div className="flex flex-col gap-6 desktop:w-1/3 desktop:max-w-[600px] desktop:mx-auto">
+        <div className="flex flex-col gap-6 desktop:w-1/3 desktop:max-w-[700px]">
           <h3 className="font-collab text-4xl desktop:text-[40px]">
             Därför vill du jobba med oss
           </h3>
@@ -69,6 +76,7 @@ console.log(isClicked)
             verksamhet unik. Och vi lovar: det blir både roligt, inspirerande
             och riktigt, riktigt bra.
           </p>
+          {!isEndpoint && (
           <div className="flex gap-6">
           <button
             className="bg-red-beige text-white p-3 px-6 rounded-full w-fit h-fit text-sm font-c-body tablet:text-base cursor-pointer shadow-lg hover:scale-110 hover:bg-warm-white hover:text-dark-red"
@@ -83,6 +91,7 @@ console.log(isClicked)
            Kontakta oss
           </button>
           </div>
+          )}
         </div>
         <div className="relative flex w-full h-[700px] tablet:h-[1500px] desktop:w-2/3 desktop:h-1/2 desktop:max-w-[900px] py-40 laptop:py-0 laptop:px-40">
           <img src={ isSmallScreen ? "https://res.cloudinary.com/dlp85vjwx/image/upload/v1748596043/utvecklaren-font_xgxmg6.svg" : "https://res.cloudinary.com/dlp85vjwx/image/upload/v1748597389/utv.izabe.font_yvn0q5.svg"} alt="Izabel utvecklare" className={`${ isSmallScreen ? "bottom-10 left-10 w-[180px] tablet:w-[250px]" : "bottom-20 left-[-10px]  w-[250px]" } absolute `}/>
