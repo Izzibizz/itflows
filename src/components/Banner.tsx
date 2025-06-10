@@ -19,7 +19,7 @@ export const Banner: React.FC = () => {
           <div key={index} className="flex items-center  overflow-hidden">
             <NavLink
               to={item.url}
-              className="text-4xl laptop:text-[80px] text-warm-white font-header px-6 py-4 whitespace-nowrap hover:scale-110"
+              className="text-4xl laptop:text-[60px] text-warm-white font-header px-6 py-4 whitespace-nowrap hover:scale-110"
             >
               {item.label}
             </NavLink>

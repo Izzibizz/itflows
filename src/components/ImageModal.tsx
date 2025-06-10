@@ -1,11 +1,18 @@
 import { useRef, useEffect } from 'react';
 
-export const ImageModal = ({ src, onClose, photographer }) => {
-    const modalRef = useRef(null);
+interface imageProps {
+
+  src: string;
+   onClose: () => void;
+  photographer: string;
+}
+
+export const ImageModal: React.FC<imageProps>= ({ src, onClose, photographer }) => {
+    const modalRef = useRef<HTMLDivElement | null>(null);
   
     useEffect(() => {
-      const handleClickOutside = (event) => {
-        if (modalRef.current && !modalRef.current.contains(event.target)) {
+      const handleClickOutside = (event:  MouseEvent) => {
+        if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
           onClose(); // Close the modal if clicked outside
         }
       };

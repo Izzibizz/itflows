@@ -28,9 +28,14 @@ export const SwiperComp: React.FC<SwiperProps> = ({onSlideChange, projects}) => 
   const navigate = useNavigate();
 
   return (
-    <div className="overflow-visible w-full laptop:w-10/12 laptop:mx-auto flex flex-col">
+    <div className="overflow-visible w-full laptop:w-9/12 laptop:mx-auto flex flex-col">
       <Swiper
-      onSlideChange={(swiper) => onSlideChange(swiper.activeIndex)}
+       onSlideChange={(swiper) => {
+    // Vänta lite innan du uppdaterar – för att undvika glitch
+    setTimeout(() => {
+      onSlideChange(swiper.realIndex);
+    }, 100); 
+  }}
       onSlideChangeTransitionEnd={(swiper) => {
     onSlideChange(swiper.realIndex);
   }}

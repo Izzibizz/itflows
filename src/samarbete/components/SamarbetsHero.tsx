@@ -54,12 +54,12 @@ export const SamarbetsHero: React.FC<RefProps> = ({ overviewRef, priceRef }) => 
           alt="itflows studio mamama"
           className="hidden laptop:block self-end laptop:self-start laptop:max-w-1/3 mt-24 laptop:mt-0 object-right object-cover aspect-[3/4]"
         />
-      <div className="flex flex-col tablet:flex-row tablet:gap-6 laptop:gap-20 laptop:flex-col justify-between">
+      <div className="flex flex-col tablet:flex-row tablet:gap-6 laptop:gap-40 laptop:flex-col w-full">
         <div className="flex flex-col gap-6  laptop:mt-10 relative">
           <h2 className="font-collab text-4xl tablet:text-[50px] laptop:text-[60px]">
             Ett helhetskoncept
           </h2>
-          <h3 className="text-c-body text-lg desktop:max-w-[700px] ">
+          <h3 className="text-c-body text-lg laptop:max-w-2/3">
             Vi hjälper dig att hitta ditt visuella uttryck – genom skräddarsydd
             webbdesign och fotografering som speglar din vision.
           </h3>
@@ -81,11 +81,11 @@ export const SamarbetsHero: React.FC<RefProps> = ({ overviewRef, priceRef }) => 
           alt="studio mamama itflows"
           className="hidden tablet:block laptop:hidden self-end w-1/3 object-right object-cover aspect-[3/4] rounded-4xl"
         />
-  <a href="https://lightbodyyoga.se" target="_blank" rel="noopener noreferrer">
+  <a href="https://lightbodyyoga.se" target="_blank" rel="noopener noreferrer" className="flex flex-col">
         <Testimonial
           testimonial={testimonials[0]}
           style={
-            "hidden laptop:flex bg-collab-beige rounded-br-none self-end rounded-tr-[120px] desktop:max-w-10/12"
+            "hidden laptop:flex bg-collab-beige rounded-br-none rounded-tr-[120px] desktop:max-w-[600px] self-end"
           }
         />
         </a>

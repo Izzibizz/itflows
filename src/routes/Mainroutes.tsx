@@ -4,7 +4,7 @@ import { LandningsSida } from "../pages/LandningsSida";
 import { NotFound } from "../pages/NotFound";
 import { OmOss } from "../pages/OmOss"
 import { Kontakt } from "../pages/Kontakt"
-import { Kunder } from "../pages/Kunder"; 
+/* import { Kunder } from "../pages/Kunder";  */
 import { WebbUtveckling } from "../pages/WebbUtveckling"
 import { Design } from "../pages/Design"
 import { Branding } from "../pages/Branding"
@@ -20,7 +20,7 @@ export const MainRoutes: React.FC = () => {
     <div>
         <Routes>
         <Route path="/" element={<LandningsSida/>}/>        
-        <Route path="/kunder" element={<Kunder/>}/>
+{/*         <Route path="/kunder" element={<Kunder/>}/> */}
         <Route path="/webbutveckling" element={<WebbUtveckling/>}/>
         <Route path="/branding" element={<Branding/>}/>
         <Route path="/design" element={<Design/>}/>

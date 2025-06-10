@@ -255,9 +255,9 @@ const navLinks = ( currentPath === "/samarbete/om-oss" ||  currentPath ===  "/sa
 
                     {showDropdown && (
                       <ul
-                        className={`absolute left-[-35%] top-full rounded-b-md shadow-xl p-2 z-60 flex flex-col ${
+                        className={`absolute left-[-35%] top-full rounded-b-md shadow-xl p-2 z-60 flex flex-col text-dark-blue bg-gradient-to-b from-warm-white/0 to-warm-white ${
                           headerBg &&
-                          "bg-warm-white z-10 backdrop-blur-[15px] mt-2"
+                          "bg-warm-white z-10 backdrop-blur-[15px] mt-2 text-warm-black"
                         }`}
                         onMouseLeave={() => setShowDropdown(false)}
                       >

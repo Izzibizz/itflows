@@ -3,7 +3,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { HiOutlineArrowSmallRight } from "react-icons/hi2";
 
-export const IntroductionAbout: React.FC = () => {
+export const AboutIntro: React.FC = () => {
   const navigate = useNavigate();
   const textRef = useRef(null);
   const textIsInView = useInView(textRef, { once: true });

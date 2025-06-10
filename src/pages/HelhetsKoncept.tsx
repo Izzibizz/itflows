@@ -25,9 +25,10 @@ export const HelhetsKoncept: React.FC = () => {
       <div className="grid laptop:grid-cols-2 gap-10 laptop:gap-20 z-20">
       <img
           src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1746791026/it-flows-studio-mamama-test-intro-2_sqgga8.jpg"
-          className="hidden tablet:block laptop:w-2/3"
+                 alt="studio mamama samarbete mellan Izabel och Emma"
+          className="hidden tablet:block laptop:w-2/3 rounded-4xl"
         />
-        <div className="flex flex-col gap-10">
+        <div className="flex flex-col gap-10 self-end">
         <div className="flex flex-col gap-2">
         <h3 className="font-wide tracking-wide text-3xl laptop:text-4xl">
           Lär känna Studio Mamama
@@ -52,11 +53,12 @@ export const HelhetsKoncept: React.FC = () => {
         </div>
         <img
           src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1746791026/it-flows-studio-mamama-test-intro-2_sqgga8.jpg"
-          className="tablet:hidden"
+          alt="studio mamama samarbete mellan Izabel och Emma"
+          className="tablet:hidden rounded-4xl"
         />
 
       </div>
-      <BookingCTAComp />
+      <BookingCTAComp horizontalImage="https://res.cloudinary.com/dlp85vjwx/image/upload/v1749554666/output_44_-_kopia_jytblk.jpg" image="https://res.cloudinary.com/dlp85vjwx/image/upload/v1749554666/output_44_dsvnrk.jpg" isHelhetskoncept={true} />
     </section>
   );
 };
