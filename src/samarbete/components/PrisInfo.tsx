@@ -30,7 +30,7 @@ export const PrisInfo: React.FC<refProps> = ({ priceRef, style }) => {
 
   return (
     <section
-      className={`flex flex-col gap-10 ${style}`}
+      className={`flex flex-col gap-10 ${style} laptop:w-10/12 mx-auto`}
       ref={priceRef}
     >
       <div className="flex flex-col gap-8">
@@ -48,8 +48,8 @@ export const PrisInfo: React.FC<refProps> = ({ priceRef, style }) => {
         {paketInfo.map((paket, index) => (
           <div
             key={index}
-            className={`grid mx-auto grid-cols-[auto_1fr] border rounded-xl border-dotted max-w-[400px] laptop:max-w-[500px]
-        tablet:grid-cols-1 tablet:grid-rows-[auto_auto_1fr_auto] gap-4 laptop:gap-0  laptop:grid-rows-[auto_1fr_auto]`}
+            className={`grid mx-auto grid-cols-[auto_1fr] border rounded-xl border-dotted max-w-[400px] laptop:max-w-[450px]
+        tablet:grid-cols-1 tablet:grid-rows-[auto_auto_1fr_auto] gap-y-4 laptop:gap-0  laptop:grid-rows-[auto_1fr_auto]`}
           >
             {/* Siffra och titel */}
             <div className="flex items-center justify-center gap-4 p-4 row-span-1">
@@ -92,8 +92,15 @@ export const PrisInfo: React.FC<refProps> = ({ priceRef, style }) => {
             </ul>
 
             {/* Pris */}
-            <div className="row-span-1 h-fit p-6 flex justify-end">
-              <h4 className="bg-warm-beige rounded-2xl w-fit p-2 px-4">
+            <div className="row-span-1 h-fit p-4 flex justify-end flex gap-2 laptop:gap-3">
+              <a href={`mailto:info@itflows.se?subject=Bokning konsultation - ${paket.title}paketet&body=Hej, jag skulle vilja boka en första konsultation för ${paket.title}paketet. Namn: företag: telefonnummer:`}
+              aria-label="Email me at info@itflows.se"
+              className="flex gap-2 items-center font-light">
+                <button className="rounded-4xl w-fit p-2 px-4 border border-dotted cursor-pointer">
+                  Boka
+                </button>
+              </a>
+              <h4 className="bg-warm-beige rounded-4xl w-fit p-2 px-4">
                 {paket.price}
               </h4>
             </div>

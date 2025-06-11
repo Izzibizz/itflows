@@ -25,7 +25,7 @@ export const Samarbete: React.FC = () => {
                 <img
           src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1749631095/nyfiken_yg89xf.svg"
           alt="nyfiken på att veta mer?"
-          className="w-[350px]"
+          className="w-[350px]  laptop:hidden"
         />
         <button
           className=" laptop:hidden bg-collab-green text-white p-3 px-6 rounded-full w-fit h-fit text-sm font-c-body tablet:text-base cursor-pointer shadow-lg hover:scale-110 hover:bg-collab-red hover:text-warm-white"
@@ -33,7 +33,7 @@ export const Samarbete: React.FC = () => {
         >
           Se våra prispaket
         </button>
-        <div className="h-full w-full laptop:h-[500px] self-end overflow-hidden">
+        <div className="h-full w-full laptop:h-[500px] self-end overflow-hidden mt-10 tablet:mt-0">
           <video
             src="https://res.cloudinary.com/dlp85vjwx/video/upload/v1749560309/ovanifr%C3%A5n.moodboarding_q03zmu.mp4"
             muted

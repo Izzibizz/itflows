@@ -36,7 +36,7 @@ useEffect(() => {
 
 
   return (
-    <section className={`${style} flex flex-col gap-10 `}>
+    <section className={`${style} flex flex-col gap-10 pb-20 border-b-2 border-dotted border-collab-lightgreen`}>
       <div className={`flex flex-col ${isEndpoint ? "desktop:flex-row-reverse" : "desktop:flex-row" } justify-between gap-10`}>
         <div className="flex flex-col gap-6 desktop:w-1/3 desktop:max-w-[700px]">
           <h3 className="font-collab text-4xl desktop:text-[40px]">
