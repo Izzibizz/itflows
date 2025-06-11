@@ -70,7 +70,7 @@ export const KontaktaOssComp: React.FC<RefProps> = ({ kontaktRef, style }) => {
         className="rounded-4xl laptop:max-h-[650px]"
       />
         <img
-        src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1748868376/vi-ser-fram-emot_w8zug0.svg"
+        src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1749631965/ser-fram-emot-mobile-2_caapac.svg"
         alt="vi ser fram emot att höra från dig"
         className="w-[230px] self-center"
       />
