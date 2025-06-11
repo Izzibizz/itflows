@@ -6,9 +6,13 @@ import clickAnimation from "../../assets/animations/clickAnimation.json";
 
 type RefProps = {
   overviewRef: React.RefObject<HTMLDivElement | null>;
+  scrolltoPrisLista: () => void;
 };
 
-export const SamarbetsOverview: React.FC<RefProps> = ({ overviewRef }) => {
+export const SamarbetsOverview: React.FC<RefProps> = ({
+  overviewRef,
+  scrolltoPrisLista
+}) => {
   const [isSmallScreen, setIsSmallScreen] = useState<boolean>(
     window.innerWidth < 1300
   );
@@ -40,7 +44,7 @@ export const SamarbetsOverview: React.FC<RefProps> = ({ overviewRef }) => {
 
   return (
     <section
-      className="pt-30 pb-40 laptop:pb-48 flex flex-col gap-10 laptop:gap-24 relative"
+      className="pt-30 pb-40 laptop:pb-48 flex flex-col gap-10 laptop:gap-4 relative"
       ref={overviewRef}
     >
       {isSmallScreen ? (
@@ -106,7 +110,6 @@ export const SamarbetsOverview: React.FC<RefProps> = ({ overviewRef }) => {
                 className="w-full h-auto "
               />
             ))}
-  
           </div>
           <div className="flex flex-col gap-6 items-end text-end w-1/2 max-w-[700px]">
             <h2 className="font-collab text-[40px]">Hur går det till?</h2>
@@ -138,6 +141,19 @@ export const SamarbetsOverview: React.FC<RefProps> = ({ overviewRef }) => {
           </div>
         </div>
       )}
+      <div className=" items-center gap-4 hidden laptop:flex self-end">
+        <img
+          src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1749631095/nyfiken_yg89xf.svg"
+          alt="nyfiken på att veta mer?"
+          className="w-[350px]"
+        />
+        <button
+          className="hidden laptop:flex bg-collab-green text-white self-end p-3 px-6 rounded-full w-fit h-fit text-sm font-c-body tablet:text-base cursor-pointer shadow-lg hover:scale-110 hover:bg-collab-red hover:text-warm-white"
+          onClick={() => scrolltoPrisLista()}
+        >
+          Se våra prispaket
+        </button>
+      </div>
 
       {isModalOpen && clickedIndex !== null && (
         <InfoModal
@@ -147,11 +163,11 @@ export const SamarbetsOverview: React.FC<RefProps> = ({ overviewRef }) => {
           onClose={handleCloseModal}
         />
       )}
-                <img
-              src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1748603736/yay_uyhy2s.svg"
-              alt="yay!"
-              className="w-[80px] tablet:w-[100px] laptop:hidden absolute bottom-10 right-10 tablet:right-1/3"
-            />
+      <img
+        src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1748603736/yay_uyhy2s.svg"
+        alt="yay!"
+        className="w-[80px] tablet:w-[100px] laptop:hidden absolute bottom-10 right-10 tablet:right-1/3"
+      />
     </section>
   );
 };

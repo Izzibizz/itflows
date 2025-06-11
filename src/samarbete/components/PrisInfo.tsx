@@ -30,7 +30,7 @@ export const PrisInfo: React.FC<refProps> = ({ priceRef, style }) => {
 
   return (
     <section
-      className={`flex flex-col gap-10  desktop:max-w-[1300px] desktop:mx-auto ${style}`}
+      className={`flex flex-col gap-10 ${style}`}
       ref={priceRef}
     >
       <div className="flex flex-col gap-8">
@@ -48,7 +48,7 @@ export const PrisInfo: React.FC<refProps> = ({ priceRef, style }) => {
         {paketInfo.map((paket, index) => (
           <div
             key={index}
-            className={`grid mx-auto grid-cols-[auto_1fr] border rounded-xl border-dotted max-w-[400px] laptop:max-w-[550px]
+            className={`grid mx-auto grid-cols-[auto_1fr] border rounded-xl border-dotted max-w-[400px] laptop:max-w-[500px]
         tablet:grid-cols-1 tablet:grid-rows-[auto_auto_1fr_auto] gap-4 laptop:gap-0  laptop:grid-rows-[auto_1fr_auto]`}
           >
             {/* Siffra och titel */}
@@ -80,7 +80,7 @@ export const PrisInfo: React.FC<refProps> = ({ priceRef, style }) => {
 
             {/* Lista */}
             <ul
-              className="p-4 laptop:p-6 text-sm col-span-full flex flex-col row-span-2 reak-words 
+              className="p-4 laptop:p-6 laptop:pl-8 text-sm col-span-full flex flex-col row-span-2 reak-words 
              [word-break:break-word] 
              [overflow-wrap:break-word] "
             >
