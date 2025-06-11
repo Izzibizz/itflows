@@ -38,7 +38,7 @@ export const Hero: React.FC = () => {
               className="bg-red-beige text-white p-3 px-6 rounded-full w-fit h-fit text-sm font-body tablet:text-xl cursor-pointer shadow-lg hover:scale-110 hover:bg-warm-white hover:text-dark-red"
               onClick={() => navigate("/erbjudanden")}
             >
-              Erbjudanden
+              Just nu 25% rabatt
             </button>
             <button
               className="bg-red-beige text-white p-3 px-6 rounded-full w-fit h-fit text-sm font-body  tablet:text-xl cursor-pointer shadow-lg hover:scale-110  hover:bg-warm-white hover:text-dark-red"

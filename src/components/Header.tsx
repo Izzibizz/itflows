@@ -135,7 +135,6 @@ const navLinks = ( currentPath === "/samarbete/om-oss" ||  currentPath ===  "/sa
     };
   }, [isOpen]);
 
-  console.log(currentPath);
 
   return (
     <>

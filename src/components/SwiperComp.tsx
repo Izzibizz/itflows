@@ -1,8 +1,7 @@
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useNavigate } from "react-router-dom";
 
-import { EffectCoverflow, Pagination, Autoplay  } from "swiper/modules";
+import { EffectCoverflow, Pagination, Autoplay } from "swiper/modules";
 import "../styles/swiper.css";
 import "../styles/effect-coverflow.css";
 import "../styles/pagination.css";
@@ -16,33 +15,35 @@ interface ProjectProps {
   pictures: string[];
   website: string;
   typeOfProject: string[];
-};
-
+}
 
 interface SwiperProps {
-  projects: ProjectProps[];             
+  projects: ProjectProps[];
   onSlideChange: (index: number) => void;
 }
 
-export const SwiperComp: React.FC<SwiperProps> = ({onSlideChange, projects}) => {
+export const SwiperComp: React.FC<SwiperProps> = ({
+  onSlideChange,
+  projects,
+}) => {
   const navigate = useNavigate();
 
   return (
     <div className="overflow-visible w-full laptop:w-9/12 laptop:mx-auto flex flex-col">
       <Swiper
-       onSlideChange={(swiper) => {
-    // Vänta lite innan du uppdaterar – för att undvika glitch
-    setTimeout(() => {
-      onSlideChange(swiper.realIndex);
-    }, 100); 
-  }}
-      onSlideChangeTransitionEnd={(swiper) => {
-    onSlideChange(swiper.realIndex);
-  }}
+        onSlideChange={(swiper) => {
+          // Vänta lite innan du uppdaterar – för att undvika glitch
+          setTimeout(() => {
+            onSlideChange(swiper.realIndex);
+          }, 100);
+        }}
+        onSlideChangeTransitionEnd={(swiper) => {
+          onSlideChange(swiper.realIndex);
+        }}
         effect={"coverflow"}
         autoplay={{
           delay: 6000,
-          disableOnInteraction: false, 
+          disableOnInteraction: false,
         }}
         speed={1500}
         direction={"horizontal"}
@@ -73,23 +74,21 @@ export const SwiperComp: React.FC<SwiperProps> = ({onSlideChange, projects}) => 
         className="my-custom-swiper w-full h-[300px] tablet:h-auto"
       >
         {projects.map((project, index) => (
-          <SwiperSlide
-            key={index}
-            onClick={() => navigate("/kunder")}
-          >
-            <img src={project.pictures[0]} className="pb-10" />
-            <div className="font-body self-end text-end hidden tablet:block">
-              <a
-                href={project.website}
-                target="_blank"
-                rel="noref noopener"
-                className="text-xl"
-              >
+          <SwiperSlide key={index}>
+            <a
+              href={project.website}
+              target="_blank"
+              rel="noref noopener"
+              className="text-xl"
+            >
+              <img src={project.pictures[0]} className="pb-10" />
+              <div className="font-body self-end text-end hidden tablet:block">
                 {project.company}
-              </a>
-              <p className="text-sm">{project.title}</p>
-              <p className="text-sm">{project.year}</p>
-            </div>
+
+                <p className="text-sm">{project.title}</p>
+                <p className="text-sm">{project.year}</p>
+              </div>
+            </a>
           </SwiperSlide>
         ))}
       </Swiper>

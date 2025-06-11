@@ -1,5 +1,6 @@
 import { useEffect } from "react"
 import { useCollabStore } from "../stores/useCollabStore"
+import { DiscountCard } from "../components/DiscountCard"
 
 export const Erbjudanden: React.FC = () => {
 
@@ -13,6 +14,7 @@ export const Erbjudanden: React.FC = () => {
     return (
       <section className=" animate-fadeIn" >
         <h1 className="font-header text-dark-blue text-4xl">Erbjudanden</h1>
+        <DiscountCard />
       </section>
     )
   }
