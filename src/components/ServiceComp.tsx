@@ -60,7 +60,7 @@ export const ServiceComp: React.FC<MovingCircleProps> = ({
 
   return (
     <section className="animate-longFadeIn flex flex-col gap-10 laptop:gap-14 font-body">
-      <div className="h-[50vh] tablet:h-[70vh] laptop:h-[60vh] w-full flex justify-center items-center flex-col relative z-20 uppercase">
+      <div className="h-[50vh] tablet:h-[70vh] laptop:h-[65vh] w-full flex justify-center items-center flex-col relative z-20 uppercase">
         <h1
           className={`font-bold text-[60px] laptop:text-[80px] text-center ${textColor}`}
         >

@@ -19,8 +19,8 @@ export const WebbUtveckling: React.FC = () => {
         imageLaptop="https://res.cloudinary.com/dlp85vjwx/image/upload/v1746716002/webbutveckling-laptop_w3xpyg.svg"
       />
       <BookingCTAComp
-        horizontalImage="https://res.cloudinary.com/dlp85vjwx/image/upload/v1747911291/coding-2_kfmlrb.png"
-        image="https://res.cloudinary.com/dlp85vjwx/image/upload/v1747910755/coding_i2pun4.jpg"
+        horizontalImage="https://res.cloudinary.com/dlp85vjwx/image/upload/t_w-500/v1749718445/izabel-lind-itflows_ohxovz.webp"
+        image="https://res.cloudinary.com/dlp85vjwx/image/upload/t_w-500/v1749718445/izabel-lind-itflows_ohxovz.webp"
       />
     </section>
   );

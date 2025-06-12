@@ -45,31 +45,37 @@ export const Header: React.FC = () => {
     { name: "Prislista", path: "/samarbete/prislista" },
     { name: "Om oss", path: "/samarbete/om-oss" },
     { name: "Kontakt", path: "/samarbete/kontakt" },
-    { name: "itFlows", path: "/" }
+    { name: "itFlows", path: "/" },
   ];
 
   const omOssNav: NavLinkItem[] = [{ name: "Hem", path: "/" }, ...navLinksBase];
-  
-  const collabOmNav: NavLinkItem[] = [{name: "Startsida", path: "/samarbete/studio-mamama"}, ...collabNav] 
+
+  const collabOmNav: NavLinkItem[] = [
+    { name: "Startsida", path: "/samarbete/studio-mamama" },
+    ...collabNav,
+  ];
 
   const navChildren =
     navLinksBase.find((link) => link.name === "Tjänster")?.children ?? [];
 
-const navLinks = ( currentPath === "/samarbete/om-oss" ||  currentPath ===  "/samarbete/prislista" ||  currentPath === "/samarbete/kontakt" )
-    ? collabOmNav
-    :  isSamarbete
-    ? collabNav
-    : currentPath === "/om-oss"
-    ? omOssNav
-    : isMobile
-    ? [
-        { name: "Hem", path: "/" },
-        ...navChildren,
-        ...navLinksBase.filter(
-          (link) => link.name !== "Tjänster" && link.name !== "Hem"
-        ),
-      ]
-    : navLinksBase;
+  const navLinks =
+    currentPath === "/samarbete/om-oss" ||
+    currentPath === "/samarbete/prislista" ||
+    currentPath === "/samarbete/kontakt"
+      ? collabOmNav
+      : isSamarbete
+      ? collabNav
+      : currentPath === "/om-oss"
+      ? omOssNav
+      : isMobile
+      ? [
+          { name: "Hem", path: "/" },
+          ...navChildren,
+          ...navLinksBase.filter(
+            (link) => link.name !== "Tjänster" && link.name !== "Hem"
+          ),
+        ]
+      : navLinksBase;
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -135,6 +141,7 @@ const navLinks = ( currentPath === "/samarbete/om-oss" ||  currentPath ===  "/sa
     };
   }, [isOpen]);
 
+  console.log("islanding", isLandingPage, "headerBg", headerBg);
 
   return (
     <>
@@ -231,10 +238,10 @@ const navLinks = ( currentPath === "/samarbete/om-oss" ||  currentPath ===  "/sa
             className={`flex gap-20 ${
               isSamarbete
                 ? "text-collab-green"
-                : isLandingPage && headerBg
-                ? "text-stone-800"
                 : isLandingPage
-                ? "text-white"
+                ? headerBg
+                  ? "text-stone-800"
+                  : "text-white"
                 : "text-dark-blue"
             } tracking-wider h-fit `}
           >
@@ -254,9 +261,9 @@ const navLinks = ( currentPath === "/samarbete/om-oss" ||  currentPath ===  "/sa
 
                     {showDropdown && (
                       <ul
-                        className={`absolute left-[-35%] top-full rounded-b-md shadow-xl p-2 z-60 flex flex-col text-dark-blue bg-gradient-to-b from-warm-white/0 to-warm-white ${
-                          headerBg &&
-                          "bg-warm-white z-10 backdrop-blur-[15px] mt-2 text-warm-black"
+                        className={`absolute left-[-35%] top-full rounded-b-md shadow-xl p-2 z-60 flex flex-col ${
+                          headerBg ?
+                          "bg-warm-white z-10 backdrop-blur-[15px] mt-2" : isLandingPage && "bg-gradient-to-b from-warm-white/0 to-dark-blue"
                         }`}
                         onMouseLeave={() => setShowDropdown(false)}
                       >

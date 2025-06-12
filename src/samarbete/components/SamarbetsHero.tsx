@@ -34,7 +34,7 @@ export const SamarbetsHero: React.FC<RefProps> = ({ overviewRef, priceRef }) => 
       <Testimonial
         testimonial={testimonials[0]}
         style={
-          "tablet:hidden self-end mt-10 bg-collab-beige rounded-br-none rounded-tr-[120px]"
+          "tablet:hidden self-end mt-10 bg-collab-beige rounded-br-none rounded-tr-[120px] laptop:rounded-tr-[150px]"
         }
       />
       <div className="relative tablet:hidden">

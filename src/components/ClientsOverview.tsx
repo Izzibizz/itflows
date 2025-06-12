@@ -69,7 +69,7 @@ export const ClientsOverview: React.FC = () => {
           </motion.div>
           <Testimonial
             testimonial={projects[testimonialIndex]}
-            style={`bg-light-beige w-full self-end h-fit rounded-bl-none rounded-tl-[120px] laptop:rounded-tl-[150px]`}
+            style={`bg-light-beige w-full self-end h-fit rounded-bl-none rounded-tl-[120px] laptop:rounded-tl-[150px] max-w-[700px]`}
           />
         </div>
       </div>

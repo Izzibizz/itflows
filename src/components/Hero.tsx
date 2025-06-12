@@ -58,7 +58,7 @@ export const Hero: React.FC = () => {
           <Testimonial
             testimonial={testimonials[0]}
             style={
-              "self-end bg-warm-white max-w-[800px] laptop:w-2/3 laptop:mt-10 rounded-br-none rounded-tr-[120px] laptop:rounded-tr-[150px]"
+              "self-end bg-warm-white max-w-[600px] laptop:w-2/3 laptop:mt-10 rounded-br-none rounded-tr-[120px] laptop:rounded-tr-[150px]"
             }
           />
         </div>
