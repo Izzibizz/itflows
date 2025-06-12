@@ -146,14 +146,14 @@ export const Header: React.FC = () => {
   return (
     <>
       <header
-        className={`${
-          isSamarbete ? "font-c-body h-14 p-10" : "font-header h-6 p-8"
+        className={`p-8 ${
+          isSamarbete ? "font-c-body h-14 p-10" : "font-header h-6"
         } px-9  laptop:px-18 fixed top-0 z-70 w-full  flex ${
           currentPath === "/om-oss" ? "justify-end" : "justify-between"
-        } items-center  animate-fadeIn ${
+        } items-center  animate-fadeIn transition-all duration-600 ease-in-out ${
           headerBg
-            ? "bg-warm-white shadow-lg backdrop-blur-[15px] p-8 "
-            : "bg-light/0 p-12"
+            ? "bg-warm-white shadow-lg backdrop-blur-[15px]"
+            : "bg-light/0"
         }`}
       >
         {currentPath !== "/om-oss" &&
@@ -189,7 +189,7 @@ export const Header: React.FC = () => {
               }
               alt="logo itflows"
               className={`${
-                headerBg ? "w-[100px]" : "w-[200px]"
+                headerBg ? "w-[100px]" : "w-[200px] pt-4"
               } laptop:hover:scale-105 cursor-pointer animate-fadeIn`}
               onClick={() => logoClick()}
             />
@@ -263,7 +263,7 @@ export const Header: React.FC = () => {
                       <ul
                         className={`absolute left-[-35%] top-full rounded-b-md shadow-xl p-2 z-60 flex flex-col ${
                           headerBg ?
-                          "bg-warm-white z-10 backdrop-blur-[15px] mt-2" : isLandingPage && "bg-gradient-to-b from-warm-white/0 to-dark-blue"
+                          "bg-warm-white z-10 backdrop-blur-[15px] mt-2" : isLandingPage && "bg-gradient-to-b from-warm-white/0 to-gray-blue"
                         }`}
                         onMouseLeave={() => setShowDropdown(false)}
                       >
