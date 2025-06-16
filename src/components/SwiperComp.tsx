@@ -1,5 +1,4 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { useNavigate } from "react-router-dom";
 
 import { EffectCoverflow, Pagination, Autoplay } from "swiper/modules";
 import "../styles/swiper.css";
@@ -26,7 +25,7 @@ export const SwiperComp: React.FC<SwiperProps> = ({
   onSlideChange,
   projects,
 }) => {
-  const navigate = useNavigate();
+
 
   return (
     <div className="overflow-visible w-full laptop:w-9/12 laptop:mx-auto flex flex-col">
