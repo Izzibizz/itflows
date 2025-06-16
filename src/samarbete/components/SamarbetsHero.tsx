@@ -67,7 +67,7 @@ export const SamarbetsHero: React.FC<RefProps> = ({ overviewRef, priceRef }) => 
             className="bg-collab-green text-white p-3 px-6 rounded-full w-fit h-fit text-sm font-c-body tablet:text-base cursor-pointer shadow-lg hover:scale-110 hover:bg-collab-red hover:text-warm-white"
             onClick={() => scrolltoOverview()}
           >
-           {isTablet ? "Se våra paket" : " Mer om erbjudandet"}
+           {isTablet ? "Se våra paket" : "Redo? Så här går det till"}
           </button>
           <img
             src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1748596040/f%C3%B6retag-font_akkegj.svg"
