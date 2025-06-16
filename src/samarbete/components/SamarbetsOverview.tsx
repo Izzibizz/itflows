@@ -11,7 +11,7 @@ type RefProps = {
 
 export const SamarbetsOverview: React.FC<RefProps> = ({
   overviewRef,
-  scrolltoPrisLista
+  scrolltoPrisLista,
 }) => {
   const [isSmallScreen, setIsSmallScreen] = useState<boolean>(
     window.innerWidth < 1300
@@ -54,10 +54,7 @@ export const SamarbetsOverview: React.FC<RefProps> = ({
               Hur går det till?
             </h2>
             <h3 className="laptop:text-xl laptop:max-w-1/2 text-justify laptop:text-end">
-              Såhär går det till{" "}
-              <span className="font-semibold">steg för steg</span> från första
-              mötet då vi lär känna varandra och tillsammans försöker förstå och
-              förtydliga visionen - hela vägen till en färdig hemsida.
+              Från första mötet där vi lär känna dig och din vision, till en färdig hemsida som känns helt rätt för dig.
             </h3>
             {isSmallScreen && (
               <>
@@ -114,10 +111,7 @@ export const SamarbetsOverview: React.FC<RefProps> = ({
           <div className="flex flex-col gap-6 items-end text-end w-1/2 max-w-[700px]">
             <h2 className="font-collab text-[40px]">Hur går det till?</h2>
             <h3 className="text-xl text-justify laptop:text-end">
-              Såhär går det till{" "}
-              <span className="font-semibold">steg för steg</span> från första
-              mötet då vi lär känna varandra och tillsammans försöker förstå och
-              förtydliga visionen - hela vägen till en färdig hemsida.
+              Från första mötet där vi lär känna dig och din vision, till en färdig hemsida som känns helt rätt för dig.
             </h3>
 
             <div className="flex flex-col justify-evenly h-fit border p-6 px-8 border-dotted gap-4 ">
