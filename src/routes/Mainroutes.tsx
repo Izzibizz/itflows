@@ -30,10 +30,10 @@ export const MainRoutes: React.FC = () => {
         <Route path="/om-oss" element={<OmOss/>}/>
         <Route path="/kontakt" element={<Kontakt/>}/>
 
-        <Route path="/samarbete/om-oss" element={<OmOssSamarbete/>}/>
-        <Route path="/samarbete/prislista" element={<Prislista/>}/>
+        <Route path="/samarbete/studio-mamama/om-oss" element={<OmOssSamarbete/>}/>
+        <Route path="/samarbete/studio-mamama/prislista" element={<Prislista/>}/>
         <Route path="/samarbete/studio-mamama" element={<Samarbete/>}/>
-         <Route path="/samarbete/kontakt" element={<SamarbeteKontakt/>}/>
+         <Route path="/samarbete/studio-mamama/kontakt" element={<SamarbeteKontakt/>}/>
         </Routes>
     </div>
   )

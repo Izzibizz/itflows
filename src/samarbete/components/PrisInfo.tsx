@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import paketData from "../../data/prislista.json";
+import additions from "../../data/additions.json";
 
 type Package = {
   title: string;
@@ -8,12 +9,18 @@ type Package = {
   for: string;
 };
 
+type Additions = {
+  category: string;
+  items: string[];
+};
+
 interface refProps {
   priceRef?: React.RefObject<HTMLDivElement | null>;
   style?: string;
 }
 
 const paketInfo: Package[] = paketData;
+const extraServices: Additions[] = additions;
 
 export const PrisInfo: React.FC<refProps> = ({ priceRef, style }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -72,9 +79,7 @@ export const PrisInfo: React.FC<refProps> = ({ priceRef, style }) => {
               </div>
             </div>
             <div className="hidden tablet:block laptop:hidden flex flex-col row-span-1 gap-4 px-4 tablet:items-center laptop:items-start justify-center">
-              <h3 className="font-collab text-4xl">
-                {paket.title}
-              </h3>
+              <h3 className="font-collab text-4xl">{paket.title}</h3>
               <p className="text-xs italic">{paket.for}</p>
             </div>
 
@@ -93,9 +98,11 @@ export const PrisInfo: React.FC<refProps> = ({ priceRef, style }) => {
 
             {/* Pris */}
             <div className="row-span-1 h-fit p-4 flex justify-end flex gap-2 laptop:gap-3">
-              <a href={`mailto:info@itflows.se?subject=Bokning konsultation - ${paket.title}paketet&body=Hej, jag skulle vilja boka en första konsultation för ${paket.title}paketet. Namn: företag: telefonnummer:`}
-              aria-label="Email me at info@itflows.se"
-              className="flex gap-2 items-center font-light">
+              <a
+                href={`mailto:info@itflows.se?subject=Bokning konsultation - ${paket.title}paketet&body=Hej, jag skulle vilja boka en första konsultation för ${paket.title}paketet. Namn: företag: telefonnummer:`}
+                aria-label="Email me at info@itflows.se"
+                className="flex gap-2 items-center font-light"
+              >
                 <button className="rounded-4xl w-fit p-2 px-4 border border-dotted cursor-pointer">
                   Boka
                 </button>
@@ -113,65 +120,16 @@ export const PrisInfo: React.FC<refProps> = ({ priceRef, style }) => {
             Tillval:
           </h3>
           <div className="grid grid-cols-1 tablet:grid-cols-2 gap-6">
-            <ul className="list-disc px-6">
-              <h4 className="font-collab text-xl underline decoration-dotted underline-offset-6 pb-2">
-                Extra material
-              </h4>
-              <li>
-                Produktfoton Premium - fota alla era produkter (i studio /
-                miljö)
-              </li>
-              <li>Promofilm - behind the scenes eller introduktion</li>
-              <li>Köp loss alla foton från fotograferingen</li>
-            </ul>
-            <ul className="list-disc px-6">
-              <h4 className="font-collab text-xl  underline decoration-dotted underline-offset-6 pb-2">
-                Sociala medier
-              </h4>
-              <li>Lanseringsstrategi Premium (idéer & struktur)</li>
-              <li>
-                Guide för egen produktion av bilder/material av hög kvalitet i
-                samma stil
-              </li>
-              <li>
-                Sociala medie-kit: profilbild, omslagsbild, post- och
-                storiesmallar
-              </li>
-              <li>Filter till sociala medier</li>
-            </ul>
-            <ul className="list-disc px-6">
-              <h4 className="font-collab text-xl  underline decoration-dotted underline-offset-6 pb-2">
-                Identitet: Copy och tryck
-              </h4>
-              <li>
-                Brand book: sammanfattning av färger, typsnitt,
-                logotypanvändning
-              </li>
-              <li>
-                Tryckmaterial marknadsföring - t.ex. flyers eller affischer
-              </li>
-              <li>
-                Copywriting: professionell text för hemsidan, kampanjer eller
-                annonser
-              </li>
-            </ul>
-            <ul className="list-disc px-6">
-              <h4 className="font-collab text-xl  underline decoration-dotted underline-offset-6 pb-2">
-                Mail
-              </h4>
-              <li>Extra support med mail-setup av profesionell mail</li>
-              <li>Prenumeration mailutskick - mall / design</li>
-              <li>E-postsignaturer: designade enligt varumärket</li>
-            </ul>
-            <ul className="list-disc px-6">
-              <h4 className="font-collab text-xl  underline decoration-dotted underline-offset-6 pb-2">
-                Uppdatering
-              </h4>
-              <li>
-                Uppdateringspaket: Köp till uppdateringar av hemsidan vid ett
-                senare tillfälle
-              </li>
-            </ul>
+            {extraServices.map((section, index) => (
+              <ul key={index} className="list-disc px-6">
+                <h4 className="font-collab text-xl underline decoration-dotted underline-offset-6 pb-2">
+                  {section.category}
+                </h4>
+                {section.items.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
+            ))}
           </div>
         </div>
         <img

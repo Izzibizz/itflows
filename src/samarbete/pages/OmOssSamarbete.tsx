@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { SamarbeteWhyComp } from "../components/SamarbeteWhyComp";
 
 export const OmOssSamarbete: React.FC = () => {
-  const [isLaptop, setIsLaptop] = useState(window.innerWidth > 1024);
+  const [isLaptop, setIsLaptop] = useState(window.innerWidth > 1024)
 
   useEffect(() => {
     const handleResize = () => {
@@ -63,11 +63,16 @@ export const OmOssSamarbete: React.FC = () => {
         </p>
       </div>
       <div className="grid tablet:grid-cols-2 desktop:grid-cols-4 gap-10 bg-collab-beige p-6 tablet:p-10 rounded-4xl">
+            <div className="flex flex-col laptop:max-w-[300px] ">
         <img
           src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1748857775/it-flows-studio-mamama-3_dim3z2.jpg"
           alt="emma"
-          className="w-full laptop:max-w-[300px] rounded-4xl"
+          className="w-full rounded-4xl"
         />
+            <a href="https://studiomamama.se" target="_blank" rel="noopener noreferrer" className="self-end">
+            <img src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1744875557/logga-studio-mamama_va4bfr.svg" alt="logga Emma Studio Mamama" className="w-[120px] "/>
+            </a>
+        </div>
         <div className="flex flex-col gap-6">
           <div className="flex flex-col gap-1">
             <h3 className="font-collab text-2xl">Emma</h3>
@@ -75,36 +80,44 @@ export const OmOssSamarbete: React.FC = () => {
           </div>
           <div className="flex flex-col gap-4">
             <p className="laptop:max-w-[400px]">
-              Emma är en passionerad content creator och utbildad fotograf med
+              Emma är en <span className="font-semibold">passionerad content creator</span> och utbildad <span className="font-semibold">fotograf</span> med
               över 10 års erfarenhet bakom kameran. Emma är expert på att skapa
-              trygg stämning framför kameran – och det syns i resultatet.
-              Bilderna känns levande, äkta och fulla av din energi.
+              <span className="italic">trygg stämning framför kameran</span> – och det syns i resultatet.
+              Bilderna känns levande, äkta och fulla av <span className="italic">din energi</span>.
             </p>
             <p>
-              Med ett öga för både känsla och strategi jobbar hon med visuell
-              kommunikation, marknads&shy;föring och innehålls&shy;planering.
+              Med ett öga för både känsla och strategi jobbar hon med  <span className="font-semibold">visuell
+              kommunikation</span>,  <span className="font-semibold">marknads&shy;föring</span> och  <span className="font-semibold">innehålls&shy;planering</span>.
             </p>
+          
           </div>
         </div>
+        <div className="flex flex-col gap-4  laptop:max-w-[300px] ">
         <img
           src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1748857781/it-flows_jgajmx.jpg"
           alt="emma"
-          className="w-full laptop:max-w-[300px] rounded-4xl"
+          className="w-full rounded-4xl"
         />
+      
+        <a href="https://itflows.se" target="_blank" rel="noopener noreferrer"  className="self-end">
+          <img src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1744875992/itflows-logo-green_lb3upj.svg" alt="logga Izabel itFlows" className="w-[90px]"/>
+          </a>
+          </div>
         <div className="flex flex-col gap-6">
           <div className="flex flex-col gap-1">
             <h3 className="font-collab text-2xl">Izabel</h3>
             <h4 className="font-c-boy text-lg">Designer & Utvecklare</h4>
           </div>
           <p className="laptop:max-w-[400px]">
-            Izabel är konstnär i grunden med en master i Fri Konst på Kungliga
+            Izabel är <span className="font-semibold">konstnär</span> i grunden med en <span className="font-semibold">master i Fri Konst</span> på Kungliga
             Konsthögskolan. Efter en Frontend-utbildning applicerar hon nu sin
-            kreativitet på genomtänkta system och visuell teknik – genom att koda
+            kreativitet på <span className="italic">genomtänkta system</span> och <span className="italic">visuell teknik</span> – genom att koda
             användarvänliga, snygga och intuitiva hemsidor från grunden.
             </p>
-            <p>Med en stark känsla för estetik skapar
-            hon allt från webbdesign och illustrationer till grafisk design till t.ex. tryckmaterial.
+            <p><span className="italic">Med en stark känsla för estetik</span> skapar
+            hon allt från <span className="font-semibold">webbdesign</span> och <span className="font-semibold">illustrationer</span> till <span className="font-semibold">grafisk design</span> till t.ex. tryckmaterial.
           </p>
+          
         </div>
       </div>
 

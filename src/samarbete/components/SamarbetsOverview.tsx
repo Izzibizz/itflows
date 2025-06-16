@@ -54,7 +54,7 @@ export const SamarbetsOverview: React.FC<RefProps> = ({
               Hur går det till?
             </h2>
             <h3 className="laptop:text-xl laptop:max-w-1/2 text-justify laptop:text-end">
-              Från första mötet där vi lär känna dig och din vision, till en
+              Från första mötet där vi lär känna dig och din vision,<br/>till en
               färdig hemsida som känns helt rätt för dig.
             </h3>
             {isSmallScreen && (
@@ -112,8 +112,8 @@ export const SamarbetsOverview: React.FC<RefProps> = ({
           <div className="flex flex-col gap-6 items-end text-end w-1/2 max-w-[700px]">
             <h2 className="font-collab text-[40px]">Hur går det till?</h2>
             <h3 className="text-xl text-justify laptop:text-end">
-              Från första mötet där vi lär känna dig och din vision, till en
-              färdig hemsida som känns helt rätt för dig.
+              Från <span className="italic">första mötet</span> där vi lär känna <span className="font-semibold">dig och din vision</span>,<br/> till en
+              <span className="font-semibold">färdig hemsida</span> som känns helt <span className="italic">rätt för dig</span>.
             </h3>
 
             <div className="flex flex-col justify-evenly h-fit border p-6 px-8 border-dotted gap-4 ">

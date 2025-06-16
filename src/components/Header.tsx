@@ -42,9 +42,9 @@ export const Header: React.FC = () => {
   ];
 
   const collabNav: NavLinkItem[] = [
-    { name: "Prislista", path: "/samarbete/prislista" },
-    { name: "Om oss", path: "/samarbete/om-oss" },
-    { name: "Kontakt", path: "/samarbete/kontakt" },
+    { name: "Prislista", path: "/samarbete/studio-mamama/prislista" },
+    { name: "Om oss", path: "/samarbete/studio-mamama/om-oss" },
+    { name: "Kontakt", path: "/samarbete/studio-mamama/kontakt" },
     { name: "itFlows", path: "/" },
   ];
 
@@ -59,9 +59,9 @@ export const Header: React.FC = () => {
     navLinksBase.find((link) => link.name === "Tjänster")?.children ?? [];
 
   const navLinks =
-    currentPath === "/samarbete/om-oss" ||
-    currentPath === "/samarbete/prislista" ||
-    currentPath === "/samarbete/kontakt"
+    currentPath === "/samarbete/studio-mamama/om-oss" ||
+    currentPath === "/samarbete/studio-mamama/prislista" ||
+    currentPath === "/samarbete/studio-mamama/kontakt"
       ? collabOmNav
       : isSamarbete
       ? collabNav
