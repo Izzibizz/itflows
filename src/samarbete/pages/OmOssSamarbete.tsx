@@ -92,7 +92,7 @@ export const OmOssSamarbete: React.FC = () => {
           
           </div>
         </div>
-        <div className="flex flex-col gap-4  laptop:max-w-[300px] ">
+        <div className="flex flex-col gap-6  laptop:max-w-[300px] ">
         <img
           src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1748857781/it-flows_jgajmx.jpg"
           alt="emma"
