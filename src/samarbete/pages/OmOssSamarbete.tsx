@@ -22,16 +22,16 @@ export const OmOssSamarbete: React.FC = () => {
             Vilka är vi?
           </h2>
           <p className="text-justify">
-            Vi heter Izabel och Emma – vänner sedan barnsben och idag kreativa
-            samarbets&shy;partners med gemensam vision och massor av driv. Efter
-            många års vänskap, projekt och idéer har vi landat i det vi älskar
-            mest: att hjälpa andra synas, kännas och nå fram.
+            Vi heter <span className="font-semibold">Izabel och Emma</span> – vänner sedan barnsben och idag <span className="italic">kreativa
+            samarbets&shy;partners</span> med gemensam vision och massor av driv. Efter
+            många års vänskap, projekt och idéer har vi landat i det <span className="font-semibold">vi älskar
+            mest</span>: att hjälpa andra <span className="italic">synas, kännas och nå fram</span>.
           </p>
-          <p className="hidden laptop:flex text-justify">
-            Hos oss får du inte bara ett uppdrag utfört – du får två engagerade
-            hjärtan, massa skratt och ett samarbete som känns mer som ett
-            riktigt roligt projekt än ett “jobb”. För när vi har kul, blir
-            resultatet som bäst. Och det smittar av sig.
+          <p className="hidden laptop:block text-justify">
+            Hos oss får du <span className="font-semibold">inte bara ett uppdrag utfört</span> – du får <span className="italic">två engagerade
+            hjärtan</span>, massa skratt och ett samarbete som <span className="font-semibold">känns mer</span> som ett
+            riktigt roligt projekt än ett “jobb”. <span className="font-semibold">För när vi har kul, blir
+            resultatet som bäst</span>. Och det smittar av sig.
           </p>
           <div className="flex flex-col gap-10 laptop:mt-10">
             <img
