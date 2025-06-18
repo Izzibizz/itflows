@@ -113,7 +113,7 @@ export const SamarbetsOverview: React.FC<RefProps> = ({
             <h2 className="font-collab text-[40px]">Hur går det till?</h2>
             <h3 className="text-xl text-justify laptop:text-end">
               Från <span className="italic">första mötet</span> där vi lär känna <span className="font-semibold">dig och din vision</span>,<br/> till en
-              <span className="font-semibold">färdig hemsida</span> som känns helt <span className="italic">rätt för dig</span>.
+              <span className="font-semibold"> färdig hemsida</span> som känns helt <span className="italic">rätt för dig</span>.
             </h3>
 
             <div className="flex flex-col justify-evenly h-fit border p-6 px-8 border-dotted gap-4 ">
