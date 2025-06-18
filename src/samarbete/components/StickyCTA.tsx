@@ -9,6 +9,7 @@ export const StickyCTA: React.FC = () => {
 
   const closePopup = () => {
     setIsPopup(false);
+     setPopupHasBeenSeen(true)
   };
 
   useEffect(() => {
@@ -23,8 +24,7 @@ export const StickyCTA: React.FC = () => {
         popupRef.current &&
         !popupRef.current.contains(event.target as Node)
       ) {
-        setIsPopup(false);
-        setPopupHasBeenSeen(true)
+        closePopup();
       }
     };
 
@@ -37,7 +37,7 @@ export const StickyCTA: React.FC = () => {
   return (
     <section
       className={`animate-fadeIn  ${
-        isPopup
+        isPopup && !popupHasBeenSeen
           ? "w-screen h-screen bg-warm-black/50 text-warm-black "
           : " rounded-tl-3xl hover:scale-110 laptop:origin-right bg-collab-red hover:bg-collab-green p-3 px-6  cursor-pointer text-warm-white"
       } fixed bottom-0 right-0 z-80 laptop:text-lg text-sm `}
