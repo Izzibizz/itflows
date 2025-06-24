@@ -1,22 +1,50 @@
 import { useState, useRef, useEffect } from "react";
+import { useForm, ValidationError } from "@formspree/react";
+import Lottie from "lottie-react";
+import animation from "../../assets/animations/Animation - dots.json";
 import { RxCross1 } from "react-icons/rx";
 import { useCollabStore } from "../../stores/useCollabStore";
 
 export const StickyCTA: React.FC = () => {
   const [isPopup, setIsPopup] = useState(false);
   const popupRef = useRef<HTMLDivElement | null>(null);
-  const { popupHasBeenSeen, setPopupHasBeenSeen } = useCollabStore()
+  const [hideSticky, setHideSticky] = useState(false)
+  const { popupHasBeenSeen, setPopupHasBeenSeen } = useCollabStore();
+  const [state, handleSubmit] = useForm("xkgbqlnz");
 
   const closePopup = () => {
     setIsPopup(false);
-     setPopupHasBeenSeen(true)
+    setPopupHasBeenSeen(true);
   };
+
+  const bookingClick = () => {
+    setIsPopup(true)
+    setPopupHasBeenSeen(false)
+  }
 
   useEffect(() => {
     setTimeout(() => {
       setIsPopup(true);
     }, 30000);
   }, []);
+
+  useEffect(() => {
+    if (state.succeeded) {
+      setTimeout(() => {
+        setIsPopup(false);
+        setPopupHasBeenSeen(true);
+        setHideSticky(true)
+      }, 5000);
+    }
+  }, [state, setPopupHasBeenSeen]);
+
+  useEffect(() => {
+    if (isPopup) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+  }, [isPopup]);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -34,13 +62,14 @@ export const StickyCTA: React.FC = () => {
     };
   }, []);
 
+  console.log(state.succeeded);
   return (
     <section
-      className={`animate-fadeIn  ${
+      className={`animate-fadeIn ${hideSticky && "hidden"} ${
         isPopup && !popupHasBeenSeen
-          ? "w-screen h-screen bg-warm-black/50 text-warm-black "
-          : " rounded-tl-3xl hover:scale-110 laptop:origin-right bg-collab-red hover:bg-collab-green p-3 px-6  cursor-pointer text-warm-white"
-      } fixed bottom-0 right-0 z-80 laptop:text-lg text-sm `}
+          ? "w-screen h-screen bg-warm-black/90 tablet:bg-warm-black/70 text-warm-black z-80 "
+          : " rounded-tl-3xl hover:scale-110 laptop:origin-right bg-collab-red hover:bg-collab-green p-3 px-6  cursor-pointer text-warm-white z-50"
+      } fixed bottom-0 right-0 laptop:text-lg text-sm `}
     >
       {isPopup && !popupHasBeenSeen ? (
         <div
@@ -49,84 +78,118 @@ export const StickyCTA: React.FC = () => {
         >
           <div className="flex flex-col tablet:flex-row justify-between relative">
             <RxCross1
-              className="absolute z-60 top-4 right-4 laptop:top-8 laptop:right-8 laptop:w-6 laptop:h-6 text-warm-black"
+              className="absolute z-60 top-4 right-4 w-6 h-6 laptop:top-8 laptop:right-8 text-warm-black cursor-pointer"
               onClick={() => closePopup()}
             />
-
-            <form
-              name="contact"
-              method="POST"
-              data-netlify="true"
-              netlify-honeypot="bot-field"
-              className="flex flex-col gap-10 bg-warm-white p-6 laptop:p-8 rounded-t-4xl tablet:rounded-l-4xl tablet:rounded-r-none tablet:w-2/3"
-            >
-              <input type="hidden" name="form-name" value="contact" />
-
-              <p className="hidden">
-                <label>
-                  Don’t fill this out: <input name="bot-field" />
-                </label>
-              </p>
-              <div className="flex flex-col gap-2 items-center self-center">
-                <h3 className="text-2xl">
-                  <span className="underline">Just nu</span> erbjuder vi en{" "}
-                  <br />{" "}
-                  <span className="font-semibold font-collab text-4xl tablet:text-3xl laptop:text-[50px]">
-                    gratis
-                  </span>{" "}
-                  <span className="text-4xl tablet:text-3xl laptop:text-4xl font-collab">
-                    första konsultation
-                  </span>
-                </h3>
-                <h4 className="text-2xl self-end">helt utan bindning</h4>
+            {state.succeeded ? (
+              <div className="animate-fadeIn flex flex-col gap-2 p-6 tablet:w-2/3 items-center text-center justify-center">
+                <h3 className="font-collab text-4xl">Tack för din bokning!</h3>
+                <p>Vi hör av oss inom kort.</p>
               </div>
-              <div className="flex flex-col gap-2">
-                <label className="flex gap-2">
-                  Namn:
-                  <input
-                    type="text"
-                    name="name"
-                    className="border border-dotted border-collab-green rounded-lg"
-                    required
+            ) : (
+              <form
+                onSubmit={handleSubmit}
+                className="relative flex flex-col gap-10 bg-warm-white p-6 laptop:p-8 rounded-t-4xl tablet:rounded-l-4xl tablet:rounded-r-none tablet:w-2/3"
+              >
+                <div className="flex flex-col gap-2 items-center self-center">
+                  <h3 className="text-2xl">
+                    <span className="underline">Just nu</span> erbjuder vi en{" "}
+                    <br />{" "}
+                    <span className="font-semibold font-collab text-4xl tablet:text-3xl laptop:text-[50px]">
+                      gratis
+                    </span>{" "}
+                    <span className="text-4xl tablet:text-3xl laptop:text-4xl font-collab">
+                      första konsultation
+                    </span>
+                  </h3>
+                  <h4 className="text-2xl self-end">helt utan bindning</h4>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <label className="flex gap-2">
+                    Namn:
+                    <input
+                      type="text"
+                      name="name"
+                      className="border border-dotted border-collab-green rounded-lg"
+                      required
+                    />
+                  </label>
+                  <ValidationError
+                    prefix="Name"
+                    field="name"
+                    errors={state.errors}
                   />
-                </label>
-
-                <label className="flex gap-2">
-                  E-post:
-                  <input
-                    type="email"
-                    name="email"
-                    className="border border-dotted border-collab-green rounded-lg"
-                    required
+                  <label className="flex gap-2">
+                    Företag:
+                    <input
+                      type="text"
+                      name="företag"
+                      className="border border-dotted border-collab-green rounded-lg"
+                      required
+                    />
+                  </label>
+                  <ValidationError
+                    prefix="Företag"
+                    field="företag"
+                    errors={state.errors}
                   />
-                </label>
-
-                <label className="flex flex-col gap-2">
-                  Meddelande:
-                  <textarea
-                    name="message"
-                    className="border border-dotted border-collab-green rounded-lg"
-                    required
-                  ></textarea>
-                </label>
-                <button
-                  type="submit"
-                  className="w-fit rounded-3xl bg-collab-red px-3 py-1 self-end"
-                >
-                  Skicka
-                </button>
-              </div>
-              <div className="">
-                <p className="text-sm text-justify">
-                  Under 30 minuter träffas vi online och går tillsammans igenom
-                  dina eller ert företags behov, mål och potential. Vi
-                  presenterar hur vi kan hjälpa just dig/er – och vad som skulle
-                  passa bäst utifrån din/er situation. Tillsammans diskuterar vi
-                  vilket av våra paket som är mest relevant, helt utan
-                  förpliktelser.
-                </p>
-              </div>
-            </form>
+                  <label className="flex gap-2">
+                    E-post:
+                    <input
+                      id="email"
+                      type="email"
+                      name="email"
+                      className="border border-dotted border-collab-green rounded-lg"
+                      required
+                    />
+                  </label>
+                  <ValidationError
+                    prefix="Email"
+                    field="email"
+                    errors={state.errors}
+                  />
+                  <label className="flex flex-col gap-2">
+                    Meddelande:
+                    <textarea
+                      name="message"
+                      className="border p-2 border-dotted border-collab-green rounded-lg"
+                      required
+                    />
+                    <ValidationError
+                      prefix="Message"
+                      field="message"
+                      errors={state.errors}
+                    />
+                  </label>
+                  <button
+                    type="submit"
+                    disabled={state.submitting}
+                    className="w-fit rounded-3xl bg-collab-red px-3 py-1 self-end cursor-pointer"
+                  >
+                    Skicka
+                  </button>
+                </div>
+                <div className="">
+                  <p className="text-xs tablet:text-sm tablet:text-justify">
+                    Du får en konsultation värd 2 500 kr – helt gratis! <br /> I
+                    ett 30-minuters onlinesamtal analyserar vi ditt/ert företags
+                    behov och diskuterar lösningar anpassade efter just er. Vi
+                    ger konkreta insikter och rekommend&shy;ationer, utan krav
+                    på vidare samarbete.
+                  </p>
+                </div>
+                {state.submitting && (
+                  <div className="absolute top-0 right-0 z-30 w-full h-full flex flex-col items-center justify-center">
+                    <Lottie
+                      animationData={animation}
+                      loop
+                      autoplay
+                      style={{ height: 600, width: 600 }}
+                    />
+                  </div>
+                )}
+              </form>
+            )}
             <video
               src="https://res.cloudinary.com/dlp85vjwx/video/upload/v1750153021/itflows-studio-mamama_y4wwbc.mp4"
               autoPlay
@@ -137,15 +200,14 @@ export const StickyCTA: React.FC = () => {
             />
           </div>
         </div>
-      ) : (
-        <a
-          href="mailto:info@itflows.se?subject=Bokning konsultation&body=Hej, jag skulle vilja boka en första konsultation. Namn: företag: telefonnummer:"
-          aria-label="Email me at info@itflows.se"
-          className={`flex gap-2 font-light items-center
-        `}
+      ) :  (
+        <p
+          className="flex gap-2 font-light items-center
+        "
+        onClick={() => bookingClick()}
         >
           Boka gratis konsultation
-        </a>
+        </p>
       )}
     </section>
   );
