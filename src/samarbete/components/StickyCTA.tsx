@@ -90,7 +90,7 @@ export const StickyCTA: React.FC = () => {
             ) : (
               <form
                 onSubmit={handleSubmit}
-                className="relative flex flex-col gap-10 bg-warm-white p-6 laptop:p-8 rounded-t-4xl rounded-b-4xl tablet:rounded-b-none tablet:rounded-l-4xl tablet:rounded-r-none tablet:w-2/3"
+                className="relative flex flex-col gap-10 bg-warm-white p-6 laptop:p-8 rounded-t-4xl rounded-b-4xl  tablet:rounded-l-4xl tablet:rounded-r-none tablet:w-2/3"
               >
                 <div className="flex flex-col gap-2 items-center self-center">
                   <h3 className="text-xl tablet:text-2xl">
