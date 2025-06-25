@@ -74,7 +74,7 @@ export const StickyCTA: React.FC = () => {
     >
       {isPopup && !popupHasBeenSeen ? (
         <div
-          className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-11/12 laptop:w-1/2 laptop:max-w-[1000px] animate-fadeIn rounded-4xl flex flex-col bg-warm-white"
+          className="animate-fadeIn fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-11/12 laptop:min-w-[700px] laptop:max-w-[1000px] animate-fadeIn rounded-4xl flex flex-col bg-warm-white"
           ref={popupRef}
         >
           <div className="flex flex-col tablet:flex-row justify-between relative ">
@@ -155,6 +155,8 @@ export const StickyCTA: React.FC = () => {
                     Meddelande:
                     <textarea
                       name="message"
+                      style={{resize: "none", height: "100px"}}
+                      placeholder="Kort om ditt företag och hur vi kan hjälpa dig"
                       className="border p-2 border-dotted border-collab-green rounded-lg w-full"
                       required
                     />
