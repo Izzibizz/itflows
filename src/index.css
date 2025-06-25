@@ -76,6 +76,16 @@ body {
   z-index: 5;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+  box-shadow: 0 0 0px 1000px #FFFAF5 inset !important; /* din bakgrundsfärg */
+  -webkit-text-fill-color: #1b1b1b !important; /* textfärg */
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+
+
 @import "tailwindcss";
 
 @theme {
