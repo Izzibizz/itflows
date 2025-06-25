@@ -15,7 +15,7 @@ export const ContactForm: React.FC = () => {
       ) : (
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col tablet:grid grid-cols-2 gap-8 laptop:gap-14 font-body p-10 border-l-2 border-t-2"
+          className="flex flex-col tablet:grid grid-cols-2 gap-8 laptop:gap-14 font-body p-6 tablet:p-10 border-l-2 border-t-2"
         >
           <div className="gap-6 flex flex-col">
             <label>
@@ -43,7 +43,7 @@ export const ContactForm: React.FC = () => {
             <label>
               Länk nuvarande hemsida/instagram:
               <input
-                type="tel"
+                type="url"
                 name="link"
                 id="link"
                 className="border-b py-1  w-full "
@@ -53,8 +53,8 @@ export const ContactForm: React.FC = () => {
             <label>
               Önskad typ av hemsida:
               <select
-                name="websiteType"
-                id="websiteType"
+                name="hemsidetyp"
+                id="hemsidetyp"
                 required
                 className="bg-warm-white cursor-pointer border-b w-full"
               >
@@ -176,12 +176,12 @@ export const ContactForm: React.FC = () => {
             </fieldset>
 
             <fieldset className="grid grid-cols-2 gap-2 mt-6">
-              <legend className="mb-2 underline">Har du redan material?</legend>
+              <legend className="mb-2 underline">Har du redan material-tillgang?</legend>
 
               <label className="inline-flex items-center cursor-pointer relative select-none">
                 <input
                   type="checkbox"
-                  name="material"
+                  name="material-tillgang"
                   value="texts"
                   id="texts"
                   className="peer appearance-none w-5 h-5 rounded-full border-2 border-gray-400 cursor-pointer
@@ -199,7 +199,7 @@ export const ContactForm: React.FC = () => {
               <label className="inline-flex items-center cursor-pointer relative select-none">
                 <input
                   type="checkbox"
-                  name="material"
+                  name="material-tillgang"
                   value="images"
                   id="images"
                   className="peer appearance-none w-5 h-5 rounded-full border-2 border-gray-400 cursor-pointer
@@ -217,7 +217,7 @@ export const ContactForm: React.FC = () => {
               <label className="inline-flex items-center cursor-pointer relative select-none">
                 <input
                   type="checkbox"
-                  name="material"
+                  name="material-tillgang"
                   value="logo"
                   id="logo"
                   className="peer appearance-none w-5 h-5 rounded-full border-2 border-gray-400 cursor-pointer
@@ -235,7 +235,7 @@ export const ContactForm: React.FC = () => {
               <label className="inline-flex items-center cursor-pointer relative select-none">
                 <input
                   type="checkbox"
-                  name="material"
+                  name="material-tillgang"
                   value="domain"
                   id="domain"
                   className="peer appearance-none w-5 h-5 rounded-full border-2 border-gray-400 cursor-pointer
@@ -259,22 +259,22 @@ export const ContactForm: React.FC = () => {
                 className="bg-warm-white cursor-pointer  w-full"
               >
                 <option value="">Välj...</option>
-                <option value="under_10k">Under 10 000 kr</option>
-                <option value="10k_25k">10 000–25 000 kr</option>
-                <option value="25k_50k">25 000–50 000 kr</option>
+                <option value="under10k">Under 10 000 kr</option>
+                <option value="10k-25k">10 000–25 000 kr</option>
+                <option value="25k-50k">25 000–50 000 kr</option>
                 <option value="vet-ej">Vet ej</option>
               </select>
             </label>
             <ValidationError
-              prefix="Email"
-              field="email"
+              prefix="budget"
+              field="budget"
               errors={state.errors}
             />
             <label>
               Hur hittade du itFlows?
               <select
-                name="referral"
-                id="referral"
+                name="rekommendation-via"
+                id="rekommendation-via"
                 className="bg-warm-white cursor-pointer w-full"
               >
                 <option value="">Välj...</option>
@@ -287,8 +287,8 @@ export const ContactForm: React.FC = () => {
               </select>
             </label>
             <ValidationError
-              prefix="referral"
-              field="referral"
+              prefix="rekommendation-via"
+              field="rekommendation-via"
               errors={state.errors}
             />
             <button
