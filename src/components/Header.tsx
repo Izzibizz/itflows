@@ -32,12 +32,11 @@ export const Header: React.FC = () => {
         { name: "Design", path: "/design" },
         { name: "Webbutveckling", path: "/webbutveckling" },
         { name: "Helhetskoncept", path: "/helhetskoncept" },
-        { name: "Erbjudanden", path: "/erbjudanden" },
       ],
     },
     /*    { name: "Kunder", path: "/kunder" }, */
     { name: "itFlows + Studio Mamama", path: "/samarbete/studio-mamama" },
-    { name: "Om oss", path: "/om-oss" },
+    { name: "Om itFlows", path: "/om-oss" },
     { name: "Kontakt", path: "/kontakt" },
   ];
 

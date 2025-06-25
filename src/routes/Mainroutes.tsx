@@ -9,7 +9,6 @@ import { WebbUtveckling } from "../pages/WebbUtveckling"
 import { Design } from "../pages/Design"
 import { Branding } from "../pages/Branding"
 import { HelhetsKoncept } from "../pages/HelhetsKoncept"
-import { Erbjudanden } from "../pages/Erbjudanden"
 import { OmOssSamarbete } from "../samarbete/pages/OmOssSamarbete";
 import { Samarbete } from "../samarbete/pages/Samarbete";
 import { Prislista } from "../samarbete/pages/Prislista";
@@ -25,7 +24,6 @@ export const MainRoutes: React.FC = () => {
         <Route path="/branding" element={<Branding/>}/>
         <Route path="/design" element={<Design/>}/>
         <Route path="/helhetskoncept" element={<HelhetsKoncept/>}/>
-        <Route path="/erbjudanden" element={<Erbjudanden/>}/>
         <Route path="/*" element={<NotFound/>}/>
         <Route path="/om-oss" element={<OmOss/>}/>
         <Route path="/kontakt" element={<Kontakt/>}/>

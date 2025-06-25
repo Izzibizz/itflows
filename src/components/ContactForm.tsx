@@ -1,73 +1,24 @@
-import { useState } from "react";
 
-type FormData = {
-  name: string;
-  email: string;
-  phone: string;
-  websiteType: string;
-  description: string;
-  materials: {
-    texts: boolean;
-    images: boolean;
-    logo: boolean;
-    domain: boolean;
-  };
-  deadline: string;
-  budget: string;
-  referral: string;
-};
+import { useForm, ValidationError } from '@formspree/react';
+import Lottie from "lottie-react";
+import animation from "../assets/animations/Animation - dots.json";
 
 export const ContactForm: React.FC = () => {
-  const [formData, setFormData] = useState<FormData>({
-    name: "",
-    email: "",
-    phone: "",
-    websiteType: "",
-    description: "",
-    materials: {
-      texts: false,
-      images: false,
-      logo: false,
-      domain: false,
-    },
-    deadline: "",
-    budget: "",
-    referral: "",
-  });
+   const [state, handleSubmit] = useForm("xdkzpzak");
 
-  const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
-  ) => {
-    const { name, value } = e.target;
-
-    if (name in formData.materials) {
-      setFormData((prev) => ({
-        ...prev,
-        materials: {
-          ...prev.materials,
-          [name]: (e.target as HTMLInputElement).checked,
-        },
-      }));
-    } else {
-      setFormData((prev) => ({
-        ...prev,
-        [name]: value,
-      }));
-    }
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Skicka till e-post, API eller formulärtjänst
-  };
 
   return (
+    <>
+    {state.succeeded ? (
+      <div className="flex flex-col gap-2 items-center justify-center">
+        <h3>Tack för din bokning!</h3>
+        <p>Vi hör av oss inom kort</p>
+      </div>
+    ) : 
+    (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col tablet:flex-row gap-4 laptop:gap-14 font-body bg-gradient-to-b from-light-beige rounded-4xl drop-shadow-xl p-10"
+      className="flex flex-col tablet:grid grid-cols-2 gap-8 laptop:gap-14 font-body bg-gradient-to-b from-light-beige rounded-4xl drop-shadow-xl p-10 pb-32"
     >
       <div className="gap-4 flex flex-col">
         <label>
@@ -75,8 +26,7 @@ export const ContactForm: React.FC = () => {
           <input
             type="text"
             name="name"
-            value={formData.name}
-            onChange={handleChange}
+            id="name"
             required
             className="bg-warm-white w-full"
           />
@@ -87,8 +37,7 @@ export const ContactForm: React.FC = () => {
           <input
             type="email"
             name="email"
-            value={formData.email}
-            onChange={handleChange}
+            id="email"
             required
             className="bg-warm-white  w-full"
           />
@@ -98,19 +47,27 @@ export const ContactForm: React.FC = () => {
           Telefonnummer:
           <input
             type="tel"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
+            name="phonenumber"
+            id="phonenumber"
+            className="bg-warm-white w-full "
+          />
+        </label>
+
+                <label>
+          Länk nuvarande hemsida/instagram:
+          <input
+            type="tel"
+            name="link"
+            id="link"
             className="bg-warm-white w-full "
           />
         </label>
 
         <label>
-          Typ av hemsida:
+          Önskad typ av hemsida:
           <select
             name="websiteType"
-            value={formData.websiteType}
-            onChange={handleChange}
+            id="websiteType"
             required
             className="bg-warm-white cursor-pointer w-full"
           >
@@ -123,69 +80,11 @@ export const ContactForm: React.FC = () => {
             <option value="annat">Annat</option>
           </select>
         </label>
-
-        <label className="flex flex-col gap-2">
-          Beskriv vad du är ute efter:
-          <textarea
-            name="description"
-            value={formData.description}
-            onChange={handleChange}
-            required
-            className="bg-warm-white h-32 p-2"
-          />
-        </label>
-      </div>
-      <div className="gap-4 flex flex-col">
-        <fieldset className="flex flex-col gap-2">
-          <legend className="mb-2">Har du redan material?</legend>
           <label>
-            <input
-              type="checkbox"
-              name="texts"
-              checked={formData.materials.texts}
-              onChange={handleChange}
-              className="cursor-pointer "
-            />{" "}
-            Texter
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              name="images"
-              checked={formData.materials.images}
-              onChange={handleChange}
-              className="cursor-pointer"
-            />{" "}
-            Bilder
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              name="logo"
-              checked={formData.materials.logo}
-              onChange={handleChange}
-              className="cursor-pointer"
-            />{" "}
-            Logotyp
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              name="domain"
-              checked={formData.materials.domain}
-              onChange={handleChange}
-              className="cursor-pointer"
-            />{" "}
-            Domännamn
-          </label>
-        </fieldset>
-
-        <label>
           Önskad lansering:
           <select
             name="deadline"
-            value={formData.deadline}
-            onChange={handleChange}
+            id="deadline"
             required
             className="bg-warm-white cursor-pointer  w-full"
           >
@@ -195,29 +94,114 @@ export const ContactForm: React.FC = () => {
             <option value="flexibel">flexibel</option>
           </select>
         </label>
+      </div>
+      <div className="gap-4 flex flex-col">
+               <fieldset className="grid grid-cols-2  gap-2">
+          <legend className="mb-2 underline">Vad behöver du hjälp med?</legend>
+          <label>
+            <input
+              type="checkbox"
+              name="branding"
+              id="branding"
+              className="cursor-pointer "
+            />{" "}
+            Branding
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="design"
+              id="design"
+              className="cursor-pointer"
+            />{" "}
+            Design
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="hemsida"
+              id="hemsida"
+              className="cursor-pointer"
+            />{" "}
+            Bygga hemsida
+          </label>
+             <label>
+            <input
+              type="checkbox"
+              name="helhetskoncept"
+            id="helhetskoncept"
+              className="cursor-pointer"
+            />{" "}
+            Helhetskoncept
+          </label>
+        </fieldset>
+        <fieldset className="grid grid-cols-2  gap-2">
+          <legend className="mb-2 underline">Har du redan material?</legend>
+          <label>
+            <input
+              type="checkbox"
+              name="texts"
+              id="texts"
+              className="cursor-pointer "
+            />{" "}
+            Texter
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="images"
+            id="images"
+              className="cursor-pointer"
+            />{" "}
+            Bilder
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="logo"
+              id="logo"
+              className="cursor-pointer"
+            />{" "}
+            Logotyp
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="domain"
+              id="domain"
+              className="cursor-pointer"
+            />{" "}
+            Domän
+          </label>
+        </fieldset>
+
+      
 
         <label>
           Budget (valfritt):
           <select
             name="budget"
-            value={formData.budget}
-            onChange={handleChange}
+            id="budget"
             className="bg-warm-white cursor-pointer  w-full"
           >
             <option value="">Välj...</option>
             <option value="under_10k">Under 10 000 kr</option>
             <option value="10k_25k">10 000–25 000 kr</option>
             <option value="25k_50k">25 000–50 000 kr</option>
+            <option value="vet-ej">Vet ej</option>
           </select>
         </label>
-
+     <ValidationError 
+        prefix="Email" 
+        field="email"
+        errors={state.errors}
+      />
         <label>
           Hur hittade du itFlows?
           <select
             name="referral"
-            value={formData.referral}
-            onChange={handleChange}
-            className="bg-warm-white cursor-pointer  w-full"
+            id="referral"
+            className="bg-warm-white cursor-pointer w-full"
           >
             <option value="">Välj...</option>
             <option value="instagramk">Instagram</option>
@@ -228,13 +212,31 @@ export const ContactForm: React.FC = () => {
             <option value="annat">Annat</option>
           </select>
         </label>
+              <ValidationError 
+        prefix="referral" 
+        field="referral"
+        errors={state.errors}
+      />
         <button
         type="submit"
-        className="bg-dark-blue text-white p-3 rounded-full hover:scale-105 transition-all w-fit self-start tablet:self-end cursor-pointer"
+        disabled={state.submitting}
+        className="bg-dark-blue text-white p-3 rounded-full hover:scale-105 transition-all w-fit self-start tablet:self-end cursor-pointer mt-6"
       >
         Skicka förfrågan
       </button>
       </div>
+               {state.submitting && (
+                  <div className="absolute top-0 right-0 z-30 w-full h-full flex flex-col items-center justify-center">
+                    <Lottie
+                      animationData={animation}
+                      loop
+                      autoplay
+                      style={{ height: 600, width: 600 }}
+                    />
+                  </div>
+                )}
     </form>
+    )}
+    </>
   );
 };

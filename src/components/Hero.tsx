@@ -1,4 +1,5 @@
-import { useNavigate } from "react-router-dom";
+
+import { useNavigate} from "react-router-dom";
 import { Testimonial } from "./Testimonial";
 import { VideoBg } from "./VideoBg.js";
 import testimonials from "../data/testimonials.json";
@@ -6,6 +7,7 @@ import { Banner } from "./Banner.js";
 
 export const Hero: React.FC = () => {
   const navigate = useNavigate();
+
 
   return (
     <section className="relative flex flex-col gap-10 justify-evenly tablet:min-h-[80vh]">
@@ -20,9 +22,13 @@ export const Hero: React.FC = () => {
           >
             BRANDING, DESIGN & WEBBUTVECKLING
             <br />
-            <span style={{ fontSize: "clamp(28px, 4vw, 60px)" }}>
+            <span className="hidden tablet:block" style={{ fontSize: "clamp(28px, 4vw, 60px)" }}>
               {" "}
               enkelt, snyggt och skräddarsytt för dig
+            </span>
+              <span className="tablet:hidden" style={{ fontSize: "clamp(28px, 4vw, 60px)" }}>
+              {" "}
+              enkelt, snyggt och skräddarsytt
             </span>
           </h1>
           <h2
@@ -33,20 +39,12 @@ export const Hero: React.FC = () => {
           </h2>
         </div>
         <div className="flex flex-col gap-12 laptop:gap-10 laptop:flex-row justify-between">
-          <div className="flex gap-4 laptop:gap-10">
-            <button
-              className="bg-red-beige text-white p-3 px-6 rounded-full w-fit h-fit text-sm font-body tablet:text-xl cursor-pointer shadow-lg hover:scale-110 hover:bg-warm-white hover:text-dark-red"
-              onClick={() => navigate("/erbjudanden")}
-            >
-              Just nu 25% rabatt
-            </button>
             <button
               className="bg-red-beige text-white p-3 px-6 rounded-full w-fit h-fit text-sm font-body  tablet:text-xl cursor-pointer shadow-lg hover:scale-110  hover:bg-warm-white hover:text-dark-red"
               onClick={() => navigate("/kontakt")}
             >
-              Boka intro
+              Boka intro - Just nu 25% rabatt
             </button>
-          </div>
           <Testimonial
             testimonial={testimonials[0]}
             style={
