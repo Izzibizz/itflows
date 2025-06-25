@@ -113,7 +113,7 @@ export const StickyCTA: React.FC = () => {
                     <input
                       type="text"
                       name="name"
-                      className="border border-dotted border-collab-green rounded-lg w-full"
+                      className="border border-dotted border-collab-green rounded-lg w-full p-1"
                       required
                     />
                   </label>
@@ -127,7 +127,7 @@ export const StickyCTA: React.FC = () => {
                     <input
                       type="text"
                       name="företag"
-                      className="border border-dotted border-collab-green rounded-lg w-full"
+                      className="border border-dotted border-collab-green rounded-lg w-full p-1"
                       required
                     />
                   </label>
@@ -142,7 +142,7 @@ export const StickyCTA: React.FC = () => {
                       id="email"
                       type="email"
                       name="email"
-                      className="border border-dotted border-collab-green rounded-lg w-full"
+                      className="border border-dotted border-collab-green rounded-lg w-full p-1"
                       required
                     />
                   </label>
