@@ -8,14 +8,14 @@ export const ContactForm: React.FC = () => {
   return (
     <>
       {state.succeeded ? (
-        <div className="flex flex-col gap-2 w-full items-center justify-center p-10 border-l-2 border-t-2">
+        <div className="flex flex-col gap-2 w-full items-center justify-center p-10">
           <h3 className="font-bold text-4xl">Tack för din bokning!</h3>
           <p className=" font-body">Vi hör av oss inom kort</p>
         </div>
       ) : (
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col tablet:grid grid-cols-2 gap-8 laptop:gap-14 font-body p-6 tablet:p-10 border-l-2 border-t-2"
+          className="flex flex-col tablet:grid grid-cols-2 gap-8 laptop:gap-14 font-body p-6 tablet:p-10 bg-light-beige max-w-[800px]"
         >
           <div className="gap-6 flex flex-col">
             <label>
@@ -56,7 +56,7 @@ export const ContactForm: React.FC = () => {
                 name="hemsidetyp"
                 id="hemsidetyp"
                 required
-                className="bg-warm-white cursor-pointer border-b w-full"
+                className="cursor-pointer border-b w-full"
               >
                 <option value="">Välj...</option>
                 <option value="företagssida">Företagssida</option>
@@ -73,7 +73,7 @@ export const ContactForm: React.FC = () => {
                 name="deadline"
                 id="deadline"
                 required
-                className="bg-warm-white cursor-pointer border-b w-full"
+                className="cursor-pointer border-b w-full"
               >
                 <option value="">Välj...</option>
                 <option value="inom_1_månad">Inom 1 månad</option>
@@ -108,7 +108,7 @@ export const ContactForm: React.FC = () => {
                   name="behov"
                   value="branding"
                   id="branding"
-                  className="peer appearance-none w-5 h-5 rounded-full border-2 border-gray-400 cursor-pointer
+                  className="peer appearance-none w-5 h-5 rounded-full border-2 border-light-blue bg-warm-white cursor-pointer
                  checked:bg-warm-black checked:border-warm-black transition-colors duration-300"
                 />
                 <span
@@ -126,7 +126,7 @@ export const ContactForm: React.FC = () => {
                   name="behov"
                   value="design"
                   id="design"
-                  className="peer appearance-none w-5 h-5 rounded-full border-2 border-gray-400 cursor-pointer
+                  className="peer appearance-none w-5 h-5 rounded-full border-2 border-light-blue bg-warm-white cursor-pointer
                  checked:bg-warm-black checked:border-warm-black transition-colors duration-300"
                 />
                 <span
@@ -144,7 +144,7 @@ export const ContactForm: React.FC = () => {
                   name="behov"
                   value="hemsida"
                   id="hemsida"
-                  className="peer appearance-none w-5 h-5 rounded-full border-2 border-gray-400 cursor-pointer
+                  className="peer appearance-none w-5 h-5 rounded-full border-2 border-light-blue bg-warm-white cursor-pointer
                  checked:bg-warm-black checked:border-warm-black transition-colors duration-300"
                 />
                 <span
@@ -162,7 +162,7 @@ export const ContactForm: React.FC = () => {
                   name="behov"
                   value="helhetskoncept"
                   id="helhetskoncept"
-                  className="peer appearance-none w-5 h-5 rounded-full border-2 border-gray-400 cursor-pointer
+                  className="peer appearance-none w-5 h-5 rounded-full border-2 border-light-blue bg-warm-white cursor-pointer
                  checked:bg-warm-black checked:border-warm-black transition-colors duration-300"
                 />
                 <span
@@ -184,7 +184,7 @@ export const ContactForm: React.FC = () => {
                   name="material-tillgang"
                   value="texts"
                   id="texts"
-                  className="peer appearance-none w-5 h-5 rounded-full border-2 border-gray-400 cursor-pointer
+                  className="peer appearance-none w-5 h-5 rounded-full border-2 border-light-blue bg-warm-white cursor-pointer
                  checked:bg-warm-black checked:border-warm-black transition-colors duration-300"
                 />
                 <span
@@ -202,7 +202,7 @@ export const ContactForm: React.FC = () => {
                   name="material-tillgang"
                   value="images"
                   id="images"
-                  className="peer appearance-none w-5 h-5 rounded-full border-2 border-gray-400 cursor-pointer
+                  className="peer appearance-none w-5 h-5 rounded-full border-2 border-light-blue bg-warm-white cursor-pointer
                  checked:bg-warm-black checked:border-warm-black transition-colors duration-300"
                 />
                 <span
@@ -220,7 +220,7 @@ export const ContactForm: React.FC = () => {
                   name="material-tillgang"
                   value="logo"
                   id="logo"
-                  className="peer appearance-none w-5 h-5 rounded-full border-2 border-gray-400 cursor-pointer
+                  className="peer appearance-none w-5 h-5 rounded-full border-2 border-light-blue bg-warm-white cursor-pointer
                  checked:bg-warm-black checked:border-warm-black transition-colors duration-300"
                 />
                 <span
@@ -238,7 +238,7 @@ export const ContactForm: React.FC = () => {
                   name="material-tillgang"
                   value="domain"
                   id="domain"
-                  className="peer appearance-none w-5 h-5 rounded-full border-2 border-gray-400 cursor-pointer
+                  className="peer appearance-none w-5 h-5 rounded-full border-2 border-light-blue bg-warm-white cursor-pointer
                  checked:bg-warm-black checked:border-warm-black transition-colors duration-300"
                 />
                 <span
@@ -256,7 +256,7 @@ export const ContactForm: React.FC = () => {
               <select
                 name="budget"
                 id="budget"
-                className="bg-warm-white cursor-pointer  w-full"
+                className="cursor-pointer  w-full"
               >
                 <option value="">Välj...</option>
                 <option value="under10k">Under 10 000 kr</option>
@@ -275,7 +275,7 @@ export const ContactForm: React.FC = () => {
               <select
                 name="rekommendation-via"
                 id="rekommendation-via"
-                className="bg-warm-white cursor-pointer w-full"
+                className="cursor-pointer w-full"
               >
                 <option value="">Välj...</option>
                 <option value="instagramk">Instagram</option>
@@ -294,7 +294,7 @@ export const ContactForm: React.FC = () => {
             <button
               type="submit"
               disabled={state.submitting}
-              className="bg-dark-blue text-white p-3 rounded-full hover:scale-105 transition-all w-fit self-start tablet:self-end cursor-pointer mt-6"
+              className="bg-dark-blue text-white p-3 rounded-full hover:scale-105 transition-all w-fit self-end cursor-pointer mt-6"
             >
               Skicka förfrågan
             </button>

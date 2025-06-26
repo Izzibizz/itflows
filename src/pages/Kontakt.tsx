@@ -23,7 +23,7 @@ useEffect(() => {
   
   return (
     <section className="laptop:mt-20 animate-longFadeIn flex flex-col laptop:flex-row gap-10 laptop:gap-26">
-      <div className="flex flex-col gap-4 laptop:w-1/2">
+      <div className="flex flex-col gap-4 laptop:w-1/2 max-w-[500px]">
       <h1 className="font-header text-dark-blue text-4xl">Kontakt</h1>
       <h2 className="font-header text-xl">Vill du ha hjälp med en hemsida?
       </h2>
