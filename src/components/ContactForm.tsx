@@ -256,7 +256,7 @@ export const ContactForm: React.FC = () => {
               <select
                 name="budget"
                 id="budget"
-                className="cursor-pointer  w-full"
+                className="cursor-pointer w-full"
               >
                 <option value="">Välj...</option>
                 <option value="under10k">Under 10 000 kr</option>
