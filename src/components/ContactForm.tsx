@@ -15,7 +15,7 @@ export const ContactForm: React.FC = () => {
       ) : (
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col tablet:grid grid-cols-2 gap-8 laptop:gap-14 font-body p-6 tablet:p-10 bg-light-beige max-w-[800px]"
+          className="flex flex-col tablet:grid grid-cols-2 gap-8 laptop:gap-14 font-body p-6 tablet:p-10 border rounded-xl laptop:rounded-4xl max-w-[800px]"
         >
           <div className="gap-6 flex flex-col">
             <label>
@@ -77,7 +77,7 @@ export const ContactForm: React.FC = () => {
               >
                 <option value="">Välj...</option>
                 <option value="inom_1_månad">Inom 1 månad</option>
-                <option value="inom_3_månader">Inom 1–3 månader</option>
+                <option value="inom_3_månader">Inom 3 månader</option>
                 <option value="flexibel">flexibel</option>
               </select>
             </label>

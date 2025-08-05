@@ -140,7 +140,6 @@ export const Header: React.FC = () => {
     };
   }, [isOpen]);
 
-  console.log("islanding", isLandingPage, "headerBg", headerBg);
 
   return (
     <>
@@ -211,7 +210,7 @@ export const Header: React.FC = () => {
                     isSamarbete
                       ? "text-collab-green bg-warm-white/98"
                       : isLandingPage
-                      ? "text-warm-white bg-warm-beige/98"
+                      ? "text-warm-white bg-dark-blue/98"
                       : "text-dark-blue bg-warm-white/98"
                   } flex justify-end px-10 `}
                   ref={dropdownRef}

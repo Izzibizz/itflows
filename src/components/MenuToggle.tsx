@@ -19,7 +19,7 @@ interface MenuToggleProps {
           ref={ref}
           onClick={toggleMenu}
           aria-label="Toggle Menu"
-          className="relative w-10 h-10 z-50 cursor-pointer"
+          className="relative w-10 h-10 z-50 mt-4 cursor-pointer"
         >
           <span
             className={`absolute block h-0.5 w-full ${isSamarbete ? "bg-collab-green" : isLandingPage && headerBg ? "bg-stone-800" : isLandingPage ? "bg-warm-white" : "bg-dark-blue"} transition-transform duration-300 
