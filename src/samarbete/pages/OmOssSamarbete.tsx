@@ -22,16 +22,16 @@ export const OmOssSamarbete: React.FC = () => {
             Vilka är vi?
           </h2>
           <p className="text-justify">
-            Vi heter <span className="font-semibold">Izabel och Emma</span> – vänner sedan barnsben och idag <span className="italic">kreativa
-            samarbets&shy;partners</span> med gemensam vision och massor av driv. Efter
-            många års vänskap, projekt och idéer har vi landat i det <span className="font-semibold">vi älskar
-            mest</span>: att hjälpa andra <span className="italic">synas, kännas och nå fram</span>.
+            Vi heter <span className="font-semibold">Izabel & Emma</span> – vänner sedan barnsben & idag <span className="italic">kreativa
+            samarbets&shy;partners</span> med gemensam vision & massor av driv. Efter
+            många års vänskap, projekt & idéer har vi landat i det <span className="font-semibold">vi älskar
+            mest</span>: att hjälpa andra <span className="italic">synas, kännas & nå fram</span>.
           </p>
           <p className="hidden laptop:block text-justify">
             Hos oss får du <span className="font-semibold">inte bara ett uppdrag utfört</span> – du får <span className="italic">två engagerade
-            hjärtan</span>, massa skratt och ett samarbete som <span className="font-semibold">känns mer</span> som ett
+            hjärtan</span>, massa skratt & ett samarbete som <span className="font-semibold">känns mer</span> som ett
             riktigt roligt projekt än ett “jobb”. <span className="font-semibold">För när vi har kul, blir
-            resultatet som bäst</span>. Och det smittar av sig.
+            resultatet som bäst</span>. & det smittar av sig.
           </p>
           <div className="flex flex-col gap-10 laptop:mt-10">
             <img
@@ -52,14 +52,14 @@ export const OmOssSamarbete: React.FC = () => {
         </div>
         <img
           src="https://res.cloudinary.com/dlp85vjwx/image/upload/v1748868999/emma-iza-utomhus_yvhoyx.png"
-          alt="Emma och Izabel"
+          alt="Emma & Izabel"
           className="laptop:w-1/2 object-cover rounded-4xl"
         />
         <p className="laptop:hidden text-justify">
           Hos oss får du inte bara ett uppdrag utfört – du får två engagerade
-          hjärtan, massa skratt och ett samarbete som känns mer som ett riktigt
+          hjärtan, massa skratt & ett samarbete som känns mer som ett riktigt
           roligt projekt än ett “jobb”. För när vi har kul, blir resultatet som
-          bäst. Och det smittar av sig.
+          bäst. & det smittar av sig.
         </p>
       </div>
       <div className="grid tablet:grid-cols-2 desktop:grid-cols-4 gap-10 bg-collab-beige p-6 tablet:p-10 rounded-4xl">
@@ -80,14 +80,14 @@ export const OmOssSamarbete: React.FC = () => {
           </div>
           <div className="flex flex-col gap-4">
             <p className="laptop:max-w-[400px]">
-              Emma är en <span className="font-semibold">passionerad content creator</span> och utbildad <span className="font-semibold">fotograf</span> med
+              Emma är en utbildad <span className="font-semibold">fotograf</span> & <span className="font-semibold">passionerad content creator</span> med
               över 10 års erfarenhet bakom kameran. Emma är expert på att skapa
-              <span className="italic">trygg stämning framför kameran</span> – och det syns i resultatet.
-              Bilderna känns levande, äkta och fulla av <span className="italic">din energi</span>.
+              <span className="italic">trygg stämning framför kameran</span> – & det syns i resultatet.
+              Bilderna känns levande, äkta & fulla av <span className="italic">din energi</span>.
             </p>
             <p>
-              Med ett öga för både känsla och strategi jobbar hon med  <span className="font-semibold">visuell
-              kommunikation</span>,  <span className="font-semibold">marknads&shy;föring</span> och  <span className="font-semibold">innehålls&shy;planering</span>.
+              Med ett öga för både känsla & strategi jobbar hon med  <span className="font-semibold">visuell
+              kommunikation</span>,  <span className="font-semibold">marknads&shy;föring</span> &  <span className="font-semibold">innehålls&shy;planering</span>.
             </p>
           
           </div>
@@ -111,11 +111,11 @@ export const OmOssSamarbete: React.FC = () => {
           <p className="laptop:max-w-[400px]">
             Izabel är <span className="font-semibold">konstnär</span> i grunden med en <span className="font-semibold">master i Fri Konst</span> på Kungliga
             Konsthögskolan. Efter en Frontend-utbildning applicerar hon nu sin
-            kreativitet på <span className="italic">genomtänkta system</span> och <span className="italic">visuell teknik</span> – genom att koda
-            användarvänliga, snygga och intuitiva hemsidor från grunden.
+            kreativitet på <span className="italic">genomtänkta system</span> & <span className="italic">visuell teknik</span> – genom att koda
+            användarvänliga, snygga & intuitiva hemsidor från grunden.
             </p>
             <p><span className="italic">Med en stark känsla för estetik</span> skapar
-            hon allt från <span className="font-semibold">webbdesign</span> och <span className="font-semibold">illustrationer</span> till <span className="font-semibold">grafisk design</span> till t.ex. tryckmaterial.
+            hon allt från <span className="font-semibold">webbdesign</span> & <span className="font-semibold">illustrationer</span> till <span className="font-semibold">grafisk design</span> till t.ex. tryckmaterial.
           </p>
           
         </div>
