@@ -1,5 +1,39 @@
 [
     {
+      "name": "Företagssida",
+      "year": 2026,
+      "company": "Hagsätra Collective",
+      "title": "Ateljéförening och kulturaktör",
+      "text": "Tack vare detta samarbete mellan Linn Bredberg och itFlows fick vi en genomtänkt spännande grafisk design, logga och hemsida, som representerar och stärker vårt företag.",
+      "pictures": [
+        "https://res.cloudinary.com/dlp85vjwx/image/upload/v1770117731/Hags%C3%A4tra-collective-animation-itflows-izabel-lind-website_hzddoa.png",
+        "https://res.cloudinary.com/dlp85vjwx/image/upload/v1770225181/Hags%C3%A4tra-collective-animation-itflows-izabel-lind-website-mobile_darnn7.png",
+        "https://res.cloudinary.com/dlp85vjwx/image/upload/v1770117731/Hags%C3%A4tra-collective-landingpage-ateljeer-itflows-izabel-lind-website_jgnzyl.png",
+        "https://res.cloudinary.com/dlp85vjwx/image/upload/v1770117732/Hags%C3%A4tra-collective-studios-ateljeer-itflows-izabel-lind-website_ldxi3b.png",
+        "https://res.cloudinary.com/dlp85vjwx/image/upload/v1770117732/Hags%C3%A4tra-collective-om-oss-ateljeer-itflows-izabel-lind-website_qu3uqk.png",
+        "https://res.cloudinary.com/dlp85vjwx/image/upload/v1770117731/Hags%C3%A4tra-collective-contact-ateljeer-itflows-izabel-lind-website_smgyec.png"
+      ],
+      "website": "https://www.hagsatracollective.se",
+      "typeOfProject": ["webbutveckling"]
+    },
+     {
+      "name": "Portfolio",
+      "year": 2025,
+      "company": "Josefine Östlund",
+      "title": "Professionell yrkeskonstnär",
+      "text": "Från idé till att omfamna estetik och varumärke på ett smidigt och starkt sätt, hemsidan låter konsten ta fokus och blir en intressant hållare och förstärkare.",
+      "pictures": [
+        "https://res.cloudinary.com/dlp85vjwx/image/upload/v1770986252/Josefine-ostlund-artist-portfolio-website-itflows-izabel-lind-Landing_umkny4.png",
+        "https://res.cloudinary.com/dlp85vjwx/image/upload/v1770117665/Josefine-ostlund-artist-portfolio-website-itflows-izabel-lind-project-overview-page_kxvabh.png",
+        "https://res.cloudinary.com/dlp85vjwx/image/upload/v1770117665/Josefine-ostlund-artist-portfolio-website-itflows-izabel-lind-projectpage_z1ka8z.png",
+        "https://res.cloudinary.com/dlp85vjwx/image/upload/v1770117665/Josefine-ostlund-artist-portfolio-website-itflows-izabel-lind-projectpage_z1ka8z.png",
+        "https://res.cloudinary.com/dlp85vjwx/image/upload/v1770119893/Josefine-ostlund-project-itflows-izabel-lind_oidu39.png",
+        "https://res.cloudinary.com/dlp85vjwx/image/upload/v1770119892/Josefine-ostlund-about-information-itflows-izabel-lind_p4m7r9.png"
+      ],
+      "website": "https://www.josefineostlund.se",
+      "typeOfProject": ["Fullstack utveckling"]
+    },
+    {
       "name": "Kontakt- och bokningshemsida",
       "year": 2025,
       "company": "Light Body Yoga",
